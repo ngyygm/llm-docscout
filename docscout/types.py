@@ -42,8 +42,13 @@ class Section:
 
     @property
     def token_len(self) -> int:
-        """Rough token count (whitespace split). Good enough for budget accounting."""
-        return len(self.text.split())
+        """Real BPE token count (read-budget unit). See docscout.env.tokenizer.
+
+        Previously a whitespace word count; switched to BPE so the headline
+        accuracy-per-read-TOKEN metric is name-accurate (round-result.md #1).
+        """
+        from docscout.env.tokenizer import count_tokens
+        return count_tokens(self.text)
 
 
 @dataclass

@@ -16,6 +16,7 @@ from dataclasses import dataclass
 from typing import Protocol
 
 from docscout.types import Document, Section
+from docscout.env.tokenizer import count_tokens
 
 _TOKEN_RE = re.compile(r"[A-Za-z0-9]+")
 
@@ -45,7 +46,7 @@ class SectionRef:
 
     @property
     def token_len(self) -> int:
-        return len(self.text.split())
+        return count_tokens(self.text)
 
     @property
     def uid(self) -> tuple[str, str]:

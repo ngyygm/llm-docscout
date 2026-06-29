@@ -16,6 +16,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from docscout.env.docstore import DocStore
+from docscout.env.tokenizer import count_tokens
 from docscout.types import Action, ActionType, QAInstance, StepResult
 
 
@@ -181,9 +182,10 @@ class SearchEnv:
                 uid = (h["doc_id"], h["section_id"])
                 if uid in seen:
                     continue  # dedup: don't re-charge a snippet already surfaced/read
+                snip_tok = count_tokens(h["snippet"])
                 self.read_log.append(ReadEntry(h["doc_id"], h["section_id"],
-                                               len(h["snippet"].split()), "search_snippet"))
-                rt += len(h["snippet"].split())
+                                               snip_tok, "search_snippet"))
+                rt += snip_tok
                 seen.add(uid)
         return obs, rt
 

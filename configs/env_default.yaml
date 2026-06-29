@@ -1,9 +1,12 @@
 # DocScout environment config (Stage-2 pilot). Mirrors the action/budget knobs.
 env:
   max_steps: 8            # hard step cap (cf. CodeScout max_turns)
-  max_read_tokens: 2000   # read-budget cap (tokens of doc content into context)
+  max_read_tokens: 2000   # read-budget cap (REAL BPE tokens of doc content into context)
   search_k: 5             # top-k snippets per search
   snippet_token_cost: true   # snippets count toward read budget (cheap by design)
+  # Token accounting is now BPE (not words). Set DOCSCOUT_TOKENIZER to the policy
+  # model path on the GPU box (e.g. /mnt/workspace/zsxdata/local-model/Qwen/...) so
+  # train/eval token counts agree; falls back to tiktoken cl100k offline. (round-result.md #1)
 
 data:
   source: synth           # synth | grounded (MuSiQue/HotpotQA/DocScope — see DATA_DESIGN.md)

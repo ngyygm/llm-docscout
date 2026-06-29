@@ -1,0 +1,29 @@
+# DocScout LLM API config (HOST-side data generation & evaluation)
+# ---------------------------------------------------------------------------
+# This is an EXAMPLE. Copy it to configs/llm_api.yaml (which is gitignored) and
+# fill in your token, OR set the token via environment variable instead:
+#
+#     cp configs/llm_api.example.yaml configs/llm_api.yaml   # then edit token
+#   -- or --
+#     export DOCSCOUT_LLM_TOKEN=sk-...
+#
+# Resolution order per field: function arg > env var > this yaml > built-in default.
+#   token    : DOCSCOUT_LLM_TOKEN      (REQUIRED — no default; keep it out of git)
+#   base_url : DOCSCOUT_LLM_BASE_URL   (default https://api3.orangeai.cc)
+#   model    : DOCSCOUT_LLM_MODEL      (default glm-5.2)
+#
+# Endpoint is OpenAI-compatible: POST {base_url}/v1/chat/completions
+# ---------------------------------------------------------------------------
+
+token: "PUT-YOUR-sk-TOKEN-HERE"      # or leave and use $DOCSCOUT_LLM_TOKEN
+base_url: "https://api3.orangeai.cc"
+model: "glm-5.2"                     # available: glm-5.1, glm-5.2
+
+# Optional tuning (safe defaults shown):
+timeout: 120
+max_retries: 4
+temperature: 0.7
+# max_tokens = max OUTPUT length per reply (NOT the context window).
+# GLM-5.2 has a 400k total context (input+output share it); 32k output is plenty
+# for long synth records while leaving ~368k for whole-corpus input.
+max_tokens: 32768

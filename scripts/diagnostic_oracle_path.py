@@ -155,6 +155,42 @@ def _get_gold_text(instance: dict, sec_idx: dict, ev: dict) -> str | None:
     return sec["text"] if sec else None
 
 
+def _simulate_search_read(bm25, sec_idx, step_num, query, gold_ev, context,
+                          entity, val_attr):
+    """Step 1 of the oracle path: search for the start entity by name and confirm
+    that the entity's gold value section is reachable in the top-k snippets.
+
+    Returns a 'search' step dict shaped like the hop-loop search steps so the
+    downstream reachability check (which inspects
+    `found_any_section_of_target_entity`) works uniformly. The actual READ of the
+    gold section is implicit here (step 1 covers search+locate of e0's value).
+    """
+    search_result = bm25.search(query, k=5)
+    target_doc = gold_ev["doc_id"]
+    target_sid = gold_ev["section_id"]
+    found_gold = any(
+        h["doc_id"] == target_doc and h["section_id"] == target_sid
+        for h in search_result
+    )
+    found_any_next = any(h["doc_id"] == target_doc for h in search_result)
+    return {
+        "step": step_num,
+        "action": "search",
+        "query": query,
+        "search_context": context,
+        "next_entity": entity,
+        "next_doc_id": target_doc,
+        "target_value_section": f"{target_doc}.{target_sid}",
+        "found_link_section": found_gold,
+        "found_any_section_of_target_entity": found_any_next,
+        "top5_results": [
+            {"doc_id": h["doc_id"], "section_id": h["section_id"],
+             "title": h["title"], "snippet": h["snippet"][:60]}
+            for h in search_result
+        ],
+    }
+
+
 def analyze_instance(instance: dict, env_max_steps: int = 8) -> dict:
     """Compute the oracle path and checks for one v4 chain instance.
 
@@ -211,7 +247,7 @@ def analyze_instance(instance: dict, env_max_steps: int = 8) -> dict:
     result["env_max_steps"] = env_max_steps
     dynamic_max_steps = min(oracle_min_steps + 2, 12)
     result["dynamic_max_steps"] = dynamic_max_steps
-    result["violates_max_steps"] = oracle_min_steps > dynamic_max_steps
+    result["violates_dynamic_max_steps"] = oracle_min_steps > dynamic_max_steps
     result["violates_static_max_steps"] = oracle_min_steps > env_max_steps
 
     # ---- Construct the oracle path ----
@@ -384,8 +420,10 @@ def analyze_instance(instance: dict, env_max_steps: int = 8) -> dict:
                                            f"target entity {s.get('next_entity')}")
                 reachable = False
         elif s["action"] == "read":
-            target = s["target"]
-            if target not in _all_uids(instance):
+            target = s["target"]  # "doc_id.section_id" string
+            # _all_uids returns (doc_id, section_id) tuples; parse target to match.
+            doc_id, _, section_id = target.partition(".")
+            if (doc_id, section_id) not in _all_uids(instance):
                 unreachable_reasons.append(f"Step {s['step']}: read target {target} not found in corpus")
                 reachable = False
 

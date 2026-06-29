@@ -46,4 +46,8 @@ Thumbs.db
 *.swo
 
 # Claude Code internal
+.claude/
 .claude/scheduled_tasks.json
+
+# LLM API secrets (real config holds the token; keep the .example tracked)
+configs/llm_api.yaml
