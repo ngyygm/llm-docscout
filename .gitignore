@@ -6,9 +6,9 @@ dist/
 build/
 .mypy_cache/
 
-# Environment
+# Environment (root-level virtual env only)
 .venv/
-env/
+/env/
 
 # Model checkpoints (too large for git)
 ckpts/
