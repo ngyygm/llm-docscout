@@ -1,0 +1,534 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2205.15281",
+      "score": 0.5294118,
+      "title": "Learning Open Domain Multi-hop Search Using Reinforcement Learning",
+      "tldr": "[research paper] The paper proposes a reinforcement learning framework to learn multi-hop search policies in open-domain corpora by modeling the search process as a Markov decision process (MDP), where the agent iteratively refines a knowledge graph through targeted document retrieval and extraction. It introduces domain-agnostic state representations that encode search dynamics and uses an actor-critic RL algorithm to optimize for minimal document processing while achieving successful path discovery, outperforming heuristic baselines on the WikiHop dataset.",
+      "abstract": "We propose a method to teach an automated agent to learn how to search for multi-hop paths of relations between entities in an open domain. The method learns a policy for directing existing information retrieval and machine reading resources to focus on relevant regions of a corpus. The approach formulates the learning problem as a Markov decision process with a state representation that encodes the dynamics of the search process and a reward structure that minimizes the number of documents that must be processed while still finding multi-hop paths. We implement the method in an actor-critic reinforcement learning algorithm and evaluate it on a dataset of search problems derived from a subset of English Wikipedia. The algorithm finds a family of policies that succeeds in extracting the desired information while processing fewer documents compared to several baseline heuristic algorithms.",
+      "authors": [
+        {
+          "misc": {
+            "email": "enoriega@arizona.edu"
+          },
+          "name": "Enrique Noriega-Atala",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "msurdeanu@arizona.edu"
+          },
+          "name": "Mihai Surdeanu",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "claytonm@arizona.edu"
+          },
+          "name": "Clayton T. Morrison",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2205.15281",
+      "date": "2022-05-30T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": "SUKI",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2203.01889",
+      "score": 0.5212766,
+      "title": "Quantum Reinforcement Learning via Policy Iteration",
+      "tldr": "[research paper] The paper presents a general quantum framework for reinforcement learning via policy iteration, leveraging quantum linear system solvers to perform quantum policy evaluation and improvement. It establishes tight convergence bounds for infinite-horizon MDPs, provides explicit block encoding constructions for efficient quantum access to environment dynamics, and demonstrates empirical advantages over classical methods on FrozenLake and InvertedPendulum environments, achieving runtime scaling of \\mathcal{O}(SA + \\log(SA)/\\epsilon^2) compared to classical \\mathcal{O}((SA)^\\omega). The framework supports both model-based and model-free settings and generalizes to linear value function approximation, enabling theoretical analysis and practical implementation of quantum policy iteration.",
+      "abstract": "Quantum computing has shown the potential to substantially speed up machine learning applications, in particular for supervised and unsupervised learning. Reinforcement learning, on the other hand, has become essential for solving many decision making problems and policy iteration methods remain the foundation of such approaches. In this paper, we provide a general framework for performing quantum reinforcement learning via policy iteration. We validate our framework by designing and analyzing: \\\\emph{quantum policy evaluation} methods for infinite horizon discounted problems by building quantum states that approximately encode the value function of a policy $\\\\pi$; and \\\\emph{quantum policy improvement} methods by post-processing measurement outcomes on these quantum states. Last, we study the theoretical and experimental performance of our quantum algorithms on two environments from OpenAI's Gym.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "El Amine Cherrat",
+          "orgs": [
+            "Universit\u00e9 de Paris",
+            "CNRS",
+            "IRIF",
+            "F-75006, Paris, France"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Iordanis Kerenidis",
+          "orgs": [
+            "Universit\u00e9 de Paris",
+            "CNRS",
+            "IRIF",
+            "F-75006, Paris, France",
+            "QC Ware, Palo Alto, USA",
+            "QC Ware, Paris, France"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Anupam Prakash",
+          "orgs": [
+            "QC Ware, Palo Alto, USA",
+            "QC Ware, Paris, France"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2203.01889",
+      "date": "2022-03-03T00:00:00",
+      "citation_count": 38,
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "venue": "Quantum Machine Intelligence",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1811.11374",
+      "score": 0.33333334,
+      "title": "A Deep Cascade Model for Multi-Document Reading Comprehension",
+      "tldr": "[research paper] A deep cascade model is proposed for multi-document machine reading comprehension (MRC) that balances effectiveness and efficiency through a coarse-to-fine pipeline. Irrelevant documents and paragraphs are filtered early using simple ranking functions, reducing computational load; the remaining candidates are processed via jointly trained document, paragraph, and answer extraction modules sharing bottom layers. The model outperforms state-of-the-art methods on TriviaQA and DuReader, achieving high accuracy while maintaining sub-50ms response times in real-world online deployment.",
+      "abstract": "A fundamental trade-off between effectiveness and efficiency needs to be balanced when designing an online question answering system. Effectiveness comes from sophisticated functions such as extractive machine reading comprehension (MRC), while efficiency is obtained from improvements in preliminary retrieval components such as candidate document selection and paragraph ranking. Given the complexity of the real-world multi-document MRC scenario, it is difficult to jointly optimize both in an end-to-end system. To address this problem, we develop a novel deep cascade learning model, which progressively evolves from the document-level and paragraph-level ranking of candidate texts to more precise answer extraction with machine reading comprehension. Specifically, irrelevant documents and paragraphs are first filtered out with simple functions for efficiency consideration. Then we jointly train three modules on the remaining texts for better tracking the answer: the document extraction, the paragraph extraction and the answer extraction. Experiment results show that the proposed method outperforms the previous state-of-the-art methods on two large-scale multi-document benchmark datasets, i.e., TriviaQA and DuReader. In addition, our online system can stably serve typical scenarios with millions of daily requests in less than 50ms.",
+      "authors": [
+        {
+          "misc": {
+            "email": "ym119608@alibaba-inc.com"
+          },
+          "name": "Ming Yan",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jiangnan.xjn@alibaba-inc.com"
+          },
+          "name": "Jiangnan Xia",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wuchen.wc@alibaba-inc.com"
+          },
+          "name": "Chen Wu",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "b.bi@alibaba-inc.com"
+          },
+          "name": "Bin Bi",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhongzhou.zhaozz@alibaba-inc.com"
+          },
+          "name": "Zhongzhou Zhao",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zj122146@alibaba-inc.com"
+          },
+          "name": "Ji Zhang",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luo.si@alibaba-inc.com"
+          },
+          "name": "Luo Si",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "masi.wr@alibaba-inc.com"
+          },
+          "name": "Rui Wang",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "hebian.ww@alibaba-inc.com"
+          },
+          "name": "Wei Wang",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        },
+        {
+          "misc": {
+            "email": "haiqing.chenhq@alibaba-inc.com"
+          },
+          "name": "Haiqing Chen",
+          "orgs": [
+            "Alibaba Group"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1811.11374",
+      "date": "2018-11-28T00:00:00",
+      "citation_count": 51,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2512.12658",
+      "score": 0.33333334,
+      "title": "CogDoc: Towards Unified thinking in Documents",
+      "tldr": "[research paper] CogDoc introduces a coarse-to-fine two-stage cognitive framework that resolves the scalability-fidelity trade-off in document reasoning by mimicking human reading behavior: a fast, low-resolution 'Fast Reading' phase for global localization and a focused, high-resolution 'Focused Thinking' phase for detailed inference. The framework achieves state-of-the-art performance in 7B parameter models, outperforming larger proprietary models like GPT-4o on visually rich benchmarks, through a direct reinforcement learning (RL) strategy that avoids policy conflicts inherent in supervised fine-tuning (SFT). A novel data synthesis pipeline generates complex, spatially distributed queries with multi-page navigation and compositional reasoning to enable training of the dual-mode policies.",
+      "abstract": "Current document reasoning paradigms are constrained by a fundamental trade-off between scalability (processing long-context documents) and fidelity (capturing fine-grained, multimodal details). To bridge this gap, we propose CogDoc, a unified coarse-to-fine thinking framework that mimics human cognitive processes: a low-resolution \"Fast Reading\" phase for scalable information localization,followed by a high-resolution \"Focused Thinking\" phase for deep reasoning. We conduct a rigorous investigation into post-training strategies for the unified thinking framework, demonstrating that a Direct Reinforcement Learning (RL) approach outperforms RL with Supervised Fine-Tuning (SFT) initialization. Specifically, we find that direct RL avoids the \"policy conflict\" observed in SFT. Empirically, our 7B model achieves state-of-the-art performance within its parameter class, notably surpassing significantly larger proprietary models (e.g., GPT-4o) on challenging, visually rich document benchmarks.",
+      "authors": [
+        {
+          "misc": {
+            "email": "xqx23@mails.tsinghua.edu.cn"
+          },
+          "name": "Qixin Xu",
+          "orgs": [
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jasper.whz@outlook.com"
+          },
+          "name": "Haozhe Wang",
+          "orgs": [
+            "The Hong Kong University of Science and Technology"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Che Liu",
+          "orgs": [
+            "Imperial College London"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Fangzhen Lin",
+          "orgs": [
+            "The Hong Kong University of Science and Technology"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Wenhu Chen",
+          "orgs": [
+            "University of Waterloo"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2512.12658",
+      "date": "2025-12-14T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.CV"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2601.01785",
+      "score": 0.25,
+      "title": "SRAS: A Lightweight Reinforcement Learning-based Document Selector for Edge-Native RAG Pipelines",
+      "tldr": "[research paper] SRAS introduces a lightweight reinforcement learning-based document selector trained via Proximal Policy Optimization (PPO) using a hybrid reward signal of Relaxed F1 and BERTScore, enabling task-aware, edge-native retrieval without requiring dense annotations or large models. The selector operates under strict compute and memory constraints (\u22640.76MB, <1s CPU latency), outperforms static and random baselines on synthetic QA benchmarks, and achieves strong zero-shot generalization (BERTScore F1 = 0.8546) on real-world SQuAD v2 data through sparse QA supervision and curriculum learning.",
+      "abstract": "Retrieval-Augmented Generation (RAG) systems often rely on fixed top-k document selection mechanisms that ignore downstream generation quality and impose computational overheads. We propose SRAS (Sparse Reward-Aware Selector), a lightweight document selector trained via reinforcement learning (RL) for edge-native RAG deployment. Unlike prior RL-based retrievers that assume large memory and latency budgets, SRAS learns a compact (~0.76MB) policy using Proximal Policy Optimization (PPO), guided by a hybrid reward signal combining Relaxed F1 and BERTScore. Our method operates under tight token and compute constraints, maintaining <1s latency on CPU. SRAS outperforms supervised and random selectors on a synthetic QA benchmark, and generalizes to real-world data, achieving BERTScore F1 of 0.8546 on SQuAD v2 without domain-specific tuning. This work is the first to demonstrate that RL-based document selection can be made ultra-lightweight, latency-aware, and effective for on-device RAG pipelines.",
+      "authors": [
+        {
+          "misc": {
+            "email": "rajiv.muttur@gmail.com",
+            "orcid": "0009-0007-7159-5610"
+          },
+          "name": "Rajiv Chaitanya Muttur",
+          "orgs": [
+            "Dept. of Computer Science and Engineering",
+            "Dayananda Sagar College of Engineering, Bangalore, India"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2601.01785",
+      "date": "2026-01-05T04:39:31",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR",
+        "cs.LG"
+      ],
+      "venue": "2025 First International Conference on Intelligent Computing and Systems at the Edge (ICEdge)",
+      "venue_year": 2025,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2304.00026",
+      "score": 0.25,
+      "title": "Understanding Reinforcement Learning Algorithms: The Progress from Basic Q-learning to Proximal Policy Optimization",
+      "tldr": "[survey paper] This survey traces the historical evolution of reinforcement learning algorithms from foundational Q-learning to modern policy optimization methods like PPO and TD3, offering a beginner-friendly, application-agnostic breakdown of core concepts, algorithmic motivations, inner workings, and limitations. It emphasizes the exploration-exploitation trade-off and the Markov decision process (MDP) framework, structuring the review chronologically to illustrate how key innovations in value-based and policy-based methods addressed convergence, stability, and sample efficiency challenges over time.",
+      "abstract": "This paper presents a review of the field of reinforcement learning (RL), with a focus on providing a comprehensive overview of the key concepts, techniques, and algorithms for beginners. RL has a unique setting, jargon, and mathematics that can be intimidating for those new to the field or artificial intelligence more broadly. While many papers review RL in the context of specific applications, such as games, healthcare, finance, or robotics, these papers can be difficult for beginners to follow due to the inclusion of non-RL-related work and the use of algorithms customized to those specific applications. To address these challenges, this paper provides a clear and concise overview of the fundamental principles of RL and covers the different types of RL algorithms. For each algorithm/method, we outline the main motivation behind its development, its inner workings, and its limitations. The presentation of the paper is aligned with the historical progress of the field, from the early 1980s Q-learning algorithm to the current state-of-the-art algorithms such as TD3, PPO, and offline RL. Overall, this paper aims to serve as a valuable resource for beginners looking to construct a solid understanding of the fundamentals of RL and be aware of the historical progress of the field. It is intended to be a go-to reference for those interested in learning about RL without being distracted by the details of specific applications.",
+      "authors": [
+        {
+          "misc": {
+            "email": "mohamedamine.chadi@ced.uca.ma"
+          },
+          "name": "Mohamed-Amine Chadi",
+          "orgs": [
+            "Laboratory of informatics systems engineering",
+            "Department of Computer Science",
+            "Faculty of Sciences Semlalia",
+            "University of Cadi Ayyad",
+            "Marrakech 40000",
+            "Morocco"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hajar Mousannifa",
+          "orgs": [
+            "Laboratory of informatics systems engineering",
+            "Department of Computer Science",
+            "Faculty of Sciences Semlalia",
+            "University of Cadi Ayyad",
+            "Marrakech 40000",
+            "Morocco"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2304.00026",
+      "date": "2023-03-31T00:00:00",
+      "citation_count": 12,
+      "categories": [
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1905.09438",
+      "score": 0.23225807,
+      "title": "Multi-hop Reading Comprehension via Deep Reinforcement Learning based Document Traversal",
+      "tldr": "[research paper] The paper reframes multi-hop reading comprehension as a finite-horizon Markov Decision Process (MDP), where a deep reinforcement learning (DRL) agent learns to traverse a sentence-level document graph to select relevant knowledge chunks sequentially. A novel sentence graph construction method enables scalable, sparse traversal independent of document length, reducing the state and action space complexity. The RL-based extractor learns to make query-aware decisions about where to look next, leveraging prior knowledge, and when integrated with standard extractors on QAngaroo/WIKIHOP, achieves consistent accuracy gains with 2\u20133x faster training than baseline methods.",
+      "abstract": "Reading Comprehension has received significant attention in recent years as high quality Question Answering (QA) datasets have become available. Despite state-of-the-art methods achieving strong overall accuracy, Multi-Hop (MH) reasoning remains particularly challenging. To address MH-QA specifically, we propose a Deep Reinforcement Learning based method capable of learning sequential reasoning across large collections of documents so as to pass a query-aware, fixed-size context subset to existing models for answer extraction. Our method is comprised of two stages: a linker, which decomposes the provided support documents into a graph of sentences, and an extractor, which learns where to look based on the current question and already-visited sentences. The result of the linker is a novel graph structure at the sentence level that preserves logical flow while still allowing rapid movement between documents. Importantly, we demonstrate that the sparsity of the resultant graph is invariant to context size. This translates to fewer decisions required from the Deep-RL trained extractor, allowing the system to scale effectively to large collections of documents.\\\n  The importance of sequential decision making in the document traversal step is demonstrated by comparison to standard IE methods, and we additionally introduce a BM25-based IR baseline that retrieves documents relevant to the query only. We examine the integration of our method with existing models on the recently proposed QAngaroo benchmark and achieve consistent increases in accuracy across the board, as well as a 2-3x reduction in training time.",
+      "authors": [
+        {
+          "misc": {
+            "email": "alex.long@unsw.edu.au"
+          },
+          "name": "Alex Long",
+          "orgs": [
+            "School of Computer Science and Engineering",
+            "University of New South Wales",
+            "Sydney"
+          ]
+        },
+        {
+          "misc": {
+            "email": "joel.mason@unsw.edu.au"
+          },
+          "name": "Joel Mason",
+          "orgs": [
+            "School of Computer Science and Engineering",
+            "University of New South Wales",
+            "Sydney"
+          ]
+        },
+        {
+          "misc": {
+            "email": "blair@cse.unsw.edu.au"
+          },
+          "name": "Alan Blair",
+          "orgs": [
+            "School of Computer Science and Engineering",
+            "University of New South Wales",
+            "Sydney"
+          ]
+        },
+        {
+          "misc": {
+            "email": "weiw@unsw.edu.au"
+          },
+          "name": "Wei Wang",
+          "orgs": [
+            "School of Computer Science and Engineering",
+            "University of New South Wales",
+            "Sydney"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1905.09438",
+      "date": "2019-05-23T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.NE"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1708.00667",
+      "score": 0.2,
+      "title": "Deep Reinforcement Learning for Inquiry Dialog Policies with Logical Formula Embeddings",
+      "tldr": "[research paper] This paper presents the first application of deep reinforcement learning (DRL) to learn policies for inquiry dialog systems (IDS), where dialog states and acts are represented using first-order logical formulae. It introduces a recursive neural network-based logical formula embedding framework that encodes logical structures into continuous vector representations, enabling DRL agents to learn policy actions (e.g., assertions, arguments) in a semantically grounded way. Experimental results show that the DRL approach with logical formula embeddings outperforms or matches rule-based policies in generating effective, contextually coherent dialog responses in compliance violation detection tasks.",
+      "abstract": "This paper is the first attempt to learn the policy of an inquiry dialog system (IDS) by using deep reinforcement learning (DRL). Most IDS frameworks represent dialog states and dialog acts with logical formulae. In order to make learning inquiry dialog policies more effective, we introduce a logical formula embedding framework based on a recursive neural network. The results of experiments to evaluate the effect of 1) the DRL and 2) the logical formula embedding framework show that the combination of the two are as effective or even better than existing rule-based methods for inquiry dialog policies.",
+      "authors": [
+        {
+          "misc": {
+            "email": "t-hiraoka@ce.jp.nec.com"
+          },
+          "name": "Takuya Hiraoka",
+          "orgs": [
+            "NEC Data Science Research Laboratories, Japan"
+          ]
+        },
+        {
+          "misc": {
+            "email": "m-tsuchida@cq.jp.nec.com"
+          },
+          "name": "Masaaki Tsuchida",
+          "orgs": [
+            "NEC Data Science Research Laboratories, Japan"
+          ]
+        },
+        {
+          "misc": {
+            "email": "y_watanabe@pkshatech.com"
+          },
+          "name": "Yotaro Watanabe",
+          "orgs": [
+            "PKSHA Technology Inc., Japan"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1708.00667",
+      "date": "2017-08-02T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2604.17337",
+      "score": 0.16666667,
+      "title": "AutoSearch: Adaptive Search Depth for Efficient Agentic RAG via Reinforcement Learning",
+      "tldr": "[research paper] AutoSearch introduces a self-answer-driven reinforcement learning framework that dynamically determines the minimal sufficient search depth in agentic RAG systems by generating intermediate answers at each retrieval step. It establishes an accuracy-efficiency trade-off by rewarding attainment of the minimal depth and penalizing over-searching, with a base reward stabilizing behavior and a quality-based reward improving performance on complex queries. Experiments show superior efficiency without sacrificing accuracy across single-hop and multi-hop QA tasks.",
+      "abstract": "Agentic retrieval-augmented generation (RAG) systems enable large language models (LLMs) to solve complex tasks through multi-step interaction with external retrieval tools. However, such multi-step interaction often involves redundant search steps, incurring substantial computational cost and latency. Prior work limits search depth (i.e., the number of search steps) to reduce cost, but this often leads to underexploration of complex questions. To address this, we first investigate how search depth affects accuracy and find a minimal sufficient search depth that defines an accuracy-efficiency trade-off, jointly determined by question complexity and the agent's capability. Furthermore, we propose AutoSearch, a reinforcement learning (RL) framework that evaluates each search step via self-generated intermediate answers. By a self-answering mechanism, AutoSearch identifies the minimal sufficient search depth and promotes efficient search by rewarding its attainment while penalizing over-searching. In addition, reward mechanisms are introduced to stabilize search behavior and improve answer quality on complex questions. Extensive experiments on multiple benchmarks show that AutoSearch achieves a superior accuracy-efficiency trade-off, alleviating over-searching while preserving search quality.",
+      "authors": "Jingbo Sun, Wenyue Chong, Songjun Tu, Qichao Zhang, Yaocheng Zhang, Jiajun Chai, Xiaohan Wang, Wei Lin, Guojun Yin, Dongbin Zhao",
+      "url": "https://arxiv.org/abs/2604.17337",
+      "date": "2026-04-19T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/bofusun/AutoSearch"
+    },
+    {
+      "arxiv_id": "2403.15065",
+      "score": 0.16666667,
+      "title": "Testing for Fault Diversity in Reinforcement Learning",
+      "tldr": "[research paper] The paper reformulates policy testing in reinforcement learning as a Quality Diversity (QD) optimization problem, where the goal is not to maximize fault count but to discover diverse, behaviorally distinct fault-inducing inputs. It introduces two classical QD algorithms to generate diverse fault cases in neural policy models, demonstrating superior fault diversity compared to state-of-the-art policy testing frameworks\u2014without increasing test budget\u2014by leveraging behavior space diversity rather than raw input diversity.",
+      "abstract": "Reinforcement Learning is the premier technique to approach sequential decision problems, including complex tasks such as driving cars and landing spacecraft. Among the software validation and verification practices, testing for functional fault detection is a convenient way to build trustworthiness in the learned decision model. While recent works seek to maximise the number of detected faults, none consider fault characterisation during the search for more diversity. We argue that policy testing should not find as many failures as possible (e.g., inputs that trigger similar car crashes) but rather aim at revealing as informative and diverse faults as possible in the model. In this paper, we explore the use of quality diversity optimisation to solve the problem of fault diversity in policy testing. Quality diversity (QD) optimisation is a type of evolutionary algorithm to solve hard combinatorial optimisation problems where high-quality diverse solutions are sought. We define and address the underlying challenges of adapting QD optimisation to the test of action policies. Furthermore, we compare classical QD optimisers to state-of-the-art frameworks dedicated to policy testing, both in terms of search efficiency and fault diversity. We show that QD optimisation, while being conceptually simple and generally applicable, finds effectively more diverse faults in the decision model, and conclude that QD-based policy testing is a promising approach.",
+      "authors": [
+        {
+          "misc": {
+            "email": "quentin@simula.no"
+          },
+          "name": "Quentin Mazouni",
+          "orgs": [
+            "Simula Research Laboratory",
+            "Oslo",
+            "Norway"
+          ]
+        },
+        {
+          "misc": {
+            "email": "helge@simula.no"
+          },
+          "name": "Helge Spieker",
+          "orgs": [
+            "Simula Research Laboratory",
+            "Oslo",
+            "Norway"
+          ]
+        },
+        {
+          "misc": {
+            "email": "arnaud@simula.no"
+          },
+          "name": "Arnaud Gotlieb",
+          "orgs": [
+            "Simula Research Laboratory",
+            "Oslo",
+            "Norway"
+          ]
+        },
+        {
+          "misc": {
+            "email": "mathieu.acher@irisa.fr"
+          },
+          "name": "Mathieu Acher",
+          "orgs": [
+            "Univ Rennes",
+            "Inria",
+            "INSA Rennes",
+            "CNRS",
+            "IRISA",
+            "Rennes",
+            "France"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2403.15065",
+      "date": "2024-03-22T00:00:00",
+      "citation_count": 8,
+      "categories": [
+        "cs.SE"
+      ],
+      "venue": "International Conference/Workshop on Automation of Software Test",
+      "venue_year": 2024,
+      "github_url": "https://github.com/QuentinMaz/QD_Based_Testing_RL"
+    }
+  ]
+}

@@ -1,0 +1,618 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2604.17337",
+      "score": 0.8333334,
+      "title": "AutoSearch: Adaptive Search Depth for Efficient Agentic RAG via Reinforcement Learning",
+      "tldr": "[research paper] AutoSearch introduces a self-answer-driven reinforcement learning framework that dynamically determines the minimal sufficient search depth in agentic RAG systems by generating intermediate answers at each retrieval step. It establishes an accuracy-efficiency trade-off by rewarding attainment of the minimal depth and penalizing over-searching, with a base reward stabilizing behavior and a quality-based reward improving performance on complex queries. Experiments show superior efficiency without sacrificing accuracy across single-hop and multi-hop QA tasks.",
+      "abstract": "Agentic retrieval-augmented generation (RAG) systems enable large language models (LLMs) to solve complex tasks through multi-step interaction with external retrieval tools. However, such multi-step interaction often involves redundant search steps, incurring substantial computational cost and latency. Prior work limits search depth (i.e., the number of search steps) to reduce cost, but this often leads to underexploration of complex questions. To address this, we first investigate how search depth affects accuracy and find a minimal sufficient search depth that defines an accuracy-efficiency trade-off, jointly determined by question complexity and the agent's capability. Furthermore, we propose AutoSearch, a reinforcement learning (RL) framework that evaluates each search step via self-generated intermediate answers. By a self-answering mechanism, AutoSearch identifies the minimal sufficient search depth and promotes efficient search by rewarding its attainment while penalizing over-searching. In addition, reward mechanisms are introduced to stabilize search behavior and improve answer quality on complex questions. Extensive experiments on multiple benchmarks show that AutoSearch achieves a superior accuracy-efficiency trade-off, alleviating over-searching while preserving search quality.",
+      "authors": "Jingbo Sun, Wenyue Chong, Songjun Tu, Qichao Zhang, Yaocheng Zhang, Jiajun Chai, Xiaohan Wang, Wei Lin, Guojun Yin, Dongbin Zhao",
+      "url": "https://arxiv.org/abs/2604.17337",
+      "date": "2026-04-19T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/bofusun/AutoSearch"
+    },
+    {
+      "arxiv_id": "2510.15719",
+      "score": 0.54347825,
+      "title": "Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive Retrieval Depth",
+      "tldr": "[research paper] The paper proposes Dynamic Search-R1, a reinforcement learning-based extension of Search-R1 that dynamically adjusts retrieval depth based on query context and retrieval results. It introduces cost-aware advantage functions\u2014both memory-bound (minimizing total tokens) and latency-bound (separating generation and retrieval token latencies)\u2014to optimize efficiency during training via PPO and GRPO. Experiments on seven QA datasets show 16\u201320% latency reduction and 5% improvement in exact match accuracy, with latency-bound cost modeling outperforming memory-bound due to the 600%+ latency gap between token generation and retrieval encoding.",
+      "abstract": "Reasoning models have gained significant attention due to their strong performance, particularly when enhanced with retrieval augmentation. However, these models often incur high computational costs, as both retrieval and reasoning tokens contribute substantially to the overall resource usage. In this work, we make the following contributions: (1) we propose a retrieval-augmented reasoning model that dynamically adjusts the length of the retrieved document list based on the query and retrieval results; (2) we develop a cost-aware advantage function for training of efficient retrieval-augmented reasoning models through reinforcement learning; and (3) we explore both memory- and latency-bound implementations of the proposed cost-aware framework for both proximal and group relative policy optimization algorithms. We evaluate our approach on seven public question answering datasets and demonstrate significant efficiency gains, without compromising effectiveness. In fact, we observed that the model latency decreases by ~16-20% across datasets, while its effectiveness increases by ~5% on average, in terms of exact match.",
+      "authors": [
+        {
+          "misc": {
+            "email": "heliahashemi@microsoft.com"
+          },
+          "name": "Helia Hashemi",
+          "orgs": [
+            "Microsoft Cambridge, MA, United States"
+          ]
+        },
+        {
+          "misc": {
+            "email": "virueh@microsoft.com"
+          },
+          "name": "Victor R\u00fchle",
+          "orgs": [
+            "Microsoft Cambridge, United Kingdom"
+          ]
+        },
+        {
+          "misc": {
+            "email": "rajmohan@microsoft.com"
+          },
+          "name": "Saravan Rajmohan",
+          "orgs": [
+            "Microsoft Redmond, WA, United States"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2510.15719",
+      "date": "2025-10-17T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": 2026,
+      "github_url": "https://github.com/petergriffinjin/search-r1"
+    },
+    {
+      "arxiv_id": "2412.01572",
+      "score": 0.4,
+      "title": "MBA-RAG: a Bandit Approach for Adaptive Retrieval-Augmented Generation through Question Complexity",
+      "tldr": "[research paper] MBA-RAG introduces a multi-armed bandit framework that dynamically selects retrieval strategies based on query complexity, replacing rigid single-class routing with exploration-exploitation balancing via epsilon-greedy sampling. It employs a fine-grained reward function that jointly optimizes generation accuracy and computational cost, penalizing high-cost strategies even when correct, leading to SOTA performance on single-hop and multi-hop datasets with up to 20% reduction in retrieval overhead.",
+      "abstract": "Retrieval Augmented Generation (RAG) has proven to be highly effective in boosting the generative performance of language model in knowledge-intensive tasks. However, existing RAG framework either indiscriminately perform retrieval or rely on rigid single-class classifiers to select retrieval methods, leading to inefficiencies and suboptimal performance across queries of varying complexity. To address these challenges, we propose a reinforcement learning-based framework that dynamically selects the most suitable retrieval strategy based on query complexity. % our solution Our approach leverages a multi-armed bandit algorithm, which treats each retrieval method as a distinct ``arm'' and adapts the selection process by balancing exploration and exploitation. Additionally, we introduce a dynamic reward function that balances accuracy and efficiency, penalizing methods that require more retrieval steps, even if they lead to a correct result. Our method achieves new state of the art results on multiple single-hop and multi-hop datasets while reducing retrieval costs. Our code are available at https://github.com/FUTUREEEEEE/MBA .",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Xiaqiang Tang",
+          "orgs": [
+            "The Hong Kong University of Science and Technology (Guangzhou)",
+            "Tencent Hunyuan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qiang Gao",
+          "orgs": [
+            "Tencent Hunyuan",
+            "Wuhan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jian Li",
+          "orgs": [
+            "Tencent Hunyuan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Nan Du",
+          "orgs": [
+            "Tencent Hunyuan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qi Li",
+          "orgs": [
+            "Iowa State University"
+          ]
+        },
+        {
+          "misc": {
+            "url": "",
+            "email": "sihongxie@hkust-gz.edu.cn"
+          },
+          "name": "Sihong Xie",
+          "orgs": [
+            "The Hong Kong University of Science and Technology (Guangzhou)"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2412.01572",
+      "date": "2024-12-02T00:00:00",
+      "citation_count": 35,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "International Conference on Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/FUTUREEEEEE/MBA"
+    },
+    {
+      "arxiv_id": "2506.19783",
+      "score": 0.33333334,
+      "title": "SAGE: Strategy-Adaptive Generation Engine for Query Rewriting",
+      "tldr": "[research paper] SAGE introduces a strategy-guided reinforcement learning framework for query rewriting in dense retrieval, where expert-crafted strategies are integrated into the GRPO algorithm to steer LLMs toward effective query reformulation. Two novel reward shaping mechanisms\u2014Strategic Credit Shaping (SCS) and Contrastive Reward Shaping (CRS)\u2014enhance learning signals by promoting exploration and mitigating reward hacking, enabling the agent to select optimal strategies, reduce redundant token usage, and achieve state-of-the-art NDCG@10 performance on HotpotQA and NFCorpus while exhibiting emergent efficiency in reasoning and inference.",
+      "abstract": "Query rewriting is pivotal for enhancing dense retrieval, yet current methods demand large-scale supervised data or suffer from inefficient reinforcement learning (RL) exploration. In this work, we first establish that guiding Large Language Models (LLMs) with a concise set of expert-crafted strategies, such as semantic expansion and entity disambiguation, substantially improves retrieval effectiveness on challenging benchmarks, including HotpotQA, FEVER, NFCorpus, and SciFact. Building on this insight, we introduce the Strategy-Adaptive Generation Engine (SAGE), which operationalizes these strategies in an RL framework. SAGE introduces two novel reward shaping mechanisms-Strategic Credit Shaping (SCS) and Contrastive Reward Shaping (CRS)-to deliver more informative learning signals. This strategy-guided approach not only achieves new state-of-the-art NDCG@10 results, but also uncovers a compelling emergent behavior: the agent learns to select optimal strategies, reduces unnecessary exploration, and generates concise rewrites, lowering inference cost without sacrificing performance. Our findings demonstrate that strategy-guided RL, enhanced with nuanced reward shaping, offers a scalable, efficient, and more interpretable paradigm for developing the next generation of robust information retrieval systems.",
+      "authors": [
+        {
+          "misc": {
+            "email": "wt0318@connect.hku.hk"
+          },
+          "name": "Teng Wang",
+          "orgs": [
+            "OPPO Research Institution"
+          ]
+        },
+        {
+          "misc": {
+            "email": "gonghl18@mails.tsinghua.edu.cn"
+          },
+          "name": "Hailei Gong",
+          "orgs": [
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhangchangwang@oppo.com"
+          },
+          "name": "Changwang Zhang",
+          "orgs": [
+            "OPPO Research Institution"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wangjun7@oppo.com"
+          },
+          "name": "Jun Wang",
+          "orgs": [
+            "OPPO Research Institution"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.19783",
+      "date": "2025-06-24T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2602.22576",
+      "score": 0.28125,
+      "title": "Search-P1: Path-Centric Reward Shaping for Stable and Efficient Agentic RAG Training",
+      "tldr": "[research paper] Search-P1 introduces path-centric reward shaping to overcome sparse rewards and low sample efficiency in agentic RAG training by evaluating reasoning trajectories at the path level. It employs dual-track path scoring\u2014self-consistency and reference-alignment\u2014with order-agnostic step coverage to provide dense, intermediate feedback, and soft outcome scoring to assign partial credit to failed trajectories, enabling learning from all samples. This results in faster convergence and a 7.7-point average accuracy gain across QA benchmarks.",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by incorporating external knowledge, yet traditional single-round retrieval struggles with complex multi-step reasoning. Agentic RAG addresses this by enabling LLMs to dynamically decide when and what to retrieve, but current RL-based training methods suffer from sparse outcome rewards that discard intermediate signals and low sample efficiency where failed samples contribute nothing. We propose Search-P1, a framework that introduces path-centric reward shaping for agentic RAG training, comprising two key components: (1) Path-Centric Reward, which evaluates the structural quality of reasoning trajectories through order-agnostic step coverage and soft scoring that extracts learning signals even from failed samples, and (2) Dual-Track Path Scoring with offline-generated reference planners that assesses paths from both self-consistency and reference-alignment perspectives. Experiments on multiple QA benchmarks demonstrate that Search-P1 achieves significant improvements over Search-R1 and other strong baselines, with an average accuracy gain of 7.7 points.",
+      "authors": [
+        {
+          "misc": {
+            "email": "tianlexia@tencent.com"
+          },
+          "name": "Tianle Xia",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "flemingxu@tencent.com"
+          },
+          "name": "Ming Xu",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "lingxianghu@tencent.com"
+          },
+          "name": "Lingxiang Hu",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "emanuelsun@tencent.com"
+          },
+          "name": "Yiding Sun",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wenweiwwli@tencent.com"
+          },
+          "name": "Wenwei Li",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "faelynshang@tencent.com"
+          },
+          "name": "Linfang Shang",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "liqunliu@tencent.com"
+          },
+          "name": "Liqun Liu",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "archershu@tencent.com"
+          },
+          "name": "Peng Shu",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "huanyu@tencent.com"
+          },
+          "name": "Huan Yu",
+          "orgs": [
+            "Tencent"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zeus@tencent.com"
+          },
+          "name": "Jie Jiang",
+          "orgs": [
+            "Tencent"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2602.22576",
+      "date": "2026-02-26T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.CL",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2411.19478",
+      "score": 0.25,
+      "title": "Zero-Indexing Internet Search Augmented Generation for Large Language Models",
+      "tldr": "[research paper] The paper proposes a zero-indexing paradigm for Internet search augmented generation that bypasses static indexing by directly leveraging search engine APIs (e.g., Google, Bing) to retrieve and process real-time web content. It introduces a parser-LLM to detect when search augmentation is needed and extract keywords, a mixed ranking strategy to re-rank HTML results by semantic relevance (using both snippets and full content), and an extractor-LLM trained via supervised fine-tuning and preference optimization to accurately extract relevant information from unstructured HTML pages\u2014without maintaining any pre-indexed corpus. Empirical results show superior content quality and cost efficiency over traditional RAG methods, with robust rejection of hallucinated or irrelevant content in production deployment.",
+      "abstract": "Retrieval augmented generation has emerged as an effective method to enhance large language model performance. This approach typically relies on an internal retrieval module that uses various indexing mechanisms to manage a static pre-processed corpus. However, such a paradigm often falls short when it is necessary to integrate the most up-to-date information that has not been updated into the corpus during generative inference time. In this paper, we explore an alternative approach that leverages standard search engine APIs to dynamically integrate the latest online information (without maintaining any index for any fixed corpus), thereby improving the quality of generated content. We design a collaborative LLM-based paradigm, where we include: (i) a parser-LLM that determines if the Internet augmented generation is demanded and extracts the search keywords if so with a single inference; (ii) a mixed ranking strategy that re-ranks the retrieved HTML files to eliminate bias introduced from the search engine API; and (iii) an extractor-LLM that can accurately and efficiently extract relevant information from the fresh content in each HTML file. We conduct extensive empirical studies to evaluate the performance of this Internet search augmented generation paradigm. The experimental results demonstrate that our method generates content with significantly improved quality. Our system has been successfully deployed in a production environment to serve 01.AI's generative inference requests.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Guangxin He",
+          "orgs": [
+            "HKUST",
+            "Fudan University",
+            "01.AI",
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zonghong Dai",
+          "orgs": [
+            "HKUST",
+            "Fudan University",
+            "01.AI",
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jiangcheng Zhu",
+          "orgs": [
+            "01.AI",
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Binqiang Zhao",
+          "orgs": [
+            "01.AI",
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qicheng Hu",
+          "orgs": [
+            "01.AI",
+            "Tsinghua University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Chenyue Li",
+          "orgs": [
+            "HKUST"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "You Peng",
+          "orgs": [
+            "HKUST"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Chen Wang",
+          "orgs": [
+            "HKUST"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Binhang Yuan",
+          "orgs": [
+            "HKUST"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2411.19478",
+      "date": "2024-11-29T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2602.07297",
+      "score": 0.18452382,
+      "title": "Progressive Searching for Retrieval in RAG",
+      "tldr": "[research paper] A progressive searching algorithm is proposed to optimize retrieval in Retrieval-Augmented Generation (RAG) systems by performing multi-stage similarity searches across decreasing dimensions\u2014starting from low-dimensional embeddings and progressively refining the candidate set through higher-dimensional passes. This approach reduces query latency without sacrificing top-1 retrieval accuracy, outperforming baseline methods like truncated KNN and PCA in scalability, while demonstrating that dimensionality reduction can be effectively managed through hierarchical search stages rather than linear projection. The method balances speed, accuracy, and computational cost, enabling efficient retrieval in large-scale document databases with high-dimensional embeddings.",
+      "abstract": "Retrieval Augmented Generation (RAG) is a promising technique for mitigating two key limitations of large language models (LLMs): outdated information and hallucinations. RAG system stores documents as embedding vectors in a database. Given a query, search is executed to find the most related documents. Then, the topmost matching documents are inserted into LLMs' prompt to generate a response. Efficient and accurate searching is critical for RAG to get relevant information. We propose a cost-effective searching algorithm for retrieval process. Our progressive searching algorithm incrementally refines the candidate set through a hierarchy of searches, starting from low-dimensional embeddings and progressing into a higher, target-dimensionality. This multi-stage approach reduces retrieval time while preserving the desired accuracy. Our findings demonstrate that progressive search in RAG systems achieves a balance between dimensionality, speed, and accuracy, enabling scalable and high-performance retrieval even for large databases.",
+      "authors": [
+        {
+          "misc": {
+            "email": "taehee.jeong"
+          },
+          "name": "Taehee Jeong",
+          "orgs": [
+            "San Jose State University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xingzhe.zhao"
+          },
+          "name": "Xingzhe Zhao",
+          "orgs": [
+            "San Jose State University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "peizu.li"
+          },
+          "name": "Peizu Li",
+          "orgs": [
+            "San Jose State University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "markus.valvur"
+          },
+          "name": "Markus Valvur",
+          "orgs": [
+            "San Jose State University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "weihua.zhao@sjsu.edu"
+          },
+          "name": "Weihua Zhao",
+          "orgs": [
+            "San Jose State University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2602.07297",
+      "date": "2026-02-07T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "venue": "International Conference on Machine Learning and Applications",
+      "venue_year": 2025,
+      "github_url": "https://github.com/taeheej/Progressive-searching-for-Retrieval-in-RAG."
+    },
+    {
+      "arxiv_id": "2505.17391",
+      "score": 0.16666667,
+      "title": "Curriculum Guided Reinforcement Learning for Efficient Multi Hop Retrieval Augmented Generation",
+      "tldr": "[research paper] EVO-RAG introduces a curriculum-guided reinforcement learning framework that evolves a query-rewriting agent through two distinct phases\u2014initial broad exploration (Discovery) and subsequent precise refinement (Refinement)\u2014using a seven-factor step-level reward vector that tracks relevance, redundancy, efficiency, and correctness. A dynamic, time-varying reward scheduler progressively shifts emphasis from exploration to refinement, enabling the agent to reduce retrieval depth by 15% and boost Exact Match by up to 4.6 points across multi-hop QA benchmarks, with ablation studies confirming the critical role of both curriculum staging and adaptive reward weighting.",
+      "abstract": "Retrieval-augmented generation (RAG) grounds large language models (LLMs) in up-to-date external evidence, yet existing multi-hop RAG pipelines still issue redundant subqueries, explore too shallowly, or wander through overly long search chains. We introduce EVO-RAG, a curriculum-guided reinforcement learning framework that evolves a query-rewriting agent from broad early-stage exploration to concise late-stage refinement. EVO-RAG couples a seven-factor, step-level reward vector (covering relevance, redundancy, efficiency, and answer correctness) with a time-varying scheduler that reweights these signals as the episode unfolds. The agent is trained with Direct Preference Optimization over a multi-head reward model, enabling it to learn when to search, backtrack, answer, or refuse. Across four multi-hop QA benchmarks (HotpotQA, 2WikiMultiHopQA, MuSiQue, and Bamboogle), EVO-RAG boosts Exact Match by up to 4.6 points over strong RAG baselines while trimming average retrieval depth by 15 %. Ablation studies confirm the complementary roles of curriculum staging and dynamic reward scheduling. EVO-RAG thus offers a general recipe for building reliable, cost-effective multi-hop RAG systems.",
+      "authors": [
+        {
+          "misc": {
+            "url": "https://orcid.org/0000-0001-6389-5823",
+            "email": "yuj49@pitt.edu",
+            "orcid": "0000-0001-6389-5823"
+          },
+          "name": "Yuelyu Ji",
+          "orgs": [
+            "University of Pittsburgh",
+            "Pittsburgh",
+            "PA",
+            "USA"
+          ]
+        },
+        {
+          "misc": {
+            "url": "https://orcid.org/0000-0001-5583-4924",
+            "orcid": "0000-0001-5583-4924"
+          },
+          "name": "Rui Meng",
+          "orgs": [
+            "Google Cloud AI Research",
+            "Sunnyvale",
+            "CA",
+            "USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhuochun Li",
+          "orgs": [
+            "University of Pittsburgh",
+            "Pittsburgh",
+            "PA",
+            "USA"
+          ]
+        },
+        {
+          "misc": {
+            "url": "https://orcid.org/0000-0002-4645-8696",
+            "orcid": "0000-0002-4645-8696"
+          },
+          "name": "Daqing He",
+          "orgs": [
+            "University of Pittsburgh",
+            "Pittsburgh",
+            "PA",
+            "USA"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2505.17391",
+      "date": "2025-05-23T00:00:00",
+      "citation_count": 5,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2512.05958",
+      "score": 0.16666667,
+      "title": "MaxShapley: Towards Incentive-compatible Generative Search with Fair Context Attribution",
+      "tldr": "[research paper] MAXSHAPLEY introduces an efficient, incentive-compatible attribution mechanism for retrieval-augmented generation (RAG) systems by leveraging a decomposable max-sum utility function to approximate Shapley values with linear computational complexity\u2014dramatically reducing resource consumption (up to 8x) compared to exact Shapley computation while maintaining comparable attribution accuracy. It enables fair, economically grounded credit assignment to content providers based on their contribution to generated answers, using only black-box LLM evaluations without requiring access to internal logits or ground truth, thus making it practical for real-world generative search pipelines.",
+      "abstract": "Generative search engines based on large language models (LLMs) are replacing traditional search, fundamentally changing how information providers are compensated. To sustain this ecosystem, we need fair mechanisms to attribute and compensate content providers based on their contributions to generated answers. We introduce MaxShapley, an efficient algorithm for fair attribution in generative search pipelines that use retrieval-augmented generation (RAG). MaxShapley is a special case of the celebrated Shapley value; it leverages a decomposable max-sum utility function to compute attributions with linear computation in the number of documents, as opposed to the exponential cost of Shapley values. We evaluate MaxShapley on three multi-hop QA datasets (HotPotQA, MuSiQUE, MS MARCO); MaxShapley achieves comparable attribution quality to exact Shapley computation, while consuming a fraction of its tokens--for instance, it gives up to an 8x reduction in resource consumption over prior state-of-the-art methods at the same attribution accuracy.",
+      "authors": [
+        "Sara Patel",
+        "Mingxun Zhou",
+        "Giulia Fanti"
+      ],
+      "url": "https://arxiv.org/abs/2512.05958",
+      "date": "2025-12-05T18:54:21",
+      "citation_count": 1,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/spaddle-boat/MaxShapley"
+    },
+    {
+      "arxiv_id": "2505.14146",
+      "score": 0.16413374,
+      "title": "s3: You Don't Need That Much Data to Train a Search Agent via RL",
+      "tldr": "[research paper] s3 introduces a model-agnostic, reinforcement learning-based framework that trains a standalone search agent using a novel reward\u2014Gain Beyond RAG (GBR)\u2014which measures improvement in generation accuracy over naive top-k retrieval. By decoupling search from generation and freezing the generator LLM, s3 avoids entanglement and overfitting, achieving superior downstream performance on six general and five medical QA benchmarks with only 2.4k training samples, outperforming state-of-the-art methods trained on 70\u00d7 more data.",
+      "abstract": "Retrieval-augmented generation (RAG) systems empower large language models (LLMs) to access external knowledge during inference. Recent advances have enabled LLMs to act as search agents via reinforcement learning (RL), improving information acquisition through multi-turn interactions with retrieval engines. However, existing approaches either optimize retrieval using search-only metrics (e.g., NDCG) that ignore downstream utility or fine-tune the entire LLM to jointly reason and retrieve-entangling retrieval with generation and limiting the real search utility and compatibility with frozen or proprietary models. In this work, we propose s3, a lightweight, model-agnostic framework that decouples the searcher from the generator and trains the searcher using a Gain Beyond RAG reward: the improvement in generation accuracy over naive RAG. s3 requires only 2.4k training samples to outperform baselines trained on over 70x more data, consistently delivering stronger downstream performance across six general QA and five medical QA benchmarks.",
+      "authors": [
+        {
+          "misc": {
+            "email": "pj20@illinois.edu"
+          },
+          "name": "Pengcheng Jiang",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xueqiang Xu",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jiacheng Lin",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jinfeng Xiao",
+          "orgs": [
+            "University of Illinois Urbana Champaign",
+            "Amazon"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zifeng Wang",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jimeng@illinois.edu"
+          },
+          "name": "Jimeng Sun",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        },
+        {
+          "misc": {
+            "email": "hanj@illinois.edu"
+          },
+          "name": "Jiawei Han",
+          "orgs": [
+            "University of Illinois Urbana Champaign"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2505.14146",
+      "date": "2025-05-20T00:00:00",
+      "citation_count": 30,
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": "https://github.com/pat-jj/s3"
+    }
+  ]
+}

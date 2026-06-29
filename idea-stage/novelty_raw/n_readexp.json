@@ -1,0 +1,398 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2001.09608",
+      "score": 0.5,
+      "title": "Some Insights into Lifelong Reinforcement Learning Systems",
+      "tldr": "[research paper] The paper challenges the traditional reinforcement learning paradigm, which treats learning as a generational process external to individual agents, arguing that lifelong reinforcement learning must instead embed learning within the agent's lifetime. It proposes that policy improvement occurs incrementally through on-the-fly updates (e.g., Q-learning) using observation histories, where each timestep contributes to real-time policy refinement rather than waiting for end-of-life evaluation. This shift emphasizes internal, continuous adaptation over inter-agent optimization, redefining the learning process as a dynamic, lifetime-spanning cognitive mechanism.",
+      "abstract": "A lifelong reinforcement learning system is a learning system that has the ability to learn through trail-and-error interaction with the environment over its lifetime. In this paper, I give some arguments to show that the traditional reinforcement learning paradigm fails to model this type of learning system. Some insights into lifelong reinforcement learning are provided, along with a simplistic prototype lifelong reinforcement learning system.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Changjian Li",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2001.09608",
+      "date": "2020-01-27T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2602.05014",
+      "score": 0.5,
+      "title": "DeepRead: Document Structure-Aware Reasoning to Enhance Agentic Search",
+      "tldr": "[research paper] DeepRead introduces a structure-aware agentic search framework that leverages document-native hierarchy and sequential organization by converting PDFs into structured Markdown with preserved headings and paragraph boundaries. It assigns coordinate-style metadata to paragraphs to enable precise localization and order-preserving reading, introducing two complementary tools\u2014Retrieve (for structural anchoring) and ReadSection (for contiguous, section-level reading)\u2014that enable human-like 'locate then read' reasoning. Experiments show superior performance over Search-o1-style agents in long-document QA, with reduced redundancy, improved completeness, and validated synergistic interaction between retrieval and reading.",
+      "abstract": "With the rapid progress of tool-using and agentic large language models (LLMs), Retrieval-Augmented Generation (RAG) is evolving from one-shot, passive retrieval into multi-turn, decision-driven evidence acquisition. Despite strong results in open-domain settings, existing agentic search frameworks commonly treat long documents as flat collections of chunks, underutilizing document-native priors such as hierarchical organization and sequential discourse structure. We introduce DeepRead, a structure-aware, multi-turn document reasoning agent that explicitly operationalizes these priors for long-document question answering. DeepRead leverages LLM-based OCR model to convert PDFs into structured Markdown that preserves headings and paragraph boundaries. It then indexes documents at the paragraph level and assigns each paragraph a coordinate-style metadata key encoding its section identity and in-section order. Building on this representation, DeepRead equips the LLM with two complementary tools: a Retrieve tool that localizes relevant paragraphs while exposing their structural coordinates (with lightweight scanning context), and a ReadSection tool that enables contiguous, order-preserving reading within a specified section and paragraph range. Our experiments demonstrate that DeepRead achieves significant improvements over Search-o1-style agentic search in document question answering. The synergistic effect between retrieval and reading tools is also validated. Our fine-grained behavioral analysis reveals a reading and reasoning paradigm resembling human-like ``locate then read'' behavior.",
+      "authors": [
+        {
+          "misc": {
+            "email": "lizhanli@stu.zuel.edu.cn"
+          },
+          "name": "Zhanli Li",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "tianhuiwen25@mails.ucas.ac.cn"
+          },
+          "name": "Huiwen Tian",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luolvzhou23s@ict.ac.cn"
+          },
+          "name": "Lvzhou Luo",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "caoyixuan@ict.ac.cn"
+          },
+          "name": "Yixuan Cao",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luop@ict.ac.cn"
+          },
+          "name": "Ping Luo",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2602.05014",
+      "date": "2026-02-04T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2508.01612",
+      "score": 0.33333334,
+      "title": "Augmented Reinforcement Learning Framework For Enhancing Decision-Making In Machine Learning Models Using External Agents",
+      "tldr": "[Master's Thesis] The paper introduces an Augmented Reinforcement Learning (ARL) framework that integrates two external agents\u2014real-time evaluators and curated feedback agents\u2014to improve decision-making in machine learning models by actively correcting suboptimal decisions and curating high-quality training data. In a real-world document identification and information extraction task, the framework establishes a rejected data pipeline to flag erroneous model outputs and enables human-in-the-loop feedback refinement, resulting in significantly improved model robustness, accuracy, and reliability in ambiguous or complex scenarios through a closed-loop data correction mechanism.",
+      "abstract": "This work proposes a novel technique Augmented Reinforcement Learning framework for the improvement of decision-making capabilities of machine learning models. The introduction of agents as external overseers checks on model decisions. The external agent can be anyone, like humans or automated scripts, that helps in decision path correction. It seeks to ascertain the priority of the \"Garbage-In, Garbage-Out\" problem that caused poor data inputs or incorrect actions in reinforcement learning. The ARL framework incorporates two external agents that aid in course correction and the guarantee of quality data at all points of the training cycle. The External Agent 1 is a real-time evaluator, which will provide feedback light of decisions taken by the model, identify suboptimal actions forming the Rejected Data Pipeline. The External Agent 2 helps in selective curation of the provided feedback with relevance and accuracy in business scenarios creates an approved dataset for future training cycles. The validation of the framework is also applied to a real-world scenario, which is \"Document Identification and Information Extraction\". This problem originates mainly from banking systems, but can be extended anywhere. The method of classification and extraction of information has to be done correctly here. Experimental results show that including human feedback significantly enhances the ability of the model in order to increase robustness and accuracy in making decisions. The augmented approach, with a combination of machine efficiency and human insight, attains a higher learning standard-mainly in complex or ambiguous environments. The findings of this study show that human-in-the-loop reinforcement learning frameworks such as ARL can provide a scalable approach to improving model performance in data-driven applications.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Sandesh Kumar Singh",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2508.01612",
+      "date": "2025-08-03T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/meetsandesh/identification_document"
+    },
+    {
+      "arxiv_id": "2010.14616",
+      "score": 0.33333334,
+      "title": "Lineage Evolution Reinforcement Learning",
+      "tldr": "[research paper] Lineage Evolution Reinforcement Learning (LERL) integrates genetic algorithm operators\u2014selection, mutation, and crossover\u2014into deep reinforcement learning (DRL) frameworks, introducing a lineage-based evaluation mechanism that preserves historical performance potential. By combining DQN, C51, Rainbow, and IQN with lineage inheritance, LERL enhances learning stability and convergence speed in Atari 2600 environments, outperforming baseline algorithms through a hybrid evolutionary-reinforcement learning paradigm that evaluates agents based on both current performance and ancestral value.",
+      "abstract": "We propose a general agent population learning system, and on this basis, we propose lineage evolution reinforcement learning algorithm. Lineage evolution reinforcement learning is a kind of derivative algorithm which accords with the general agent population learning system. We take the agents in DQN and its related variants as the basic agents in the population, and add the selection, mutation and crossover modules in the genetic algorithm to the reinforcement learning algorithm. In the process of agent evolution, we refer to the characteristics of natural genetic behavior, add lineage factor to ensure the retention of potential performance of agent, and comprehensively consider the current performance and lineage value when evaluating the performance of agent. Without changing the parameters of the original reinforcement learning algorithm, lineage evolution reinforcement learning can optimize different reinforcement learning algorithms. Our experiments show that the idea of evolution with lineage improves the performance of original reinforcement learning algorithm in some games in Atari 2600.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Zeyu Zhang",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Guisheng Yin",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2010.14616",
+      "date": "2020-09-26T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.NE",
+        "cs.AI",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2205.15281",
+      "score": 0.27702704,
+      "title": "Learning Open Domain Multi-hop Search Using Reinforcement Learning",
+      "tldr": "[research paper] The paper proposes a reinforcement learning framework to learn multi-hop search policies in open-domain corpora by modeling the search process as a Markov decision process (MDP), where the agent iteratively refines a knowledge graph through targeted document retrieval and extraction. It introduces domain-agnostic state representations that encode search dynamics and uses an actor-critic RL algorithm to optimize for minimal document processing while achieving successful path discovery, outperforming heuristic baselines on the WikiHop dataset.",
+      "abstract": "We propose a method to teach an automated agent to learn how to search for multi-hop paths of relations between entities in an open domain. The method learns a policy for directing existing information retrieval and machine reading resources to focus on relevant regions of a corpus. The approach formulates the learning problem as a Markov decision process with a state representation that encodes the dynamics of the search process and a reward structure that minimizes the number of documents that must be processed while still finding multi-hop paths. We implement the method in an actor-critic reinforcement learning algorithm and evaluate it on a dataset of search problems derived from a subset of English Wikipedia. The algorithm finds a family of policies that succeeds in extracting the desired information while processing fewer documents compared to several baseline heuristic algorithms.",
+      "authors": [
+        {
+          "misc": {
+            "email": "enoriega@arizona.edu"
+          },
+          "name": "Enrique Noriega-Atala",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "msurdeanu@arizona.edu"
+          },
+          "name": "Mihai Surdeanu",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "claytonm@arizona.edu"
+          },
+          "name": "Clayton T. Morrison",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2205.15281",
+      "date": "2022-05-30T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": "SUKI",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1912.09007",
+      "score": 0.25,
+      "title": "Interestingness Elements for Explainable Reinforcement Learning: Understanding Agents' Capabilities and Limitations",
+      "tldr": "[research paper] The paper introduces an explainable reinforcement learning (XRL) framework that extracts 'interestingness elements' from an agent's interaction history\u2014using statistical and machine learning analysis across four dimensions: frequency, execution certainty, transition-value, and sequences\u2014to capture both capabilities and limitations of RL agents. These elements enable the generation of visual summaries (short video clips) highlighting key behavioral moments, which are shown to improve human perception of agent aptitude in task performance, especially when diverse interaction patterns (e.g., frequent vs. rare states, challenge overcoming) are represented. User studies demonstrate that presenting only positive or negative instances leads to misperceptions, while diverse elements allow accurate assessment of agent strengths and weaknesses.",
+      "abstract": "We propose an explainable reinforcement learning (XRL) framework that analyzes an agent's history of interaction with the environment to extract interestingness elements that help explain its behavior. The framework relies on data readily available from standard RL algorithms, augmented with data that can easily be collected by the agent while learning. We describe how to create visual summaries of an agent's behavior in the form of short video-clips highlighting key interaction moments, based on the proposed elements. We also report on a user study where we evaluated the ability of humans to correctly perceive the aptitude of agents with different characteristics, including their capabilities and limitations, given visual summaries automatically generated by our framework. The results show that the diversity of aspects captured by the different interestingness elements is crucial to help humans correctly understand an agent's strengths and limitations in performing a task, and determine when it might need adjustments to improve its performance.",
+      "authors": [
+        {
+          "misc": {
+            "email": "pedro.sequeira@sri.com"
+          },
+          "name": "Pedro Sequeira",
+          "orgs": [
+            "SRI International",
+            "333 Ravenswood Avenue, Menlo Park, CA 94025, United States"
+          ]
+        },
+        {
+          "misc": {
+            "email": "melinda.gervasio@sri.com"
+          },
+          "name": "Melinda Gervasio",
+          "orgs": [
+            "SRI International",
+            "333 Ravenswood Avenue, Menlo Park, CA 94025, United States"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1912.09007",
+      "date": "2019-12-19T00:00:00",
+      "citation_count": 122,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.HC",
+        "stat.ML"
+      ],
+      "venue": "Artificial Intelligence",
+      "venue_year": null,
+      "github_url": "https://github.com/SRI-AIC/InterestingnessXRL"
+    },
+    {
+      "arxiv_id": "2411.00867",
+      "score": 0.2,
+      "title": "Mechanistic Interpretability of Reinforcement Learning Agents",
+      "tldr": "[research paper] A mechanistic interpretability study of a reinforcement learning agent trained on procedural mazes reveals that early convolutional layers detect structural features like walls and pathways, while intermediate layers begin to localize the agent and goal, exhibiting goal misgeneralization\u2014specifically, persistent bias toward the top-right corner\u2014despite no explicit goal there. Saliency and feature mapping uncover that the agent's decision-making is driven by learned spatial biases rather than task-relevant signals, indicating a failure in goal internalization. The work introduces interactive tools for layer-wise activation exploration, enabling deeper insight into how RL agents form and follow implicit navigation strategies.",
+      "abstract": "This paper explores the mechanistic interpretability of reinforcement learning (RL) agents through an analysis of a neural network trained on procedural maze environments. By dissecting the network's inner workings, we identified fundamental features like maze walls and pathways, forming the basis of the model's decision-making process. A significant observation was the goal misgeneralization, where the RL agent developed biases towards certain navigation strategies, such as consistently moving towards the top right corner, even in the absence of explicit goals. Using techniques like saliency mapping and feature mapping, we visualized these biases. We furthered this exploration with the development of novel tools for interactively exploring layer activations.",
+      "authors": [
+        {
+          "misc": {
+            "email": "tristantrim@gmail.com"
+          },
+          "name": "Tristan Trim",
+          "orgs": [
+            "University of Victoria",
+            "Victoria BC, Canada"
+          ]
+        },
+        {
+          "misc": {
+            "email": "graystontriston@gmail.com"
+          },
+          "name": "Triston Grayston",
+          "orgs": [
+            "University of Victoria",
+            "Victoria BC, Canada"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2411.00867",
+      "date": "2024-10-30T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2006.03185",
+      "score": 0.2,
+      "title": "Balancing Reinforcement Learning Training Experiences in Interactive Information Retrieval",
+      "tldr": "[research paper] The paper proposes Document Environment Generation (DEG), a domain randomization technique that synthesizes relevant document environments by merging query-matching segments from relevant documents with irrelevant segments from a corpus. This balances training experiences in reinforcement learning for interactive information retrieval by addressing sparse rewards due to document imbalance. DEG dynamically constrains policy updates based on environmental divergence to prevent catastrophic forgetting, improving RL agent performance in unseen scenarios by 22% on TREC DD 2017.",
+      "abstract": "Interactive Information Retrieval (IIR) and Reinforcement Learning (RL) share many commonalities, including an agent who learns while interacts, a long-term and complex goal, and an algorithm that explores and adapts. To successfully apply RL methods to IIR, one challenge is to obtain sufficient relevance labels to train the RL agents, which are infamously known as sample inefficient. However, in a text corpus annotated for a given query, it is not the relevant documents but the irrelevant documents that predominate. This would cause very unbalanced training experiences for the agent and prevent it from learning any policy that is effective. Our paper addresses this issue by using domain randomization to synthesize more relevant documents for the training. Our experimental results on the Text REtrieval Conference (TREC) Dynamic Domain (DD) 2017 Track show that the proposed method is able to boost an RL agent's learning effectiveness by 22\\\\% in dealing with unseen situations.",
+      "authors": [
+        {
+          "misc": {
+            "email": "lc1117@georgetown.edu"
+          },
+          "name": "Limin Chen",
+          "orgs": [
+            "InfoSense",
+            "Department of Computer Science",
+            "Georgetown University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zt79@georgetown.edu"
+          },
+          "name": "Zhiwen Tang",
+          "orgs": [
+            "InfoSense",
+            "Department of Computer Science",
+            "Georgetown University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "grace.yang@georgetown.edu"
+          },
+          "name": "Grace Hui Yang",
+          "orgs": [
+            "InfoSense",
+            "Department of Computer Science",
+            "Georgetown University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2006.03185",
+      "date": "2020-06-05T00:00:00",
+      "citation_count": 12,
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2405.15430",
+      "score": 0.16666667,
+      "title": "Counterexample-Guided Repair of Reinforcement Learning Systems Using Safety Critics",
+      "tldr": "[research paper] A counterexample-guided repair algorithm is proposed for deep reinforcement learning agents that violate safety constraints, using a jointly optimized safety critic and agent. The method iteratively identifies unsafe trajectories (counterexamples) and refines both the policy and safety critic via gradient-based constrained optimization to ensure the critic correctly classifies new unsafe behaviors, enabling safe deployment without retraining from scratch. The approach is general across environments and safety specifications, relying only on falsification/verification capabilities, and avoids expensive real-time verification by leveraging learned safety critics.",
+      "abstract": "Naively trained Deep Reinforcement Learning agents may fail to satisfy vital safety constraints. To avoid costly retraining, we may desire to repair a previously trained reinforcement learning agent to obviate unsafe behaviour. We devise a counterexample-guided repair algorithm for repairing reinforcement learning systems leveraging safety critics. The algorithm jointly repairs a reinforcement learning agent and a safety critic using gradient-based constrained optimisation.",
+      "authors": [
+        {
+          "misc": {
+            "email": "david.boetius@uni-konstanz.de",
+            "orcid": "0000-0002-9071-1695"
+          },
+          "name": "David Boetius",
+          "orgs": [
+            "University of Konstanz",
+            "78457 Konstanz, Germany"
+          ]
+        },
+        {
+          "misc": {
+            "email": "stefan.leue@uni-konstanz.de",
+            "orcid": "0000-0002-4259-624X"
+          },
+          "name": "Stefan Leue",
+          "orgs": [
+            "University of Konstanz",
+            "78457 Konstanz, Germany"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2405.15430",
+      "date": "2024-05-24T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.LG",
+        "cs.LO"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2603.25333",
+      "score": 0.16666667,
+      "title": "Adaptive Chunking: Optimizing Chunking-Method Selection for RAG",
+      "tldr": "[research paper] Adaptive Chunking introduces a document-aware chunking framework that selects optimal chunking strategies per document using five intrinsic metrics: References Completeness, Intrachunk Cohesion, Document Contextual Coherence, Block Integrity, and Size Compliance. It deploys novel chunkers\u2014LLM-regex and split-then-merge recursive splitters\u2014with post-processing to preserve context and enforce size constraints, achieving a 10-point increase in answer correctness (62\u201364% \u2192 72%) and a 30% rise in successfully answered questions across legal, technical, and social science texts without altering models or prompts.",
+      "abstract": "The effectiveness of Retrieval-Augmented Generation (RAG) is highly dependent on how documents are chunked, that is, segmented into smaller units for indexing and retrieval. Yet, commonly used \"one-size-fits-all\" approaches often fail to capture the nuanced structure and semantics of diverse texts. Despite its central role, chunking lacks a dedicated evaluation framework, making it difficult to assess and compare strategies independently of downstream performance. We challenge this paradigm by introducing Adaptive Chunking, a framework that selects the most suitable chunking strategy for each document based on a set of five novel intrinsic, document-based metrics: References Completeness (RC), Intrachunk Cohesion (ICC), Document Contextual Coherence (DCC), Block Integrity (BI), and Size Compliance (SC), which directly assess chunking quality across key dimensions. To support this framework, we also introduce two new chunkers, an LLM-regex splitter and a split-then-merge recursive splitter, alongside targeted post-processing techniques. On a diverse corpus spanning legal, technical, and social science domains, our metric-guided adaptive method significantly improves downstream RAG performance. Without changing models or prompts, our framework increases RAG outcomes, raising answers correctness to 72% (from 62-64%) and increasing the number of successfully answered questions by over 30% (65 vs. 49). These results demonstrate that adaptive, document-aware chunking, guided by a complementary suite of intrinsic metrics, offers a practical and effective path to more robust RAG systems. Code available at https://github.com/ekimetrics/adaptive-chunking.",
+      "authors": "Paulo Roberto de Moura J\\'unior, Jean Lelong, Annabelle Blangero",
+      "url": "https://arxiv.org/abs/2603.25333",
+      "date": "2026-03-26T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/ekimetrics/adaptive-chunking."
+    }
+  ]
+}

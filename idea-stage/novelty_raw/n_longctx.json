@@ -1,0 +1,542 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2510.15719",
+      "score": 0.64285713,
+      "title": "Cost-Aware Retrieval-Augmentation Reasoning Models with Adaptive Retrieval Depth",
+      "tldr": "[research paper] The paper proposes Dynamic Search-R1, a reinforcement learning-based extension of Search-R1 that dynamically adjusts retrieval depth based on query context and retrieval results. It introduces cost-aware advantage functions\u2014both memory-bound (minimizing total tokens) and latency-bound (separating generation and retrieval token latencies)\u2014to optimize efficiency during training via PPO and GRPO. Experiments on seven QA datasets show 16\u201320% latency reduction and 5% improvement in exact match accuracy, with latency-bound cost modeling outperforming memory-bound due to the 600%+ latency gap between token generation and retrieval encoding.",
+      "abstract": "Reasoning models have gained significant attention due to their strong performance, particularly when enhanced with retrieval augmentation. However, these models often incur high computational costs, as both retrieval and reasoning tokens contribute substantially to the overall resource usage. In this work, we make the following contributions: (1) we propose a retrieval-augmented reasoning model that dynamically adjusts the length of the retrieved document list based on the query and retrieval results; (2) we develop a cost-aware advantage function for training of efficient retrieval-augmented reasoning models through reinforcement learning; and (3) we explore both memory- and latency-bound implementations of the proposed cost-aware framework for both proximal and group relative policy optimization algorithms. We evaluate our approach on seven public question answering datasets and demonstrate significant efficiency gains, without compromising effectiveness. In fact, we observed that the model latency decreases by ~16-20% across datasets, while its effectiveness increases by ~5% on average, in terms of exact match.",
+      "authors": [
+        {
+          "misc": {
+            "email": "heliahashemi@microsoft.com"
+          },
+          "name": "Helia Hashemi",
+          "orgs": [
+            "Microsoft Cambridge, MA, United States"
+          ]
+        },
+        {
+          "misc": {
+            "email": "virueh@microsoft.com"
+          },
+          "name": "Victor R\u00fchle",
+          "orgs": [
+            "Microsoft Cambridge, United Kingdom"
+          ]
+        },
+        {
+          "misc": {
+            "email": "rajmohan@microsoft.com"
+          },
+          "name": "Saravan Rajmohan",
+          "orgs": [
+            "Microsoft Redmond, WA, United States"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2510.15719",
+      "date": "2025-10-17T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": 2026,
+      "github_url": "https://github.com/petergriffinjin/search-r1"
+    },
+    {
+      "arxiv_id": "1806.03529",
+      "score": 0.5,
+      "title": "Learning to Search in Long Documents Using Document Structure",
+      "tldr": "[research paper] The paper proposes DocQN, a Deep Q-Network variant trained to navigate long documents as trees, where an agent learns to interleave structural navigation with answer extraction. It overcomes data bias toward early answers by sampling tree nodes from diverse document regions, enabling effective exploration. Empirically, DocQN outperforms standard DQN and information retrieval baselines in both navigation accuracy and end-to-end question answering, with further gains when ensembled.",
+      "abstract": "Reading comprehension models are based on recurrent neural networks that sequentially process the document tokens. As interest turns to answering more complex questions over longer documents, sequential reading of large portions of text becomes a substantial bottleneck. Inspired by how humans use document structure, we propose a novel framework for reading comprehension. We represent documents as trees, and model an agent that learns to interleave quick navigation through the document tree with more expensive answer extraction. To encourage exploration of the document tree, we propose a new algorithm, based on Deep Q-Network (DQN), which strategically samples tree nodes at training time. Empirically we find our algorithm improves question answering performance compared to DQN and a strong information-retrieval (IR) baseline, and that ensembling our model with the IR baseline results in further gains in performance.",
+      "authors": [
+        {
+          "misc": {
+            "email": "morgeva@mail.tau.ac.il"
+          },
+          "name": "Mor Geva",
+          "orgs": [
+            "Tel Aviv University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "joberant@cs.tau.ac.il"
+          },
+          "name": "Jonathan Berant",
+          "orgs": [
+            "Tel Aviv University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1806.03529",
+      "date": "2018-06-09T00:00:00",
+      "citation_count": 17,
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "International Conference on Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/mega002/DocQN"
+    },
+    {
+      "arxiv_id": "2412.18547",
+      "score": 0.33333334,
+      "title": "Token-Budget-Aware LLM Reasoning",
+      "tldr": "[research paper] The paper identifies that Chain-of-Thought (CoT) reasoning in LLMs is often unnecessarily lengthy due to token elasticity\u2014where small token budgets fail to constrain actual output, leading to inflated token usage. It proposes TALE (Token-Budget-Aware LLM rEasoning), a framework that dynamically adjusts reasoning token budgets based on problem complexity: TALE-EP estimates optimal budgets via zero-shot prompting, while TALE-PT internalizes budget awareness through post-training. Experiments show TALE-EP reduces token usage by 67% with <3% accuracy drop, and TALE-PT cuts costs by ~50% while maintaining competitive performance, offering a practical balance between efficiency and accuracy in reasoning.",
+      "abstract": "Reasoning is critical for large language models (LLMs) to excel in a wide range of tasks. While methods like Chain-of-Thought (CoT) reasoning and enhance LLM performance by decomposing problems into intermediate steps, they also incur significant overhead in token usage, leading to increased costs. We find that the reasoning process of current LLMs is unnecessarily lengthy and it can be compressed by including a reasonable token budget in the prompt, but the choice of token budget plays a crucial role in the actual compression effectiveness. We then propose a token-budget-aware LLM reasoning framework that dynamically adjusts the number of reasoning tokens based on the reasoning complexity of each problem. Experiments show that our method effectively reduces token costs in CoT reasoning with only a slight performance reduction, offering a practical solution to balance efficiency and accuracy in LLM reasoning. Code: https://github.com/GeniusHTX/TALE",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Tingxu Han",
+          "orgs": [
+            "Nanjing University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhenting Wang",
+          "orgs": [
+            "Nanjing University",
+            "Rutgers University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "corresponding author"
+          },
+          "name": "Chunrong Fang",
+          "orgs": [
+            "UMass Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shiyu Zhao",
+          "orgs": [
+            "Rutgers University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shiqing Ma",
+          "orgs": [
+            "UMass Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhenyu Chen",
+          "orgs": [
+            "Nanjing University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2412.18547",
+      "date": "2024-12-24T00:00:00",
+      "citation_count": 177,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/GeniusHTX/TALE"
+    },
+    {
+      "arxiv_id": "1107.1322",
+      "score": 0.33333334,
+      "title": "Text Classification: A Sequential Reading Approach",
+      "tldr": "[research paper] The paper proposes a reinforcement learning-based model that frames text classification as a sequential decision process, where an agent reads sentences one by one and decides when to classify a document or stop reading. The model learns to focus on relevant sentences and terminates early when sufficient information is gathered, outperforming traditional SVM methods on small training sets and matching them on large sets while reducing the amount of text processed. This enables efficient classification for expensive or long documents.",
+      "abstract": "We propose to model the text classification process as a sequential decision process. In this process, an agent learns to classify documents into topics while reading the document sentences sequentially and learns to stop as soon as enough information was read for deciding. The proposed algorithm is based on a modelisation of Text Classification as a Markov Decision Process and learns by using Reinforcement Learning. Experiments on four different classical mono-label corpora show that the proposed approach performs comparably to classical SVM approaches for large training sets, and better for small training sets. In addition, the model automatically adapts its reading process to the quantity of training information provided.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Gabriel Dulac-Arnold",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Ludovic Denoyer",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Patrick Gallinari",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/1107.1322",
+      "date": "2011-07-07T00:00:00",
+      "citation_count": 45,
+      "categories": [
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "venue": "European Conference on Information Retrieval",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2510.25668",
+      "score": 0.25,
+      "title": "ALDEN: Reinforcement Learning for Active Navigation and Evidence Gathering in Long Documents",
+      "tldr": "[research paper] ALDEN introduces a multi-turn reinforcement learning framework to train vision-language models as agentic agents for navigating long, visually rich documents. It expands the action space with a novel 'fetch' operation that directly accesses pages by index, enabling efficient navigation beyond semantic search. A cross-level reward function provides turn- and token-level supervision to guide reasoning and prevent redundant actions, while a visual-semantic anchoring mechanism stabilizes training by applying dual-path KL-divergence constraints on visual and textual representations. Evaluated on five benchmarks, ALDEN achieves state-of-the-art performance with 9.14% average accuracy improvement over baselines, demonstrating robustness and generalization in long-document understanding.",
+      "abstract": "Vision-language models (VLMs) excel at interpreting text-rich images but struggle with long, visually complex documents that demand analysis and integration of information spread across multiple pages. Existing approaches typically rely on fixed reasoning templates or rigid pipelines, which force VLMs into a passive role and hinder both efficiency and generalization. We present Active Long-DocumEnt Navigation (ALDEN), a multi-turn reinforcement learning framework that fine-tunes VLMs as interactive agents capable of actively navigating long, visually rich documents. ALDEN introduces a novel fetch action that directly accesses the page by index, complementing the classic search action and better exploiting document structure. For dense process supervision and efficient training, we propose a rule-based cross-level reward that provides both turn- and token-level signals. To address the empirically observed training instability caused by numerous visual tokens from long documents, we further propose a visual-semantic anchoring mechanism that applies a dual-path KL-divergence constraint to stabilize visual and textual representations separately during training. Trained on a corpus constructed from three open-source datasets, ALDEN achieves state-of-the-art performance on five long-document benchmarks. Overall, ALDEN marks a step beyond passive document reading toward agents that autonomously navigate and reason across long, visually rich documents, offering a robust path to more accurate and efficient long-document understanding.",
+      "authors": [
+        {
+          "misc": {
+            "email": "tianyu.yang@uni-goettingen.de"
+          },
+          "name": "Tianyu Yang",
+          "orgs": [
+            "University of G\u00f6ttingen"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Terry Ruas",
+          "orgs": [
+            "University of G\u00f6ttingen"
+          ]
+        },
+        {
+          "misc": {
+            "email": "meetyijun@gmail.com"
+          },
+          "name": "Yijun Tian",
+          "orgs": [
+            "University of Notre Dame"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jan Philip Wahle",
+          "orgs": [
+            "University of G\u00f6ttingen"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Daniel Kurzawe",
+          "orgs": [
+            "University of G\u00f6ttingen",
+            "State and University Library of G\u00f6ttingen"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Bela Gipp",
+          "orgs": [
+            "University of G\u00f6ttingen"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2510.25668",
+      "date": "2025-10-29T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI",
+        "cs.MM"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2205.15281",
+      "score": 0.25,
+      "title": "Learning Open Domain Multi-hop Search Using Reinforcement Learning",
+      "tldr": "[research paper] The paper proposes a reinforcement learning framework to learn multi-hop search policies in open-domain corpora by modeling the search process as a Markov decision process (MDP), where the agent iteratively refines a knowledge graph through targeted document retrieval and extraction. It introduces domain-agnostic state representations that encode search dynamics and uses an actor-critic RL algorithm to optimize for minimal document processing while achieving successful path discovery, outperforming heuristic baselines on the WikiHop dataset.",
+      "abstract": "We propose a method to teach an automated agent to learn how to search for multi-hop paths of relations between entities in an open domain. The method learns a policy for directing existing information retrieval and machine reading resources to focus on relevant regions of a corpus. The approach formulates the learning problem as a Markov decision process with a state representation that encodes the dynamics of the search process and a reward structure that minimizes the number of documents that must be processed while still finding multi-hop paths. We implement the method in an actor-critic reinforcement learning algorithm and evaluate it on a dataset of search problems derived from a subset of English Wikipedia. The algorithm finds a family of policies that succeeds in extracting the desired information while processing fewer documents compared to several baseline heuristic algorithms.",
+      "authors": [
+        {
+          "misc": {
+            "email": "enoriega@arizona.edu"
+          },
+          "name": "Enrique Noriega-Atala",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "msurdeanu@arizona.edu"
+          },
+          "name": "Mihai Surdeanu",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        },
+        {
+          "misc": {
+            "email": "claytonm@arizona.edu"
+          },
+          "name": "Clayton T. Morrison",
+          "orgs": [
+            "The University of Arizona"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2205.15281",
+      "date": "2022-05-30T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": "SUKI",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2311.13565",
+      "score": 0.2,
+      "title": "Drilling Down into the Discourse Structure with LLMs for Long Document Question Answering",
+      "tldr": "[research paper] The paper proposes D\u00b3 (Drilling Down into the Discourse), a zero-shot evidence retrieval method for long document question answering that leverages discourse structure to create condensed document summaries, reducing input tokens by 74% (to 26% of baseline) while retaining 99.6% of performance. By replacing section content with summaries, the approach preserves global context and inter-segment dependencies, enabling efficient LLM inference without sacrificing accuracy. The method is integrated with self-ask reasoning agents to achieve near-optimal multi-hop performance, demonstrating strong scalability and cost-efficiency in complex QA tasks.",
+      "abstract": "We address the task of evidence retrieval for long document question answering, which involves locating relevant paragraphs within a document to answer a question. We aim to assess the applicability of large language models (LLMs) in the task of zero-shot long document evidence retrieval, owing to their unprecedented performance across various NLP tasks. However, currently the LLMs can consume limited context lengths as input, thus providing document chunks as inputs might overlook the global context while missing out on capturing the inter-segment dependencies. Moreover, directly feeding the large input sets can incur significant computational costs, particularly when processing the entire document (and potentially incurring monetary expenses with enterprise APIs like OpenAI's GPT variants). To address these challenges, we propose a suite of techniques that exploit the discourse structure commonly found in documents. By utilizing this structure, we create a condensed representation of the document, enabling a more comprehensive understanding and analysis of relationships between different parts. We retain $99.6\\\\%$ of the best zero-shot approach's performance, while processing only $26\\\\%$ of the total tokens used by the best approach in the information seeking evidence retrieval setup. We also show how our approach can be combined with \\\\textit{self-ask} reasoning agent to achieve best zero-shot performance in complex multi-hop question answering, just $\\\\approx 4\\\\%$ short of zero-shot performance using gold evidence.",
+      "authors": [
+        {
+          "misc": {
+            "email": "inair@umich.edu"
+          },
+          "name": "Inderjeet Nair",
+          "orgs": [
+            "University of Michigan, Ann Arbor, MI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "shsomasu@adobe.com"
+          },
+          "name": "Shwetha Somasundaram",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        },
+        {
+          "misc": {
+            "email": "apoorvs@adobe.com"
+          },
+          "name": "Apoorv Saxena",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        },
+        {
+          "misc": {
+            "email": "koustavag@adobe.com"
+          },
+          "name": "Koustava Goswami",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2311.13565",
+      "date": "2023-11-22T00:00:00",
+      "citation_count": 15,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2601.14224",
+      "score": 0.2,
+      "title": "Rerank Before You Reason: Analyzing Reranking Tradeoffs through Effective Token Cost in Deep Search Agents",
+      "tldr": "[empirical study / experimental analysis] The paper introduces Effective Token Cost (ETC) to systematically evaluate reranking tradeoffs in deep search agents, showing that moderate reranking consistently improves retrieval and end-to-end accuracy while reducing total token cost more effectively than increasing reasoning effort. Using BrowseComp-Plus, it demonstrates that lightweight reranking (e.g., d=20\u201350) achieves comparable accuracy to deeper reasoning at significantly lower ETC, especially when accounting for hardware and financial disparities via tunable input/output weights.",
+      "abstract": "Deep research agents rely on iterative retrieval and reasoning to answer complex queries, but scaling test-time computation raises significant efficiency concerns. We study how to allocate reasoning budget in deep search pipelines, focusing on the role of listwise reranking. Using the BrowseComp-Plus benchmark, we analyze tradeoffs between model scale, reasoning effort, reranking depth, and total token cost via a novel effective token cost (ETC) metric. Our results show that reranking consistently improves retrieval and end-to-end accuracy, and that moderate reranking often yields larger gains than increasing search-time reasoning, achieving comparable accuracy at substantially lower cost. All our code is available at https://github.com/texttron/BrowseComp-Plus.git",
+      "authors": [
+        {
+          "misc": {
+            "email": "sahel.sharifymoghaddam@uwaterloo.ca"
+          },
+          "name": "Sahel Sharifymoghaddam",
+          "orgs": [
+            "David R. Cheriton School of Computer Science, University of Waterloo, Canada"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jimmylin@uwaterloo.ca"
+          },
+          "name": "Jimmy Lin",
+          "orgs": [
+            "David R. Cheriton School of Computer Science, University of Waterloo, Canada"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2601.14224",
+      "date": "2026-01-20T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/texttron/BrowseComp-Plus.git"
+    },
+    {
+      "arxiv_id": "2502.16860",
+      "score": 0.16666667,
+      "title": "LongAttn: Selecting Long-context Training Data via Token-level Attention",
+      "tldr": "[research paper] LongAttn introduces a token-level framework that leverages self-attention mechanisms from LLMs to quantify long-range dependencies by computing dependency strength (DS_T) and distribution uniformity (DU_T), enabling more accurate and efficient selection of high-quality long-context training data. It outperforms sentence-level methods like ProLong and random sampling in long-context retrieval, achieves superior scalability and efficiency, and produces LongABC-32K\u2014a curated dataset with strong long-range dependencies\u2014by filtering from ArXiv, Book, and Code sources using attention-based scoring from the first decoder layer of LLaMA.",
+      "abstract": "With the development of large language models (LLMs), there has been an increasing need for significant advancements in handling long contexts. To enhance long-context capabilities, constructing high-quality training data with long-range dependencies is crucial. Existing methods to select long-context data often rely on sentence-level analysis, which can be greatly optimized in both performance and efficiency. In this paper, we propose a novel token-level framework, LongAttn, which leverages the self-attention mechanism of LLMs to measure the long-range dependencies for the data. By calculating token-level dependency strength and distribution uniformity of token scores, LongAttn effectively quantifies long-range dependencies, enabling more accurate and efficient data selection. We filter LongABC-32K from open-source long-context datasets (ArXiv, Book, and Code). Through our comprehensive experiments, LongAttn has demonstrated its excellent effectiveness, scalability, and efficiency. To facilitate future research in long-context data, we released our code and the high-quality long-context training data LongABC-32K.",
+      "authors": [
+        {
+          "misc": {
+            "email": "wulongyun@stu.pku.edu.cn"
+          },
+          "name": "Longyun Wu",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Dawei Zhu",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Guangxiang Zhao",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhuocheng Yu",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jungfeng Ran",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xiangyu Wong",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {
+            "email": "sunlin1@360.cn"
+          },
+          "name": "Lin Sun",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        },
+        {
+          "misc": {
+            "email": "lisujian@pku.edu.cn"
+          },
+          "name": "Sujian Li",
+          "orgs": [
+            "Peking University",
+            "Qiyuan Tech"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2502.16860",
+      "date": "2025-02-24T00:00:00",
+      "citation_count": 5,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/Lyun0912-wu/LongAttn"
+    },
+    {
+      "arxiv_id": "2203.06408",
+      "score": 0.16666667,
+      "title": "Information retrieval for label noise document ranking by bag sampling and group-wise loss",
+      "tldr": "[research paper] The paper addresses label noise and negative sampling inefficiencies in long document ranking by introducing bag sampling and group-wise Localized Contrastive Estimation (LCE). It encodes long documents via head-middle-tail passage segmentation, uses dense retrieval to generate candidates, and divides retrieval data into bags for per-bag negative sampling. A group-wise LCE loss is computed using convolutional features and max-pooling to extract global group representations, enhancing robustness to label noise and preserving first-stage retrieval ranking signals. The method achieves state-of-the-art performance on the MS MARCO Long Document Ranking leaderboard.",
+      "abstract": "Long Document retrieval (DR) has always been a tremendous challenge for reading comprehension and information retrieval. The pre-training model has achieved good results in the retrieval stage and Ranking for long documents in recent years. However, there is still some crucial problem in long document ranking, such as data label noises, long document representations, negative data Unbalanced sampling, etc. To eliminate the noise of labeled data and to be able to sample the long documents in the search reasonably negatively, we propose the bag sampling method and the group-wise Localized Contrastive Estimation(LCE) method. We use the head middle tail passage for the long document to encode the long document, and in the retrieval, stage Use dense retrieval to generate the candidate's data. The retrieval data is divided into multiple bags at the ranking stage, and negative samples are selected in each bag. After sampling, two losses are combined. The first loss is LCE. To fit bag sampling well, after query and document are encoded, the global features of each group are extracted by convolutional layer and max-pooling to improve the model's resistance to the impact of labeling noise, finally, calculate the LCE group-wise loss. Notably, our model shows excellent performance on the MS MARCO Long document ranking leaderboard.",
+      "authors": [
+        {
+          "misc": {
+            "email": "lcy081099@gmail.com"
+          },
+          "name": "Chunyu Li",
+          "orgs": [
+            "Tongji University",
+            "China"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xinghu1995@outlook.com"
+          },
+          "name": "Xing Hu",
+          "orgs": [
+            "University College London",
+            "China"
+          ]
+        },
+        {
+          "misc": {
+            "email": "djjshowtime@gmail.com"
+          },
+          "name": "Jiajia Ding",
+          "orgs": [
+            "Edinburgh University",
+            "China"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wangfan_1992@126.com"
+          },
+          "name": "Fan Wang",
+          "orgs": [
+            "Tongji University",
+            "China"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2203.06408",
+      "date": "2022-03-12T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IT",
+        "cs.AI",
+        "math.IT"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    }
+  ]
+}

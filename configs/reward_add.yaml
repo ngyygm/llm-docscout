@@ -1,0 +1,10 @@
+# Reward variant: R_add (additive cost baseline). reward = answer + w_evidence*evidence
+#                                                       - lambda*read_tokens + termination
+reward:
+  name: additive
+  w_answer: 1.0
+  w_evidence: 0.3
+  evidence_source: read
+  lambda_tokens: 5.0e-4
+  r_submit_bonus: 0.5
+  r_nosubmit_penalty: -0.5

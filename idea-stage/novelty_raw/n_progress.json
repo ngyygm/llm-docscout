@@ -1,0 +1,560 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2311.13565",
+      "score": 0.5,
+      "title": "Drilling Down into the Discourse Structure with LLMs for Long Document Question Answering",
+      "tldr": "[research paper] The paper proposes D\u00b3 (Drilling Down into the Discourse), a zero-shot evidence retrieval method for long document question answering that leverages discourse structure to create condensed document summaries, reducing input tokens by 74% (to 26% of baseline) while retaining 99.6% of performance. By replacing section content with summaries, the approach preserves global context and inter-segment dependencies, enabling efficient LLM inference without sacrificing accuracy. The method is integrated with self-ask reasoning agents to achieve near-optimal multi-hop performance, demonstrating strong scalability and cost-efficiency in complex QA tasks.",
+      "abstract": "We address the task of evidence retrieval for long document question answering, which involves locating relevant paragraphs within a document to answer a question. We aim to assess the applicability of large language models (LLMs) in the task of zero-shot long document evidence retrieval, owing to their unprecedented performance across various NLP tasks. However, currently the LLMs can consume limited context lengths as input, thus providing document chunks as inputs might overlook the global context while missing out on capturing the inter-segment dependencies. Moreover, directly feeding the large input sets can incur significant computational costs, particularly when processing the entire document (and potentially incurring monetary expenses with enterprise APIs like OpenAI's GPT variants). To address these challenges, we propose a suite of techniques that exploit the discourse structure commonly found in documents. By utilizing this structure, we create a condensed representation of the document, enabling a more comprehensive understanding and analysis of relationships between different parts. We retain $99.6\\\\%$ of the best zero-shot approach's performance, while processing only $26\\\\%$ of the total tokens used by the best approach in the information seeking evidence retrieval setup. We also show how our approach can be combined with \\\\textit{self-ask} reasoning agent to achieve best zero-shot performance in complex multi-hop question answering, just $\\\\approx 4\\\\%$ short of zero-shot performance using gold evidence.",
+      "authors": [
+        {
+          "misc": {
+            "email": "inair@umich.edu"
+          },
+          "name": "Inderjeet Nair",
+          "orgs": [
+            "University of Michigan, Ann Arbor, MI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "shsomasu@adobe.com"
+          },
+          "name": "Shwetha Somasundaram",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        },
+        {
+          "misc": {
+            "email": "apoorvs@adobe.com"
+          },
+          "name": "Apoorv Saxena",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        },
+        {
+          "misc": {
+            "email": "koustavag@adobe.com"
+          },
+          "name": "Koustava Goswami",
+          "orgs": [
+            "Adobe Research, India"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2311.13565",
+      "date": "2023-11-22T00:00:00",
+      "citation_count": 15,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2506.19923",
+      "score": 0.5,
+      "title": "Prover Agent: An Agent-Based Framework for Formal Mathematical Proofs",
+      "tldr": "[research paper] Prover Agent introduces an agent-based framework that synergizes an informal reasoning LLM with a formal proof assistant (Lean) to generate auxiliary lemmas\u2014such as special cases or derived facts\u2014that guide proof strategy discovery. These lemmas are formally verified in Lean, enabling iterative refinement and significantly improving success rates (88.1% on MiniF2F) with small language models (SLMs) and minimal inference cost, outperforming prior SLM-based methods in both correctness and efficiency.",
+      "abstract": "We present Prover Agent, a novel AI agent for automated theorem proving that integrates large language models (LLMs) with a formal proof assistant, Lean. Prover Agent coordinates an informal reasoning LLM, a formal prover model, and feedback from Lean while also generating auxiliary lemmas. These auxiliary lemmas are not limited to subgoals in the formal proof but can also include special cases or potentially useful facts derived from the assumptions, which help in discovering a viable proof strategy. It achieves an 88.1% success rate on the MiniF2F benchmark, establishing a new state-of-the-art among methods using small language models (SLMs) with a much lower sample budget than previous approaches. We also present theoretical analyses and case studies that illustrate how these generated lemmas contribute to solving challenging problems. Our code is publicly available at: https://github.com/kAIto47802/Prover-Agent.",
+      "authors": [
+        {
+          "misc": {
+            "email": "baba-kaito662@g.ecc.u-tokyo.ac.jp"
+          },
+          "name": "Kaito Baba",
+          "orgs": [
+            "The University of Tokyo, Tokyo, Japan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Chaoran Liu",
+          "orgs": [
+            "Research and Development Center for Large Language Models, National Institute of Informatics, Tokyo, Japan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shuhei Kurita",
+          "orgs": [
+            "National Institute of Informatics, Tokyo, Japan"
+          ]
+        },
+        {
+          "misc": {
+            "email": "sannai.akiyoshi.7z@kyoto-u.ac.jp"
+          },
+          "name": "Akiyoshi Sannai",
+          "orgs": [
+            "Kyoto University, Kyoto, Japan",
+            "Shiga University, Shiga, Japan",
+            "RIKEN Center for Advanced General Intelligence for Science Program, Kobe, Japan",
+            "National Institute of Science Technology Policy, Tokyo, Japan"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.19923",
+      "date": "2025-06-24T00:00:00",
+      "citation_count": 19,
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2409.00009",
+      "score": 0.33333334,
+      "title": "Web Retrieval Agents for Evidence-Based Misinformation Detection",
+      "tldr": "[research paper] The paper introduces a web-retrieval agent framework that enhances LLM-based misinformation detection by combining an LLM for claim decomposition with a separate web search agent for evidence retrieval. This dual-agent approach outperforms standalone LLMs and existing RAG methods, improving macro F1 by up to 20%, and demonstrates robustness across multiple models (GPT-3.5, GPT-4, Mixtral, Claude, Vicuna). Key findings reveal that search effectiveness depends on missing information types, with some cases showing counterproductive results; the system leverages diverse, low-bias sources and performs well with both Cohere Coral and customizable DuckDuckGo, though Wikipedia is suboptimal. In-depth analysis of sources, summarization, knowledge base selection, and uncertainty calibration reveals trade-offs in real-world applicability and highlights opportunities for future optimization in retrieval strategy and evidence filtering.",
+      "abstract": "This paper develops an agent-based automated fact-checking approach for detecting misinformation. We demonstrate that combining a powerful LLM agent, which does not have access to the internet for searches, with an online web search agent yields better results than when each tool is used independently. Our approach is robust across multiple models, outperforming alternatives and increasing the macro F1 of misinformation detection by as much as 20 percent compared to LLMs without search. We also conduct extensive analyses on the sources our system leverages and their biases, decisions in the construction of the system like the search tool and the knowledge base, the type of evidence needed and its impact on the results, and other parts of the overall process. By combining strong performance with in-depth understanding, we hope to provide building blocks for future search-enabled misinformation mitigation systems.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Jacob-Junqi Tian",
+          "orgs": [
+            "McGill",
+            "Mila"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hao Yu",
+          "orgs": [
+            "McGill",
+            "Mila"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yury Orlovskiy",
+          "orgs": [
+            "UC Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Tyler Vergho",
+          "orgs": [
+            "Dartmouth"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Mauricio Rivera",
+          "orgs": [
+            "Mila"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Mayank Goel",
+          "orgs": [
+            "IIT Hyderabad"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zachary Yang",
+          "orgs": [
+            "McGill",
+            "Mila"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jean-Fran\u00e7ois Godbout",
+          "orgs": [
+            "Universit\u00e9 de Montr\u00e9al",
+            "Mila"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Reihaneh Rabbany",
+          "orgs": [
+            "McGill",
+            "Mila"
+          ]
+        },
+        {
+          "misc": {
+            "email": "kellin.pelrine@mila.quebec"
+          },
+          "name": "Kellin Pelrine",
+          "orgs": [
+            "McGill",
+            "Mila"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2409.00009",
+      "date": "2024-08-15T00:00:00",
+      "citation_count": 19,
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/ComplexData-MILA/webretrieval"
+    },
+    {
+      "arxiv_id": "1107.1322",
+      "score": 0.33333334,
+      "title": "Text Classification: A Sequential Reading Approach",
+      "tldr": "[research paper] The paper proposes a reinforcement learning-based model that frames text classification as a sequential decision process, where an agent reads sentences one by one and decides when to classify a document or stop reading. The model learns to focus on relevant sentences and terminates early when sufficient information is gathered, outperforming traditional SVM methods on small training sets and matching them on large sets while reducing the amount of text processed. This enables efficient classification for expensive or long documents.",
+      "abstract": "We propose to model the text classification process as a sequential decision process. In this process, an agent learns to classify documents into topics while reading the document sentences sequentially and learns to stop as soon as enough information was read for deciding. The proposed algorithm is based on a modelisation of Text Classification as a Markov Decision Process and learns by using Reinforcement Learning. Experiments on four different classical mono-label corpora show that the proposed approach performs comparably to classical SVM approaches for large training sets, and better for small training sets. In addition, the model automatically adapts its reading process to the quantity of training information provided.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Gabriel Dulac-Arnold",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Ludovic Denoyer",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Patrick Gallinari",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/1107.1322",
+      "date": "2011-07-07T00:00:00",
+      "citation_count": 45,
+      "categories": [
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "venue": "European Conference on Information Retrieval",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2601.03768",
+      "score": 0.25,
+      "title": "Agentic Proof Automation: A Case Study",
+      "tldr": "Agentic proof automation leverages LLMs with feedback loops to autonomously generate and refine proof scripts in Lean 4, reducing human effort in mechanizing formal systems. In a case study of System Capless (14k+ lines), off-the-shelf LLM agents completed 189 proof tasks with 87% success rate and only 16% requiring human intervention, demonstrating scalability and practicality of LLM-based proof engineering under human-guided strategy input.",
+      "abstract": "Proof engineering is notoriously labor-intensive: proofs that are straightforward on paper often require lengthy scripts in theorem provers. Recent advances in large language models (LLMs) create new opportunities for proof automation: modern LLMs not only generate proof scripts, but also support agentic behavior, exploring codebases and iteratively refining their outputs against prover feedback. These advances enable an emerging scheme where LLM-based agents undertake most proof engineering under human guidance. Humans provide mathematical insight (definitions, theorems, proof strategies); agents handle the mechanical work of proof development. We call this scheme agentic proof automation. We present this scheme through a case study: mechanizing the semantic type soundness of a sophisticated formal system, System Capless, in Lean 4, comprising over 14,000 lines of code. Using off-the-shelf LLM agents with a single lightweight proof-checking tool, the agents completed 189 proof engineering tasks with an 87% success rate, only 16% requiring human intervention. The case study demonstrates that agents are capable proof engineers that substantially boost productivity, though they fall short in creative reasoning and still require human guidance in certain cases. We release an interactive explorer where readers can examine all agent interactions; the mechanization is open-sourced for experiments and extensions.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Yichen Xu",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Martin Odersky",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2601.03768",
+      "date": "2026-01-07T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.PL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1806.03529",
+      "score": 0.25,
+      "title": "Learning to Search in Long Documents Using Document Structure",
+      "tldr": "[research paper] The paper proposes DocQN, a Deep Q-Network variant trained to navigate long documents as trees, where an agent learns to interleave structural navigation with answer extraction. It overcomes data bias toward early answers by sampling tree nodes from diverse document regions, enabling effective exploration. Empirically, DocQN outperforms standard DQN and information retrieval baselines in both navigation accuracy and end-to-end question answering, with further gains when ensembled.",
+      "abstract": "Reading comprehension models are based on recurrent neural networks that sequentially process the document tokens. As interest turns to answering more complex questions over longer documents, sequential reading of large portions of text becomes a substantial bottleneck. Inspired by how humans use document structure, we propose a novel framework for reading comprehension. We represent documents as trees, and model an agent that learns to interleave quick navigation through the document tree with more expensive answer extraction. To encourage exploration of the document tree, we propose a new algorithm, based on Deep Q-Network (DQN), which strategically samples tree nodes at training time. Empirically we find our algorithm improves question answering performance compared to DQN and a strong information-retrieval (IR) baseline, and that ensembling our model with the IR baseline results in further gains in performance.",
+      "authors": [
+        {
+          "misc": {
+            "email": "morgeva@mail.tau.ac.il"
+          },
+          "name": "Mor Geva",
+          "orgs": [
+            "Tel Aviv University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "joberant@cs.tau.ac.il"
+          },
+          "name": "Jonathan Berant",
+          "orgs": [
+            "Tel Aviv University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1806.03529",
+      "date": "2018-06-09T00:00:00",
+      "citation_count": 17,
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "International Conference on Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/mega002/DocQN"
+    },
+    {
+      "arxiv_id": "2602.05014",
+      "score": 0.23376624,
+      "title": "DeepRead: Document Structure-Aware Reasoning to Enhance Agentic Search",
+      "tldr": "[research paper] DeepRead introduces a structure-aware agentic search framework that leverages document-native hierarchy and sequential organization by converting PDFs into structured Markdown with preserved headings and paragraph boundaries. It assigns coordinate-style metadata to paragraphs to enable precise localization and order-preserving reading, introducing two complementary tools\u2014Retrieve (for structural anchoring) and ReadSection (for contiguous, section-level reading)\u2014that enable human-like 'locate then read' reasoning. Experiments show superior performance over Search-o1-style agents in long-document QA, with reduced redundancy, improved completeness, and validated synergistic interaction between retrieval and reading.",
+      "abstract": "With the rapid progress of tool-using and agentic large language models (LLMs), Retrieval-Augmented Generation (RAG) is evolving from one-shot, passive retrieval into multi-turn, decision-driven evidence acquisition. Despite strong results in open-domain settings, existing agentic search frameworks commonly treat long documents as flat collections of chunks, underutilizing document-native priors such as hierarchical organization and sequential discourse structure. We introduce DeepRead, a structure-aware, multi-turn document reasoning agent that explicitly operationalizes these priors for long-document question answering. DeepRead leverages LLM-based OCR model to convert PDFs into structured Markdown that preserves headings and paragraph boundaries. It then indexes documents at the paragraph level and assigns each paragraph a coordinate-style metadata key encoding its section identity and in-section order. Building on this representation, DeepRead equips the LLM with two complementary tools: a Retrieve tool that localizes relevant paragraphs while exposing their structural coordinates (with lightweight scanning context), and a ReadSection tool that enables contiguous, order-preserving reading within a specified section and paragraph range. Our experiments demonstrate that DeepRead achieves significant improvements over Search-o1-style agentic search in document question answering. The synergistic effect between retrieval and reading tools is also validated. Our fine-grained behavioral analysis reveals a reading and reasoning paradigm resembling human-like ``locate then read'' behavior.",
+      "authors": [
+        {
+          "misc": {
+            "email": "lizhanli@stu.zuel.edu.cn"
+          },
+          "name": "Zhanli Li",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "tianhuiwen25@mails.ucas.ac.cn"
+          },
+          "name": "Huiwen Tian",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luolvzhou23s@ict.ac.cn"
+          },
+          "name": "Lvzhou Luo",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "caoyixuan@ict.ac.cn"
+          },
+          "name": "Yixuan Cao",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luop@ict.ac.cn"
+          },
+          "name": "Ping Luo",
+          "orgs": [
+            "Key Lab of Intelligent Information Processing of Chinese Academy of Sciences (CAS), Institute of Computing Technology, CAS",
+            "State Key Lab of AI Safety",
+            "University of Chinese Academy of Sciences"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2602.05014",
+      "date": "2026-02-04T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2604.22861",
+      "score": 0.22083333,
+      "title": "IntrAgent: An LLM Agent for Content-Grounded Information Retrieval through Literature Review",
+      "tldr": "[Research Paper] introduces IntraView, a new task for fine-grained, content\u2011grounded information retrieval from scientific literature, and presents IntrAgent, an LLM agent that mimics human reading via section ranking and iterative reading with hierarchy preservation and sufficiency checks. IntrAgent achieves a 13.2% higher cross\u2011domain accuracy than state\u2011of\u2011the\u2011art RAG and literature\u2011agent baselines on the newly released IntraBench benchmark.",
+      "abstract": "Scientific research relies on accurate information retrieval from literature to support analytical decisions. In this work, we introduce a new task, INformation reTRieval through literAture reVIEW (IntraView), which aims to automate fine-grained information retrieval faithfully grounded in the provided content in response to research-driven queries, and propose IntrAgent, an LLM-based agent that addresses this challenging task. In particular, IntrAgent is designed to mimic human behaviors when reading literature for information retrieval -- identifying relevant sections and then iteratively extracting key details to refine the retrieved information. It follows a two-stage pipeline: a Section Ranking stage that prioritizes relevant literature sections through structural-knowledge-enabled reasoning, and an Iterative Reading stage that continuously extracts details and synthesizes them into concise, contextually grounded answers. To support rigorous evaluation, we introduce IntraBench, a new benchmark consisting of 315 test instances built from expert-authored questions paired with literature spanning five STEM domains. Across seven backbone LLMs, IntrAgent achieves on average 13.2% higher cross-domain accuracy than state-of-the-art RAG and research-agent baselines.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Fengbo Ma",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zixin Rao",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xiaoting Li",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhetao Chen",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hongyue Sun",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yiping Zhao",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xianyan Chen",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhen Xiang",
+          "orgs": [
+            "University of Georgia, Athens, GA, USA"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2604.22861",
+      "date": "2026-04-23T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2410.20954",
+      "score": 0.2,
+      "title": "Active Legibility in Multiagent Reinforcement Learning",
+      "tldr": "[research paper] The paper introduces a Multi-Agent Active Legibility (MAAL) framework that enhances agent behavior legibility by shaping rewards based on KL divergence between observer beliefs and true goals before and after action execution, reducing ambiguity in goal recognition and improving collaboration efficiency. It proposes a Legible Interactive-POMDP (LI-POMDP) formalism and evaluates the framework across problem domains where legibility directly impacts task completion speed and accuracy, demonstrating superior performance and reduced training time compared to standard MARL methods like VDN, QMIX, and MADDPG.",
+      "abstract": "A multiagent sequential decision problem has been seen in many critical applications including urban transportation, autonomous driving cars, military operations, etc. Its widely known solution, namely multiagent reinforcement learning, has evolved tremendously in recent years. Among them, the solution paradigm of modeling other agents attracts our interest, which is different from traditional value decomposition or communication mechanisms. It enables agents to understand and anticipate others' behaviors and facilitates their collaboration. Inspired by recent research on the legibility that allows agents to reveal their intentions through their behavior, we propose a multiagent active legibility framework to improve their performance. The legibility-oriented framework allows agents to conduct legible actions so as to help others optimise their behaviors. In addition, we design a series of problem domains that emulate a common scenario and best characterize the legibility in multiagent reinforcement learning. The experimental results demonstrate that the new framework is more efficient and costs less training time compared to several multiagent reinforcement learning algorithms.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Yanyu Liu",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Yinghui Pan",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Yifeng Zeng",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Biyang Ma",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Doshi Prashant",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2410.20954",
+      "date": "2024-10-28T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "Artificial Intelligence",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2605.06647",
+      "score": 0.18333334,
+      "title": "Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval",
+      "tldr": "[research paper] SIRA introduces a single-query, controllable BM25 retrieval framework that leverages LLM reasoning to generate discriminative, corpus-aware keyword expansions\u2014predicting missing evidence terms and filtering out common or confusing ones using document frequency statistics\u2014thereby compressing multi-round exploratory search into one efficient, interpretable retrieval step. It outperforms dense retrievers and multi-round agentic baselines on ten BEIR benchmarks and downstream QA tasks by exploiting LLMs' ability to reason about retrieval structure while maintaining transparency, training-free operation, and low latency.",
+      "abstract": "Retrieval-augmented agents are increasingly the interface to large organizational knowledge bases, yet most still treat retrieval as a black box: they issue exploratory queries, inspect returned snippets, and iteratively reformulate until useful evidence emerges. This approach resembles how a newcomer searches an unfamiliar database rather than how an expert navigates it with strong priors about terminology and likely evidence, and results in unnecessary retrieval rounds, increased latency, and poor recall.\n  We introduce \\textit{SuperIntelligent Retrieval Agent} (SIRA), which defines \\emph{superintelligence} in retrieval as the ability to compress multi-round exploratory search into a single corpus-discriminative retrieval action. SIRA does not merely ask what terms are relevant to the query; it asks which terms are likely to separate the desired evidence from corpus-level confusers. On the corpus side, an LLM enriches each document offline with missing search vocabulary; on the query side, it predicts evidence vocabulary omitted by the query; and document-frequency statistics as a tool call to filter proposed terms that are absent, overly common, or unlikely to create retrieval margin. The final retrieval step is a single weighted BM25 call combining the original query with the validated expansion.\n  Across ten BEIR benchmarks and downstream question-answering tasks, SIRA achieves the significantly superior performance outperforming dense retrievers and state-of-the-art multi-round agentic baselines, demonstrating that one well-formed lexical query, guided by LLM cognition and lightweight corpus statistics, can exceed substantially more expensive multi-round search while remaining interpretable, training-free, and efficient.",
+      "authors": [
+        {
+          "misc": {
+            "email": "zy45@meta.com"
+          },
+          "name": "Zeyu Yang",
+          "orgs": [
+            "Meta"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qi Ma",
+          "orgs": [
+            "Meta"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jason Chen",
+          "orgs": [
+            "Meta"
+          ]
+        },
+        {
+          "misc": {
+            "email": "anshumali@meta.com"
+          },
+          "name": "Anshumali Shrivastava",
+          "orgs": [
+            "Meta"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2605.06647",
+      "date": "2026-05-07T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/facebookresearch/sira"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Reward variant: R_redund (ALDEN-flavored). reward = answer + w_evidence*evidence
+#                                                  - beta*redundancy - lambda*read_tokens + termination
+# redundancy = duplicate reads + repeated identical searches (anti-redundant-actions)
+reward:
+  name: redundancy
+  w_answer: 1.0
+  w_evidence: 0.3
+  evidence_source: read
+  beta_redundancy: 5.0e-2
+  lambda_tokens: 5.0e-4
+  r_submit_bonus: 0.5
+  r_nosubmit_penalty: -0.5

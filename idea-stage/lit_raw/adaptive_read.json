@@ -1,0 +1,500 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2601.18116",
+      "score": 0.5,
+      "title": "FABLE: Forest-Based Adaptive Bi-Path LLM-Enhanced Retrieval for Multi-Document Reasoning",
+      "tldr": "[research paper] FABLE introduces a forest-based, LLM-enhanced retrieval framework that constructs multi-granularity semantic hierarchies during offline indexing and enables query-adaptive navigation via a bi-path strategy\u2014combining semantic traversal and structure-aware propagation\u2014to achieve efficient, accurate multi-document reasoning. It outperforms structured RAG and full-context LLMs in completeness and faithfulness, reducing token usage by up to 94% while maintaining high reasoning quality through dynamic budget control and hierarchical traversal.",
+      "abstract": "The rapid expansion of long-context Large Language Models (LLMs) has reignited debate on whether Retrieval-Augmented Generation (RAG) remains necessary. However, empirical evidence reveals persistent limitations of long-context inference, including the lost-in-the-middle phenomenon, high computational cost, and poor scalability for multi-document reasoning. Conversely, traditional RAG systems, while efficient, are constrained by flat chunk-level retrieval that introduces semantic noise and fails to support structured cross-document synthesis. We present \\textbf{FABLE}, a \\textbf{F}orest-based \\textbf{A}daptive \\textbf{B}i-path \\textbf{L}LM-\\textbf{E}nhanced retrieval framework that integrates LLMs into both knowledge organization and retrieval. FABLE constructs LLM-enhanced hierarchical forest indexes with multi-granularity semantic structures, then employs a bi-path strategy combining LLM-guided hierarchical traversal with structure-aware propagation for fine-grained evidence acquisition, with explicit budget control for adaptive efficiency trade-offs. Extensive experiments demonstrate that FABLE consistently outperforms SOTA RAG methods and achieves comparable accuracy to full-context LLM inference with up to 94\\% token reduction, showing that long-context LLMs amplify rather than fully replace the need for structured retrieval.",
+      "authors": [
+        {
+          "misc": {
+            "is_first_author": true
+          },
+          "name": "Lin Sun",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Linglin Zhang",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jingang Huang",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Change Jia",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhengwei Cheng",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xiangzheng Zhang",
+          "orgs": [
+            "Qiyuan Tech, Beijing, China"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2601.18116",
+      "date": "2026-01-26T04:00:56",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2505.13504",
+      "score": 0.5,
+      "title": "An agentic system with reinforcement-learned subsystem improvements for parsing form-like documents",
+      "tldr": "[research paper] Proposes a multi-agent reinforcement learning framework for form-like document parsing where LLM agents operate in a self-correcting loop: a meta-prompting agent uses RL-driven rewards and penalties to optimize task-specific prompts, while a document classifier, schema builder, and data extractor agents collaboratively parse key-value pairs and line items. The system leverages Gymnasium for RL training on natural language actions, enabling adaptive prompt tuning and error correction across diverse layouts, formats, and document types without predefined entity lists, outperforming monolithic LLM-based extractors in uncertainty-prone scenarios.",
+      "abstract": "Extracting alphanumeric data from form-like documents such as invoices, purchase orders, bills, and financial documents is often performed via vision (OCR) and learning algorithms or monolithic pipelines with limited potential for systemic improvements. We propose an agentic AI system that leverages Large Language Model (LLM) agents and a reinforcement learning (RL) driver agent to automate consistent, self-improving extraction under LLM inference uncertainty. Our work highlights the limitations of monolithic LLM-based extraction and introduces a modular, multi-agent framework with task-specific prompts and an RL policy of rewards and penalties to guide a meta-prompting agent to learn from past errors and improve prompt-based actor agents. This self-corrective adaptive system handles diverse documents, file formats, layouts, and LLMs, aiming to automate accurate information extraction without the need for human intervention. Results as reported on two benchmark datasets of SOIRE, and CORD, are promising for the agentic AI framework.",
+      "authors": [
+        {
+          "misc": {
+            "orcid": "0009-0002-4806-7207",
+            "orcid_url": "https://orcid.org/0009-0002-4806-7207"
+          },
+          "name": "Ayesha Amjad",
+          "orgs": []
+        },
+        {
+          "misc": {
+            "orcid": "0000-0002-7421-0479",
+            "orcid_url": "https://orcid.org/0000-0002-7421-0479"
+          },
+          "name": "Saurav Sthapit",
+          "orgs": []
+        },
+        {
+          "misc": {
+            "orcid": "0000-0003-0638-9689",
+            "orcid_url": "https://orcid.org/0000-0003-0638-9689"
+          },
+          "name": "Tahir Qasim Syed",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2505.13504",
+      "date": "2025-05-16T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "venue": "International Workshop on Engineering Multi-Agent Systems",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2510.13214",
+      "score": 0.36190477,
+      "title": "Adaptive Reasoning Executor: A Collaborative Agent System for Efficient Reasoning",
+      "tldr": "[research paper] The paper proposes an adaptive reasoning executor that uses a small LLM to generate initial answers, which are then verified by a large LLM via either immediate or step-by-step judgment. For simple problems, the large LLM quickly confirms correctness, avoiding costly deep reasoning and reducing computational cost by over 50% with minimal accuracy loss. For complex problems, the system falls back to full deep reasoning, maintaining high performance across benchmarks like GSM8K and MMLU.",
+      "abstract": "Recent advances in Large Language Models (LLMs) demonstrate that chain-of-thought prompting and deep reasoning substantially enhance performance on complex tasks, and multi-agent systems can further improve accuracy by enabling model debates. However, applying deep reasoning to all problems is computationally expensive. To mitigate these costs, we propose a complementary agent system integrating small and large LLMs. The small LLM first generates an initial answer, which is then verified by the large LLM. If correct, the answer is adopted directly; otherwise, the large LLM performs in-depth reasoning. Experimental results show that, for simple problems, our approach reduces the computational cost of the large LLM by more than 50% with negligible accuracy loss, while consistently maintaining robust performance on complex tasks.",
+      "authors": [
+        "Zehui Ling",
+        "Deshu Chen",
+        "Yichi Zhang",
+        "Yuchen Liu",
+        "Xigui Li",
+        "Xin Guo",
+        "Yuan Cheng"
+      ],
+      "url": "https://arxiv.org/abs/2510.13214",
+      "date": "2025-10-15T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2603.09297",
+      "score": 0.33333334,
+      "title": "TA-Mem: Tool-Augmented Autonomous Memory Retrieval for LLM in Long-Term Conversational QA",
+      "tldr": "[research paper] TA-Mem introduces a tool-augmented, agentic memory retrieval framework that replaces static top-k similarity search with autonomous, adaptive tool selection for long-term conversational QA. The system employs a one-shot multi-task LLM agent to semantically chunk and extract structured episodic memories, stores them in a multi-indexed database supporting key-based and similarity-based queries, and enables a retrieval agent to dynamically select tools based on question type, iteratively fetching relevant memories until a final response is generated. Evaluation on LoCoMo shows superior answer quality and reduced token overhead compared to baselines, with tool usage patterns revealing strong adaptability across domains.",
+      "abstract": "Large Language Model (LLM) has exhibited strong reasoning ability in text-based contexts across various domains, yet the limitation of context window poses challenges for the model on long-range inference tasks and necessitates a memory storage system. While many current storage approaches have been proposed with episodic notes and graph representations of memory, retrieval methods still primarily rely on predefined workflows or static similarity top-k over embeddings. To address this inflexibility, we introduced a novel tool-augmented autonomous memory retrieval framework (TA-Mem), which contains: (1) a memory extraction LLM agent which is prompted to adaptively chuck an input into sub-context based on semantic correlation, and extract information into structured notes, (2) a multi-indexed memory database designed for different types of query methods including both key-based lookup and similarity-based retrieval, (3) a tool-augmented memory retrieval agent which explores the memory autonomously by selecting appropriate tools provided by the database based on the user input, and decides whether to proceed to the next iteration or finalizing the response after reasoning on the fetched memories. The TA-Mem is evaluated on the LoCoMo dataset, achieving significant performance improvements over existing baseline approaches. In addition, an analysis of tool use across different question types also demonstrates the adaptivity of the proposed method.",
+      "authors": [
+        {
+          "misc": {
+            "email": "yuanmw1998@gmail.com"
+          },
+          "name": "Mengwei Yuan",
+          "orgs": [
+            "Independent Researcher",
+            "Milpitas, USA, 95035"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jiananliu2408@gmail.com"
+          },
+          "name": "Jianan Liu",
+          "orgs": [
+            "Independent Researcher",
+            "Austin, USA, 78613"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jing.y@wustl.edu"
+          },
+          "name": "Jing Yang",
+          "orgs": [
+            "Washington University in St. Louis",
+            "St. Louis, USA, 63130"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xl4230@nyu.edu"
+          },
+          "name": "Xianyou Li",
+          "orgs": [
+            "New York University",
+            "New York, USA, 10012"
+          ]
+        },
+        {
+          "misc": {
+            "email": "yanwr2016@gmail.com"
+          },
+          "name": "Weiran Yan",
+          "orgs": [
+            "Independent Researcher",
+            "Milpitas, USA, 95035"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wu.yicha@northeastern.edu"
+          },
+          "name": "Yichao Wu",
+          "orgs": [
+            "Northeastern University",
+            "Boston, USA, 02115"
+          ]
+        },
+        {
+          "misc": {
+            "email": "liang.p@northeastern.edu"
+          },
+          "name": "Penghao Liang",
+          "orgs": [
+            "Northeastern University",
+            "Boston, USA, 02115"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2603.09297",
+      "date": "2026-03-10T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2601.03258",
+      "score": 0.25,
+      "title": "Enhancing Retrieval-Augmented Generation with Two-Stage Retrieval: FlashRank Reranking and Query Expansion",
+      "tldr": "[research paper] A two-stage retrieval framework for Retrieval-Augmented Generation (RAG) introduces LLM-driven query expansion to boost recall by generating semantically relevant query variants, followed by FlashRank\u2014a marginal-utility reranker that greedily selects evidence under a token budget by maximizing information gain per token. The method jointly optimizes relevance, novelty, brevity, and cross-encoder evidence via learned coefficients, achieving up to 5.4% higher NDCG@10, 6\u20138% improved generation accuracy, and 35% reduction in context tokens across MS MARCO, BEIR, and FinanceBench, with ablation studies confirming independent contributions of both query expansion and reranking.",
+      "abstract": "Retrieval-Augmented Generation (RAG) couples a retriever with a large language model (LLM) to ground generated responses in external evidence. While this framework enhances factuality and domain adaptability, it faces a key bottleneck: balancing retrieval recall with limited LLM context. Retrieving too few passages risks missing critical context, while retrieving too many overwhelms the prompt window, diluting relevance and increasing cost.\n  We propose a two-stage retrieval pipeline that integrates LLM-driven query expansion to improve candidate recall and FlashRank, a fast marginal-utility reranker that dynamically selects an optimal subset of evidence under a token budget. FlashRank models document utility as a weighted combination of relevance, novelty, brevity, and cross-encoder evidence. Together, these modules form a generalizable solution that increases answer accuracy, faithfulness, and computational efficiency.",
+      "authors": "Sherine George",
+      "url": "https://arxiv.org/abs/2601.03258",
+      "date": "2025-10-17T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2506.12317",
+      "score": 0.25,
+      "title": "The Budget AI Researcher and the Power of RAG Chains",
+      "tldr": "[research paper] The Budget AI Researcher introduces a retrieval-augmented generation (RAG) chain framework that constructs a hierarchical topic tree from 9 major AI conferences, enabling the identification of distant topic pairs to generate novel, grounded research abstracts. By combining topic-guided recombination with iterative self-evaluation against real literature and peer-review standards, the system produces more concrete and interesting ideas than standard LLM prompting, with human evaluations confirming enhanced perceived novelty and scientific credibility.",
+      "abstract": "Navigating the vast and rapidly growing body of scientific literature is a formidable challenge for aspiring researchers. Current approaches to supporting research idea generation often rely on generic large language models (LLMs). While LLMs are effective at aiding comprehension and summarization, they often fall short in guiding users toward practical research ideas due to their limitations. In this study, we present a novel structural framework for research ideation. Our framework, The Budget AI Researcher, uses retrieval-augmented generation (RAG) chains, vector databases, and topic-guided pairing to recombine concepts from hundreds of machine learning papers. The system ingests papers from nine major AI conferences, which collectively span the vast subfields of machine learning, and organizes them into a hierarchical topic tree. It uses the tree to identify distant topic pairs, generate novel research abstracts, and refine them through iterative self-evaluation against relevant literature and peer reviews, generating and refining abstracts that are both grounded in real-world research and demonstrably interesting. Experiments using LLM-based metrics indicate that our method significantly improves the concreteness of generated research ideas relative to standard prompting approaches. Human evaluations further demonstrate a substantial enhancement in the perceived interestingness of the outputs. By bridging the gap between academic data and creative generation, the Budget AI Researcher offers a practical, free tool for accelerating scientific discovery and lowering the barrier for aspiring researchers. Beyond research ideation, this approach inspires solutions to the broader challenge of generating personalized, context-aware outputs grounded in evolving real-world knowledge.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Franklin Lee",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Tengfei Ma",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.12317",
+      "date": "2025-06-14T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/hellojoeAoPS11235/ai-research-agent"
+    },
+    {
+      "arxiv_id": "2412.18547",
+      "score": 0.25,
+      "title": "Token-Budget-Aware LLM Reasoning",
+      "tldr": "[research paper] The paper identifies that Chain-of-Thought (CoT) reasoning in LLMs is often unnecessarily lengthy due to token elasticity\u2014where small token budgets fail to constrain actual output, leading to inflated token usage. It proposes TALE (Token-Budget-Aware LLM rEasoning), a framework that dynamically adjusts reasoning token budgets based on problem complexity: TALE-EP estimates optimal budgets via zero-shot prompting, while TALE-PT internalizes budget awareness through post-training. Experiments show TALE-EP reduces token usage by 67% with <3% accuracy drop, and TALE-PT cuts costs by ~50% while maintaining competitive performance, offering a practical balance between efficiency and accuracy in reasoning.",
+      "abstract": "Reasoning is critical for large language models (LLMs) to excel in a wide range of tasks. While methods like Chain-of-Thought (CoT) reasoning and enhance LLM performance by decomposing problems into intermediate steps, they also incur significant overhead in token usage, leading to increased costs. We find that the reasoning process of current LLMs is unnecessarily lengthy and it can be compressed by including a reasonable token budget in the prompt, but the choice of token budget plays a crucial role in the actual compression effectiveness. We then propose a token-budget-aware LLM reasoning framework that dynamically adjusts the number of reasoning tokens based on the reasoning complexity of each problem. Experiments show that our method effectively reduces token costs in CoT reasoning with only a slight performance reduction, offering a practical solution to balance efficiency and accuracy in LLM reasoning. Code: https://github.com/GeniusHTX/TALE",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Tingxu Han",
+          "orgs": [
+            "Nanjing University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhenting Wang",
+          "orgs": [
+            "Nanjing University",
+            "Rutgers University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "corresponding author"
+          },
+          "name": "Chunrong Fang",
+          "orgs": [
+            "UMass Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shiyu Zhao",
+          "orgs": [
+            "Rutgers University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shiqing Ma",
+          "orgs": [
+            "UMass Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhenyu Chen",
+          "orgs": [
+            "Nanjing University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2412.18547",
+      "date": "2024-12-24T00:00:00",
+      "citation_count": 177,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/GeniusHTX/TALE"
+    },
+    {
+      "arxiv_id": "2407.12021",
+      "score": 0.21428572,
+      "title": "Adaptive Draft-Verification for Efficient Large Language Model Decoding",
+      "tldr": "[research paper] ADED introduces a fine-tuning-free, adaptive draft-verification framework for LLM decoding that dynamically approximates the output distribution using a tri-gram matrix updated during runtime. By integrating a Monte Carlo Tree Search (MCTS)-inspired draft maker with a token preference score\u2014balancing exploitation of known probabilities and exploration of underrepresented token spaces\u2014it evolves its draft generation to closely match the true LLM output. The method achieves up to 2.5\u00d7 speedup in decoding latency and a 20% higher acceptance rate than baselines through continuous feedback-driven refinement of the token probability model, without requiring model fine-tuning or fixed retrieval schemes.",
+      "abstract": "Large language model (LLM) decoding involves generating a sequence of tokens based on a given context, where each token is predicted one at a time using the model's learned probabilities. The typical autoregressive decoding method requires a separate forward pass through the model for each token generated, which is computationally inefficient and poses challenges for deploying LLMs in latency-sensitive scenarios. The main limitations of current decoding methods stem from their inefficiencies and resource demands. Existing approaches either necessitate fine-tuning smaller models, which is resource-intensive, or rely on fixed retrieval schemes to construct drafts for the next tokens, which lack adaptability and fail to generalize across different models and contexts. To address these issues, we introduce a novel methodology called ADED, which accelerates LLM decoding without requiring fine-tuning. Our approach involves an adaptive draft-verification process that evolves over time to improve efficiency. We utilize a tri-gram matrix-based LLM representation to dynamically approximate the output distribution of the LLM, allowing the model to adjust to changing token probabilities during the decoding process. Additionally, we implement a draft construction mechanism that effectively balances exploration and exploitation, ensuring that the drafts generated are both diverse and close to the true output distribution of the LLM. The importance of this design lies in its ability to optimize the draft distribution adaptively, leading to faster and more accurate decoding. Through extensive experiments on various benchmark datasets and LLM architectures, we demonstrate that ADED significantly accelerates the decoding process while maintaining high accuracy, making it suitable for deployment in a wide range of practical applications.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Xukun Liu",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Bowen Lei",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Ruqi Zhang",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Dongkuan Xu",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2407.12021",
+      "date": "2024-06-27T00:00:00",
+      "citation_count": 10,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2508.08256",
+      "score": 0.2,
+      "title": "FIER: Fine-Grained and Efficient KV Cache Retrieval for Long-context LLM Inference",
+      "tldr": "[research paper] Fier introduces a fine-grained KV cache retrieval method that uses 1-bit quantized keys to estimate token importance, enabling accurate, token-level retrieval without sacrificing efficiency. By exploiting the sparsity of critical tokens across long contexts, Fier achieves performance comparable to full KV cache usage while using only 11% of the cache budget, reducing decoding latency by 1.2\u00d7 to 1.5\u00d7 through precise, query-aware selection.",
+      "abstract": "The Key-Value (KV) cache reading latency increases significantly with context lengths, hindering the efficiency of long-context LLM inference. To address this, previous works propose retaining a small fraction of KV cache based on token importance. For example, KV eviction uses static heuristics to retain tokens, while KV retrieval dynamically selects query-relevant tokens for more adaptive cache management. However, we observe that important tokens are often sparsely distributed across the long context. This sparsity makes existing page-level KV retrieval inaccurate, as each page may include irrelevant tokens and miss critical ones. In this work, we propose Fier, a \\\\underline{Fi}ne-Grained and \\\\underline{E}fficient KV cache \\\\underline{R}etrieval method. Fier uses 1-bit quantized keys to estimate the importance of each token, resulting in efficient and precise retrieval. Experiments show that Fier matches full KV performance using only 11\\\\% of the cache budget across various long-context tasks, reducing decoding latency by 1.2$\\\\times$ to 1.5$\\\\times$.Code is available at https://github.com/SimWangArizona/FIER",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Dongwei Wang",
+          "orgs": [
+            "University of Arizona"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zijie Liu",
+          "orgs": [
+            "University of North Carolina at Chapel Hill"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Song Wang",
+          "orgs": [
+            "University of Virginia"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yuxin Ren",
+          "orgs": [
+            "University of Arizona"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jianing Deng",
+          "orgs": [
+            "University of Pittsburgh"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jingtong Hu",
+          "orgs": [
+            "University of Pittsburgh"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Tianlong Chen",
+          "orgs": [
+            "University of North Carolina at Chapel Hill"
+          ]
+        },
+        {
+          "misc": {
+            "email": "huanruiyang@arizona.edu"
+          },
+          "name": "Huanrui Yang",
+          "orgs": [
+            "University of Arizona"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2508.08256",
+      "date": "2025-05-28T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.DB"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2602.07213",
+      "score": 0.18285716,
+      "title": "Adaptive Retrieval helps Reasoning in LLMs -- but mostly if it's not used",
+      "tldr": "[research paper] An adaptive retrieval-augmented reasoning agent outperforms both Chain-of-Thought (CoT) and static retrieval on mathematical reasoning benchmarks, demonstrating that on-demand, agentic retrieval\u2014where the LLM self-identifies knowledge gaps and retrieves information only when needed\u2014leads to superior performance. Crucially, retrieval is used infrequently (7% on GSM8K, 38.8% on MATH-500), with usage scaling strongly with problem difficulty, indicating that the model's ability to self-assess and selectively retrieve is a key metacognitive mechanism. The results show that retrieval is not universally beneficial; in most cases, the agent performs better when it does not retrieve, suggesting that active non-use of retrieval is a sign of strong internal reasoning.",
+      "abstract": "Large Language Models (LLMs) often falter in complex reasoning tasks due to their static, parametric knowledge, leading to hallucinations and poor performance in specialized domains like mathematics. This work explores a fundamental principle for enhancing generative models: treating retrieval as a form of dynamic in-context learning. We test an adaptive retrieval-augmented architecture where an LLM agent actively decides when to query an external knowledge base during its reasoning process. We compare this adaptive strategy against a standard Chain-of-Thought (CoT) baseline and a static retrieval approach on the GSM8K and MATH-500 benchmarks. Although our experiments show that static retrieval is inferior to CoT, the adaptive retrieval shows interesting behavior: While traces including retrieved results show slightly worse performance compared to CoT, traces that do not include retrieval actually perform better compared to CoT. This suggests that: (a) retrieval only rarely helps reasoning (we show a few counterexamples, e.g. using useful theorems) and (b) actively not using retrieval is indicative of good model performance. Furthermore, we find that the model scales its retrieval frequency with the difficulty of the problem, reinforcing that the decision to retrieve is a crucial metacognitive signal. The agent's ability to self-assess its knowledge and selectively engage with external information represents a key principle for building more robust and reliable generative models.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Srijan Shakya",
+          "orgs": [
+            "Institute of Machine Learning, Johannes Kepler University Linz, Austria",
+            "Pro2future GmbH, Linz, Austria"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Anamaria-Roberta Hartl",
+          "orgs": [
+            "Institute of Machine Learning, Johannes Kepler University Linz, Austria"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Sepp Hochreiter",
+          "orgs": [
+            "Institute of Machine Learning, Johannes Kepler University Linz, Austria",
+            "NXAI GmbH, Linz, Austria"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Korbinian Poppel",
+          "orgs": [
+            "ELLIS Institute T\u00fcbingen, Germany"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2602.07213",
+      "date": "2026-02-06T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.LG"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    }
+  ]
+}

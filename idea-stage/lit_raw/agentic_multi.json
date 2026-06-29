@@ -1,0 +1,572 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2603.14468",
+      "score": 0.5555556,
+      "title": "LongVidSearch: An Agentic Benchmark for Multi-hop Evidence Retrieval Planning in Long Videos",
+      "tldr": "[research paper] LongVidSearch introduces a standardized, agentic benchmark for multi-hop evidence retrieval in long videos, enforcing strict retrieval necessity where each hop requires exactly k non-redundant, temporally discontinuous evidence clips\u2014removing shortcut learning. The benchmark uses an adversarial construction pipeline with semantic leakage, temporal discontinuity, and N-1 ablation checks to ensure genuine multi-hop reasoning, and evaluates agents via tool-call cost and answer accuracy under a unified interface, revealing that retrieval planning remains the primary bottleneck despite strong LLMs like GPT-5 achieving only 42.43% accuracy.",
+      "abstract": "Long video question answering (Long-Video QA) increasingly relies on agentic tool use to retrieve evidence from long videos. In realistic settings, this process often requires multi-hop retrieval, where agents must iteratively gather multiple discontinuous evidence clips. However, existing long-video benchmarks are largely static: they rarely enforce strict multi-hop retrieval and typically lack a standardized evidence-access interface, making it difficult to separate failures in retrieval planning from those in answer generation. To address this gap, we introduce LongVidSearch, a benchmark for evaluating agentic multi-hop evidence retrieval planning in long videos under standardized access constraints. LongVidSearch enforces retrieval necessity: a Hop-k question requires exactly k necessary evidence clips, and removing any single clip renders the question unsolvable. The benchmark contains 3,000 questions over 447 long videos (average length 26 minutes), covering four reasoning categories: State Mutation, Causal Inference, Global Summary, and Visual Tracking, with 2-hop, 3-hop, and 4-hop evidence requirements. To ensure fair and controlled evaluation, all agents interact with LongVidSearch through a unified tool interface, which fixes the retrieval backend and isolates the agent's ability to formulate queries and plan iterative retrieval. In addition to answer accuracy, we measure tool-call cost to analyze the accuracy-efficiency trade-off under identical access conditions. We evaluate VideoAgent-style QA agents with multiple backbone LLMs using three-judge majority voting. GPT-5 achieves the highest accuracy (42.43), outperforming Gemini 3 Pro (30.97) and GPT-4o (19.20), yet remaining below 50 %, highlighting the difficulty of multi-hop retrieval planning. With gold evidence clips, performance becomes near-perfect, confirming retrieval planning as the primary bottleneck.",
+      "authors": [
+        {
+          "misc": {
+            "email": "2022112619@stu.hit.edu.cn"
+          },
+          "name": "Rongyi Yu",
+          "orgs": [
+            "Harbin Institute of Technology",
+            "Harbin, China"
+          ]
+        },
+        {
+          "misc": {
+            "email": "duanchy3@mail2.sysu.edu.cn"
+          },
+          "name": "Chenyuan Duan",
+          "orgs": [
+            "Sun Yat-sen University",
+            "GuangZhou, China"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wentao.zhang@pku.edu.cn"
+          },
+          "name": "Wentao Zhang",
+          "orgs": [
+            "Peking University",
+            "Zhongguancun Academy",
+            "Beijing, China"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2603.14468",
+      "date": "2026-03-15T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CV",
+        "cs.IR"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/yrywill/LongVidSearch"
+    },
+    {
+      "arxiv_id": "2009.12756",
+      "score": 0.5416667,
+      "title": "Answering Complex Open-Domain Questions with Multi-Hop Dense Retrieval",
+      "tldr": "[research paper] The paper introduces a simple, corpus-agnostic multi-hop dense retrieval framework that iteratively retrieves document sequences by encoding the question and previously retrieved passages as a dynamic query. Unlike prior methods relying on entity linking or hyperlinks, it uses pretrained encoders and maximum inner product search to discover sufficient evidence paths in unstructured text, achieving state-of-the-art performance on HotpotQA and FEVER with a 10x speedup in inference while maintaining high accuracy. The approach enables efficient, generalizable multi-hop reasoning without domain-specific corpus structures.",
+      "abstract": "We propose a simple and efficient multi-hop dense retrieval approach for answering complex open-domain questions, which achieves state-of-the-art performance on two multi-hop datasets, HotpotQA and multi-evidence FEVER. Contrary to previous work, our method does not require access to any corpus-specific information, such as inter-document hyperlinks or human-annotated entity markers, and can be applied to any unstructured text corpus. Our system also yields a much better efficiency-accuracy trade-off, matching the best published accuracy on HotpotQA while being 10 times faster at inference time.",
+      "authors": [
+        {
+          "misc": {
+            "email": "xwhan@cs.ucsb.edu"
+          },
+          "name": "Wenhan Xiong",
+          "orgs": [
+            "University of California, Santa Barbara"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xiangl@cs.umass.edu"
+          },
+          "name": "Xiang Lorraine Li",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {
+            "email": "sviyer@fb.com"
+          },
+          "name": "Srinivasan Iyer",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jingfeidu@fb.com"
+          },
+          "name": "Jingfei Du",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "plewis@fb.com"
+          },
+          "name": "Patrick Lewis",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "william@cs.ucsb.edu"
+          },
+          "name": "William Yang Wang",
+          "orgs": [
+            "University of California, Santa Barbara"
+          ]
+        },
+        {
+          "misc": {
+            "email": "mehdad@fb.com"
+          },
+          "name": "Yashar Mehdad",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "scottyih@fb.com"
+          },
+          "name": "Wen-tau Yih",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "sriedel@fb.com"
+          },
+          "name": "Sebastian Riedel",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "dkiela@fb.com"
+          },
+          "name": "Douwe Kiela",
+          "orgs": [
+            "Facebook AI"
+          ]
+        },
+        {
+          "misc": {
+            "email": "barlaso@fb.com"
+          },
+          "name": "Barlas O\u011fuz",
+          "orgs": [
+            "Facebook AI"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2009.12756",
+      "date": "2020-09-27T00:00:00",
+      "citation_count": 233,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "International Conference on Learning Representations",
+      "venue_year": null,
+      "github_url": "https://github.com/facebookresearch/multihop_dense_retrieval"
+    },
+    {
+      "arxiv_id": "2510.14278",
+      "score": 0.41025642,
+      "title": "PRISM: Agentic Retrieval with LLMs for Multi-Hop Question Answering",
+      "tldr": "[research paper] PRISM introduces an agentic retrieval framework that decouples precision and recall in multi-hop question answering via three LLM-based agents: a Question Analyzer that decomposes complex queries into sub-questions, a Selector that filters out irrelevant passages for high precision, and an Adder that reintroduces missing evidence for improved recall. The iterative loop between Selector and Adder refines the evidence set, producing compact, comprehensive, and faithful passages that outperform baselines in both retrieval quality and downstream QA performance across four benchmarks, particularly mitigating hallucination and the 'lost-in-the-middle' problem in long contexts.",
+      "abstract": "Retrieval plays a central role in multi-hop question answering (QA), where answering complex questions requires gathering multiple pieces of evidence. We introduce an Agentic Retrieval System that leverages large language models (LLMs) in a structured loop to retrieve relevant evidence with high precision and recall. Our framework consists of three specialized agents: a Question Analyzer that decomposes a multi-hop question into sub-questions, a Selector that identifies the most relevant context for each sub-question (focusing on precision), and an Adder that brings in any missing evidence (focusing on recall). The iterative interaction between Selector and Adder yields a compact yet comprehensive set of supporting passages. In particular, it achieves higher retrieval accuracy while filtering out distracting content, enabling downstream QA models to surpass full-context answer accuracy while relying on significantly less irrelevant information. Experiments on four multi-hop QA benchmarks -- HotpotQA, 2WikiMultiHopQA, MuSiQue, and MultiHopRAG -- demonstrates that our approach consistently outperforms strong baselines.",
+      "authors": [
+        {
+          "misc": {
+            "email": "mnahid@ualberta.ca"
+          },
+          "name": "Md Mahadi Hasan Nahid",
+          "orgs": [
+            "Department of Computing Science, University of Alberta, Canada"
+          ]
+        },
+        {
+          "misc": {
+            "email": "drafiei@ualberta.ca"
+          },
+          "name": "Davood Rafiei",
+          "orgs": [
+            "Department of Computing Science, University of Alberta, Canada"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2510.14278",
+      "date": "2025-10-16T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2605.16598",
+      "score": 0.4,
+      "title": "GRASP: Graph Agentic Search over Propositions for Multi-hop Question Answering",
+      "tldr": "[Research Paper] GRASP is an agentic retrieval system that optimizes for both accuracy and token efficiency in multi-hop question answering by decomposing queries into dependency-aware plans. It utilizes a novel three-layer hierarchical graph of entities, propositions, and passages to enable dynamic scaling of sub-agents and reduce token usage compared to existing graph-based methods.",
+      "abstract": "Agentic retrieval improves multi-hop question answering by giving language models autonomy to iteratively gather evidence. Recent work augments these systems with knowledge graphs for structured traversal, but this combination introduces significant cost: expensive graph construction at index time and compounding token usage at inference time. We introduce Graph Agentic Search over Propositions (GRASP), an agentic system that simultaneously optimizes for high accuracy and minimal token usage in multi-hop question answering. Rather than executing a rigid, singular query, GRASP actively coordinates its retrieval strategy by decomposing multi-hop queries into dependency-aware plans. This enables GRASP to dynamically scale the number of sub-agents according to the complexity of the problem. Each sub-agent resolves its single-hop query by exploring a novel three-layer hierarchical graph of entities, propositions, and passages, using the entity layer for targeted traversal and the proposition layer for high-recall passage retrieval via reciprocal-rank voting. We evaluate GRASP on MuSiQue, 2WikiMultihopQA, and HotpotQA under two settings: open-corpus retrieval and extended context reasoning (LongBench). GRASP achieves the highest QA accuracy in the open retrieval setting on MuSiQue and 2Wiki while using 40-50 percent fewer tokens than IRCoT+HippoRAG2. Furthermore, GRASP leads on EM and F1 across all three datasets in the LongBench setting while using 30 percent fewer tokens than the next most accurate method. Finally, we introduce success economy - the amortized token cost per correct answer, weighted by difficulty - and advocate for efficiency-aware evaluation as a standard practice for agentic QA.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Stockton Jenkins",
+          "orgs": [
+            "University of Wisconsin-Madison"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Ramya Korlakai Vinayak",
+          "orgs": [
+            "University of Wisconsin-Madison"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Junjie Hu",
+          "orgs": [
+            "University of Wisconsin-Madison"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2605.16598",
+      "date": "2026-05-15T19:59:35",
+      "citation_count": 0,
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1909.07598",
+      "score": 0.33333334,
+      "title": "Multi-step Entity-centric Information Retrieval for Multi-Hop Question Answering",
+      "tldr": "[research paper] Introduces an entity-centric information retrieval framework for multi-hop question answering that jointly performs entity linking and re-ranking of evidence chains. The method uses BERT-based re-rankers to score chains of initial paragraphs and entity-describing paragraphs, leveraging contextualized entity representations derived from query-paragraph concatenations. Empirically, it outperforms baseline methods and pseudo-relevance feedback approaches on HOTPOTQA, boosting baseline QA model performance by 10.59 F1 points without additional training, by exploiting shared bridge entities between supporting documents.",
+      "abstract": "Multi-hop question answering (QA) requires an information retrieval (IR) system that can find \\\\emph{multiple} supporting evidence needed to answer the question, making the retrieval process very challenging. This paper introduces an IR technique that uses information of entities present in the initially retrieved evidence to learn to `\\\\emph{hop}' to other relevant evidence. In a setting, with more than \\\\textbf{5 million} Wikipedia paragraphs, our approach leads to significant boost in retrieval performance. The retrieved evidence also increased the performance of an existing QA model (without any training) on the \\\\hotpot benchmark by \\\\textbf{10.59} F1.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Ameya Godbole",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Dilip Kavarthapu",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Rajarshi Das",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhiyu Gong",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Abhishek Singhal",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hamed Zamani",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Mo Yu",
+          "orgs": [
+            "IBM Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Tian Gao",
+          "orgs": [
+            "IBM Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xiaoxiao Guo",
+          "orgs": [
+            "IBM Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Manzil Zaheer",
+          "orgs": [
+            "Google Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Andrew McCallum",
+          "orgs": [
+            "University of Massachusetts Amherst"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1909.07598",
+      "date": "2019-09-17T00:00:00",
+      "citation_count": 53,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2009.07465",
+      "score": 0.3026316,
+      "title": "Answering Any-hop Open-domain Questions with Iterative Document Reranking",
+      "tldr": "[research paper] The paper proposes Iterative Document Reranking (IDR), a unified framework for open-domain question answering that addresses noise accumulation and fixed-step limitations in multi-hop retrieval. It introduces a graph-based reranking model using entity-linked document graphs and graph attention networks to model multi-document interactions, enabling adaptive, noise-reduced retrieval that dynamically stops when sufficient supporting evidence is found. Experiments show superior performance over state-of-the-art methods on single-hop and multi-hop datasets by effectively filtering irrelevant documents and improving supporting document identification through contextualized document relationships.",
+      "abstract": "Existing approaches for open-domain question answering (QA) are typically designed for questions that require either single-hop or multi-hop reasoning, which make strong assumptions of the complexity of questions to be answered. Also, multi-step document retrieval often incurs higher number of relevant but non-supporting documents, which dampens the downstream noise-sensitive reader module for answer extraction. To address these challenges, we propose a unified QA framework to answer any-hop open-domain questions, which iteratively retrieves, reranks and filters documents, and adaptively determines when to stop the retrieval process. To improve the retrieval accuracy, we propose a graph-based reranking model that perform multi-document interaction as the core of our iterative reranking framework. Our method consistently achieves performance comparable to or better than the state-of-the-art on both single-hop and multi-hop open-domain QA datasets, including Natural Questions Open, SQuAD Open, and HotpotQA.",
+      "authors": [
+        {
+          "misc": {
+            "email": "ping.nie@pku.edu.cn"
+          },
+          "name": "Ping Nie",
+          "orgs": [
+            "Peking University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "arun.ramamurthy@siemens.com"
+          },
+          "name": "Arun Ramamurthy",
+          "orgs": [
+            "Siemens Corporate Technology"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2009.07465",
+      "date": "2020-09-16T00:00:00",
+      "citation_count": 24,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2009.07402",
+      "score": 0.25,
+      "title": "Asking Complex Questions with Multi-hop Answer-focused Reasoning",
+      "tldr": "[research paper] The paper introduces a novel multi-hop question generation task that goes beyond single-hop relations by discovering and modeling complex semantic relationships among entities across documents, using an answer-centric entity graph. It proposes a multi-hop answer-focused reasoning model based on relational graph convolutional networks (RGCN) to perform structured, answer-aware reasoning over entity relations at multiple granularities, outperforming both single-hop and existing graph-based multi-hop baselines on HOTPOTQA through improved entity relation modeling and contextual aggregation.",
+      "abstract": "Asking questions from natural language text has attracted increasing attention recently, and several schemes have been proposed with promising results by asking the right question words and copy relevant words from the input to the question. However, most state-of-the-art methods focus on asking simple questions involving single-hop relations. In this paper, we propose a new task called multihop question generation that asks complex and semantically relevant questions by additionally discovering and modeling the multiple entities and their semantic relations given a collection of documents and the corresponding answer 1. To solve the problem, we propose multi-hop answer-focused reasoning on the grounded answer-centric entity graph to include different granularity levels of semantic information including the word-level and document-level semantics of the entities and their semantic relations. Through extensive experiments on the HOTPOTQA dataset, we demonstrate the superiority and effectiveness of our proposed model that serves as a baseline to motivate future work.",
+      "authors": [
+        {
+          "misc": {
+            "email": "maxiy@ufl.edu"
+          },
+          "name": "Xiyao Ma",
+          "orgs": [
+            "NSF Center for Big Learning, University of Florida"
+          ]
+        },
+        {
+          "misc": {
+            "email": "valder@ufl.edu"
+          },
+          "name": "Qile Zhu",
+          "orgs": [
+            "NSF Center for Big Learning, University of Florida"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhou.y@ufl.edu"
+          },
+          "name": "Yanlin Zhou",
+          "orgs": [
+            "NSF Center for Big Learning, University of Florida"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xiaolinli@ieee.org"
+          },
+          "name": "Xiaolin Li",
+          "orgs": [
+            "Cognition Lab"
+          ]
+        },
+        {
+          "misc": {
+            "email": "dpwu@ufl.edu"
+          },
+          "name": "Dapeng Wu",
+          "orgs": [
+            "NSF Center for Big Learning, University of Florida"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2009.07402",
+      "date": "2020-09-16T00:00:00",
+      "citation_count": 5,
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/Shawn617/Multi-hop-NQG"
+    },
+    {
+      "arxiv_id": "2508.09755",
+      "score": 0.18939394,
+      "title": "Transforming Questions and Documents for Semantically Aligned Retrieval-Augmented Generation",
+      "tldr": "[research paper] The paper proposes a question-centric RAG framework for multihop question answering that decomposes complex queries into single-hop subquestions via LLMs and transforms document chunks into answerable questions (AQs) using Qwen3-8B, enabling semantic alignment between queries and documents through question-to-question retrieval. This eliminates structural mismatch in embedding-based retrieval, avoids graph construction or multistage summarization, and achieves superior performance on HotpotQA, 2WikiMultiHopQa, and MuSiQue without fine-tuning or task-specific supervision.",
+      "abstract": "We introduce a novel retrieval-augmented generation (RAG) framework tailored for multihop question answering. First, our system uses large language model (LLM) to decompose complex multihop questions into a sequence of single-hop subquestions that guide document retrieval. This decomposition mitigates the ambiguity inherent in multi-hop queries by clearly targeting distinct knowledge facets. Second, instead of embedding raw or chunked documents directly, we generate answerable questions from each document chunk using Qwen3-8B, embed these generated questions, and retrieve relevant chunks via question-question embedding similarity. During inference, the retrieved chunks are then fed along with the original question into the RAG pipeline. We evaluate on three multihop question datasets (MuSiQue, 2WikiMultiHopQa, HotpotQA) from LongBench. Our method improves RAG performacne compared to baseline systems. Our contributions highlight the benefits of using answerable-question embeddings for RAG, and the effectiveness of LLM-based query decomposition for multihop scenarios.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Seokgi Lee",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2508.09755",
+      "date": "2025-08-13T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2403.00816",
+      "score": 0.16666667,
+      "title": "Read and Think: An Efficient Step-wise Multimodal Language Model for Document Understanding and Reasoning",
+      "tldr": "[research paper] CFRet-DVQA introduces a coarse-to-fine retrieval framework that retrieves multi-page document segments based on query semantics, bypassing the need for fixed-length input by filtering irrelevant content through staged segmentation. It leverages LLMs with efficient tuning (prefix tuning, bias tuning, LoRA) to generate answers aligned with document style, achieving state-of-the-art results on five benchmarks including multi-page datasets with only 22M parameters, demonstrating superior performance in cross-page context understanding and retrieval accuracy.",
+      "abstract": "Understanding the contents of multimodal documents is essential to accurately extract relevant evidence and use it for reasoning. Existing document understanding models tend to generate answers with a single word or phrase directly, ignoring the source document's evidence and lacking interpretability. In this work, we address the lack of step-wise capabilities through data augmentation and extension. Specifically, We use Multi-modal Large Language Models (MLLMs), which have strong visual understanding and reasoning abilities, as data generators to generate step-wise question-and-answer pairs for document images and use a high-performance LLM as the error detector to filter out noisy data. This step-wise data generation pipeline is implemented using both template-based and few-shot methods. We then use the generated high-quality data to train a humanized document understanding and reasoning model, specifically designed to solve complex questions that require reasoning or multi-hop question answering, dubbed DocAssistant. Experimental results demonstrate the effectiveness and application value of step-wise generation, showing a 5 improvement on InfoVQA with complex layouts and a 7 improvement on ChartQA with complex reasoning, compared to directly generated answers. We hope our work highlights the potential of synthetic data and encourages further exploration of multi-modal document reasoning capabilities.",
+      "authors": [
+        {
+          "misc": {
+            "email": "jxzhang@ir.hit.edu.cn"
+          },
+          "name": "Jinxu Zhang",
+          "orgs": [
+            "Harbin Institute of Technology (HIT)"
+          ]
+        },
+        {
+          "misc": {
+            "email": "yqyu@ir.hit.edu.cn"
+          },
+          "name": "Yongqi Yu",
+          "orgs": [
+            "Harbin Institute of Technology (HIT)"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhangyu@ir.hit.edu.cn"
+          },
+          "name": "Yu Zhang",
+          "orgs": [
+            "Harbin Institute of Technology (HIT)"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2403.00816",
+      "date": "2024-02-26T00:00:00",
+      "citation_count": 4,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2211.02200",
+      "score": 0.14285715,
+      "title": "Miko Team: Deep Learning Approach for Legal Question Answering in ALQAC 2022",
+      "tldr": "[research paper] The paper presents a deep learning approach for legal document retrieval and question answering in ALQAC 2022, leveraging RoBERTa fine-tuned on legal domain data. A BM25-based lexical matching module is used to generate high-quality positive and negative training samples, enabling efficient retrieval and reducing computational load. Long articles are segmented into fixed-length passages to preserve context, and the system achieves 1st place in retrieval and 3rd in question answering with strong performance on low-resource legal text tasks.",
+      "abstract": "We introduce efficient deep learning-based methods for legal document processing including Legal Document Retrieval and Legal Question Answering tasks in the Automated Legal Question Answering Competition (ALQAC 2022). In this competition, we achieve 1\\\\textsuperscript{st} place in the first task and 3\\\\textsuperscript{rd} place in the second task. Our method is based on the XLM-RoBERTa model that is pre-trained from a large amount of unlabeled corpus before fine-tuning to the specific tasks. The experimental results showed that our method works well in legal retrieval information tasks with limited labeled data. Besides, this method can be applied to other information retrieval tasks in low-resource languages.",
+      "authors": [
+        {
+          "misc": {
+            "email": "hieuv@jaist.ac.jp"
+          },
+          "name": "Hieu Nguyen Van",
+          "orgs": [
+            "Japan Advanced Institute of Science and Technology"
+          ]
+        },
+        {
+          "misc": {
+            "email": "dating.ms@jaist.ac.jp"
+          },
+          "name": "Dat Nguyen",
+          "orgs": [
+            "Japan Advanced Institute of Science and Technology"
+          ]
+        },
+        {
+          "misc": {
+            "email": "phuongnm@jaist.ac.jp"
+          },
+          "name": "Phuong Minh Nguyen",
+          "orgs": [
+            "Japan Advanced Institute of Science and Technology"
+          ]
+        },
+        {
+          "misc": {
+            "email": "nguyenml@jaist.ac.jp"
+          },
+          "name": "Minh Le Nguyen",
+          "orgs": [
+            "Japan Advanced Institute of Science and Technology"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2211.02200",
+      "date": "2022-11-04T00:00:00",
+      "citation_count": 10,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": "International Conference on Knowledge and Systems Engineering",
+      "venue_year": 2022,
+      "github_url": null
+    }
+  ]
+}

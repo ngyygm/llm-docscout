@@ -1,0 +1,651 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2505.15117",
+      "score": 0.5416667,
+      "title": "An Empirical Study on Reinforcement Learning for Reasoning-Search Interleaved LLM Agents",
+      "tldr": "[empirical study] An empirical investigation into reinforcement learning (RL) for training LLM-based search agents reveals that format rewards significantly boost final performance by enforcing agentic action structure, while intermediate retrieval rewards offer little benefit. General-purpose LLMs outperform reasoning-specialized ones due to superior early-stage instruction-following, and model scale improves performance with diminishing returns. Search engine quality critically shapes RL dynamics\u2014non-informative or weak engines lead to avoidance or inefficient retrieval, whereas strong engines enable stable learning; at inference, agents remain robust across search engines, with stronger retrieval systems yielding better downstream results.",
+      "abstract": "Reinforcement learning (RL) has demonstrated strong potential in training large language models (LLMs) capable of complex reasoning for real-world problem solving. More recently, RL has been leveraged to create sophisticated LLM-based search agents that adeptly combine reasoning with search engine use. While the use of RL for training search agents is promising, the optimal design of such agents remains not fully understood. In particular, key factors -- such as (1) reward formulation, (2) the choice and characteristics of the underlying LLM, and (3) the role of the search engine in the RL process -- require further investigation. In this work, we conduct comprehensive empirical studies to systematically investigate these and offer actionable insights. We highlight several key findings: format rewards are effective in improving final performance, whereas intermediate retrieval rewards have limited impact; the scale and initialization of the LLM (general-purpose vs. reasoning-specialized) significantly influence RL outcomes; and the choice of search engine plays a critical role in shaping RL training dynamics and the robustness of the trained agent during inference. These establish important guidelines for successfully building and deploying LLM-based search agents in real-world applications. Code is available at https://github.com/PeterGriffinJin/Search-R1.",
+      "authors": [
+        {
+          "misc": {
+            "email": "bowenj4@illinois.edu"
+          },
+          "name": "Bowen Jin",
+          "orgs": [
+            "University of Illinois at Urbana-Champaign"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jinsung Yoon",
+          "orgs": [
+            "Google Cloud AI Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Priyanka Kargupta",
+          "orgs": [
+            "University of Illinois at Urbana-Champaign"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Sercan \u00d6. Arik",
+          "orgs": [
+            "Google Cloud AI Research"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jiawei Han",
+          "orgs": [
+            "University of Illinois at Urbana-Champaign"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2505.15117",
+      "date": "2025-05-21T00:00:00",
+      "citation_count": 31,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/PeterGriffinJin/Search-R1"
+    },
+    {
+      "arxiv_id": "2506.07528",
+      "score": 0.5,
+      "title": "Coordinating Search-Informed Reasoning and Reasoning-Guided Search in Claim Verification",
+      "tldr": "[research paper] HARIS introduces a hierarchical agent framework for multi-hop claim verification, decoupling reasoning and search into specialized LLM agents that iteratively collaborate. The high-level reasoning agent constructs verification chains and generates factual questions, while the low-level search agent retrieves and refines evidence through dynamic query iteration, with both agents trained end-to-end via reinforcement learning using group relative policy optimization and outcome-based rewards. This coordination enables accurate identification of implicit bridging facts\u2014critical for complex claims\u2014by modeling the reciprocal feedback loop between reasoning-driven search and search-informed reasoning, outperforming decomposition-based and static reasoning methods on EX-FEVER and HOVER benchmarks.",
+      "abstract": "Multi-hop claim verification is inherently challenging, requiring multi-step reasoning to construct verification chains while iteratively searching for information to uncover hidden bridging facts. This process is fundamentally interleaved, as effective reasoning relies on dynamically retrieved evidence, while effective search demands reasoning to refine queries based on partial information. To achieve this, we propose Hierarchical Agent Reasoning and Information Search (HARIS), explicitly modeling the coordinated process of reasoning-driven searching and search-informed reasoning. HARIS consists of a high-level reasoning agent that focuses on constructing the main verification chain, generating factual questions when more information is needed, and a low-level search agent that iteratively retrieves more information, refining its search based on intermediate findings. This design allows each agent to specialize in its respective task, enhancing verification accuracy and interpretability. HARIS is trained using reinforcement learning with outcome-based rewards. Experimental results on the EX-FEVER and HOVER benchmarks demonstrate that HARIS achieves strong performance, greatly advancing multi-hop claim verification.",
+      "authors": [
+        {
+          "misc": {
+            "email": "qisheng001@e.ntu.edu.sg"
+          },
+          "name": "Qisheng Hu",
+          "orgs": [
+            "Nanyang Technological University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Quanyu Long",
+          "orgs": [
+            "Nanyang Technological University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Wenya Wang",
+          "orgs": [
+            "Nanyang Technological University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.07528",
+      "date": "2025-06-09T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/qishenghu/HARIS"
+    },
+    {
+      "arxiv_id": "2503.09516",
+      "score": 0.4166667,
+      "title": "Search-R1: Training LLMs to Reason and Leverage Search Engines with Reinforcement Learning",
+      "tldr": "[research paper] Search-R1 introduces a reinforcement learning framework that enables large language models to autonomously generate search queries during step-by-step reasoning, interleaving LLM token generation with real-time search engine retrieval. It addresses key challenges in RL-based search-and-reasoning by using retrieved token masking for stable training, supporting multi-turn search-reasoning loops via structured token delimiters, and employing a simple outcome-based reward function that outperforms RAG baselines by 20\u201324% across seven question-answering datasets, with empirical insights into LLM selection, response length, and RL method efficacy.",
+      "abstract": "Efficiently acquiring external knowledge and up-to-date information is essential for effective reasoning and text generation in large language models (LLMs). Prompting advanced LLMs with reasoning capabilities to use search engines during inference is often suboptimal, as the LLM might not fully possess the capability on how to interact optimally with the search engine. This paper introduces Search-R1, an extension of reinforcement learning (RL) for reasoning frameworks where the LLM learns to autonomously generate (multiple) search queries during step-by-step reasoning with real-time retrieval. Search-R1 optimizes LLM reasoning trajectories with multi-turn search interactions, leveraging retrieved token masking for stable RL training and a simple outcome-based reward function. Experiments on seven question-answering datasets show that Search-R1 improves performance by 41% (Qwen2.5-7B) and 20% (Qwen2.5-3B) over various RAG baselines under the same setting. This paper further provides empirical insights into RL optimization methods, LLM choices, and response length dynamics in retrieval-augmented reasoning. The code and model checkpoints are available at https://github.com/PeterGriffinJin/Search-R1.",
+      "authors": [
+        {
+          "misc": {
+            "email": "bowenj4@illinois.edu"
+          },
+          "name": "Bowen Jin",
+          "orgs": [
+            "Department of Computer Science, University of Illinois at Urbana-Champaign"
+          ]
+        },
+        {
+          "misc": {
+            "email": "hzeng@cs.umass.edu"
+          },
+          "name": "Hansi Zeng",
+          "orgs": [
+            "Center for Intelligent Information Retrieval, University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhenrui3@illinois.edu"
+          },
+          "name": "Zhenrui Yue",
+          "orgs": [
+            "Department of Computer Science, University of Illinois at Urbana-Champaign"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jinsungyoon@google.com"
+          },
+          "name": "Jinsung Yoon",
+          "orgs": [
+            "Google Cloud AI Research"
+          ]
+        },
+        {
+          "misc": {
+            "email": "soarik@google.com"
+          },
+          "name": "Sercan \u00d6. Ar\u0131k",
+          "orgs": [
+            "Google Cloud AI Research"
+          ]
+        },
+        {
+          "misc": {
+            "email": "dwang24@illinois.edu"
+          },
+          "name": "Dong Wang",
+          "orgs": [
+            "Department of Computer Science, University of Illinois at Urbana-Champaign"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zamani@cs.umass.edu"
+          },
+          "name": "Hamed Zamani",
+          "orgs": [
+            "Center for Intelligent Information Retrieval, University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {
+            "email": "hanj@illinois.edu"
+          },
+          "name": "Jiawei Han",
+          "orgs": [
+            "Department of Computer Science, University of Illinois at Urbana-Champaign"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2503.09516",
+      "date": "2025-03-12T00:00:00",
+      "citation_count": 966,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/PeterGriffinJin/Search-R1"
+    },
+    {
+      "arxiv_id": "2510.10009",
+      "score": 0.35897437,
+      "title": "Beyond the limitation of a single query: Train your LLM for query expansion with Reinforcement Learning",
+      "tldr": "[research paper] ExpandSearch introduces an expand-then-squeeze framework where a reinforcement learning-trained LLM generates multiple semantically diverse query variants to maximize retrieval recall, addressing semantic incompleteness in multi-hop QA. A pre-trained squeezer model selectively distills retrieved content into reasoning-relevant summaries, mitigating information overload and enabling a 3B LLM to achieve state-of-the-art performance with 4.4% average improvement across seven benchmarks, particularly on tasks requiring diverse evidence aggregation.",
+      "abstract": "Reasoning-augmented search agents, such as Search-R1, are trained to reason, search, and generate the final answer iteratively. Nevertheless, due to their limited capabilities in reasoning and search, their performance on multi-hop QA benchmarks remains far from satisfactory. To handle complex or compound queries, we train an LLM-based search agent with the native capability of query expansion through reinforcement learning. In each turn, our search agent proposes several query variants, which are searched simultaneously to cover more relevant information. Meanwhile, given limited post-training data and computing resources, it is very challenging for a search agent to master multiple tasks, including query generation, retrieved information understanding, and answer generation. Therefore, we propose incorporating a pre-trained squeezer model that helps the search agent understand the retrieved documents, allowing the search agent to focus on query generation for high retrieval recall. With the assistance of the squeezer model, we discover that even a small-scale 3B LLM can demonstrate a strong capability of query expansion and achieve state-of-the-art accuracy on the multi-hop QA benchmarks. To be specific, our experiments across seven question-answering benchmarks demonstrate that our method, named ExpandSearch, achieves an average improvement of 4.4% compared to state-of-the-art baselines, with strong gains on multi-hop reasoning tasks requiring diverse evidence aggregation.",
+      "authors": [
+        {
+          "misc": {
+            "internship": "partially conducted during Shu\u2019s internship at NVIDIA"
+          },
+          "name": "Shu Zhao",
+          "orgs": [
+            "NVIDIA",
+            "Pennsylvania State University"
+          ]
+        },
+        {
+          "misc": {
+            "role": "Project Lead",
+            "email": "tayu@nvidia.com"
+          },
+          "name": "Tan Yu",
+          "orgs": [
+            "NVIDIA",
+            "Pennsylvania State University"
+          ]
+        },
+        {
+          "misc": {
+            "equal_contribution": true
+          },
+          "name": "Anbang Xu",
+          "orgs": [
+            "NVIDIA",
+            "Pennsylvania State University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2510.10009",
+      "date": "2025-10-11T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2506.04185",
+      "score": 0.30555555,
+      "title": "R-Search: Empowering LLM Reasoning with Search via Multi-Reward Reinforcement Learning",
+      "tldr": "[research paper] R-Search introduces a reinforcement learning framework that enables large language models to dynamically interleave multi-step reasoning with search actions at the token level, learning optimal reasoning\u2013search trajectories through multi-stage, multi-type rewards (answer quality, evidence quality, format correctness). By distilling retrieved documents into structured evidence and integrating them into the reasoning chain, the framework achieves deeper knowledge interaction, reducing hallucination and improving performance on complex logic- and knowledge-intensive tasks\u2014outperforming state-of-the-art RAG baselines by up to 32.2% in-domain and 25.1% out-of-domain.",
+      "abstract": "Large language models (LLMs) have notably progressed in multi-step and long-chain reasoning. However, extending their reasoning capabilities to encompass deep interactions with search remains a non-trivial challenge, as models often fail to identify optimal reasoning-search interaction trajectories, resulting in suboptimal responses. We propose R-Search, a novel reinforcement learning framework for Reasoning-Search integration, designed to enable LLMs to autonomously execute multi-step reasoning with deep search interaction, and learn optimal reasoning search interaction trajectories via multi-reward signals, improving response quality in complex logic- and knowledge-intensive tasks. R-Search guides the LLM to dynamically decide when to retrieve or reason, while globally integrating key evidence to enhance deep knowledge interaction between reasoning and search. During RL training, R-Search provides multi-stage, multi-type rewards to jointly optimize the reasoning-search trajectory. Experiments on seven datasets show that R-Search outperforms advanced RAG baselines by up to 32.2% (in-domain) and 25.1% (out-of-domain). The code and data are available at https://github.com/QingFei1/R-Search.",
+      "authors": [
+        {
+          "misc": {
+            "email": "zhaoqingfei@iie.ac.cn"
+          },
+          "name": "Qingfei Zhao",
+          "orgs": [
+            "Institute of Information Engineering, Chinese Academy of Sciences",
+            "School of Cyber Security, University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wangruobing@iie.ac.cn"
+          },
+          "name": "Ruobing Wang",
+          "orgs": [
+            "Institute of Information Engineering, Chinese Academy of Sciences",
+            "School of Cyber Security, University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Dingling Xu",
+          "orgs": [
+            "Beijing Normal University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhadaren@iie.ac.cn"
+          },
+          "name": "Daren Zha",
+          "orgs": [
+            "Institute of Information Engineering, Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Limin Liu",
+          "orgs": [
+            "Institute of Information Engineering, Chinese Academy of Sciences"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.04185",
+      "date": "2025-06-04T00:00:00",
+      "citation_count": 20,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/QingFei1/R-Search"
+    },
+    {
+      "arxiv_id": "2604.17555",
+      "score": 0.25,
+      "title": "COSEARCH: Joint Training of Reasoning and Document Ranking via Reinforcement Learning for Agentic Search",
+      "tldr": "[research paper] CoSearch introduces a joint reinforcement learning framework that co-trains a multi-step reasoning agent and a generative document ranker to overcome retrieval bottlenecks in agentic search. It addresses two key challenges: (1) semantic grouping of sub-queries by token-level F1 similarity to enable Group Relative Policy Optimization (GRPO) without additional rollouts, and (2) a composite reward combining immediate ranking quality (Hit@$k$) with trajectory-level answer correctness to align retrieval with downstream performance. Experiments on seven QA benchmarks show consistent F1 gains\u2014up to +26.8% over fixed retrieval baselines\u2014demonstrating that joint optimization of reasoning and retrieval significantly improves search effectiveness.",
+      "abstract": "Agentic search -- the task of training agents that iteratively reason, issue queries, and synthesize retrieved information to answer complex questions -- has achieved remarkable progress through reinforcement learning (RL). However, existing approaches such as Search-R1, treat the retrieval system as a fixed tool, optimizing only the reasoning agent while the retrieval component remains unchanged. A preliminary experiment reveals that the gap between an oracle and a fixed retrieval system reaches up to +26.8% relative F1 improvement across seven QA benchmarks, suggesting that the retrieval system is a key bottleneck in scaling agentic search performance. Motivated by this finding, we propose CoSearch, a framework that jointly trains a multi-step reasoning agent and a generative document ranking model via Group Relative Policy Optimization (GRPO). To enable effective GRPO training for the ranker -- whose inputs vary across reasoning trajectories -- we introduce a semantic grouping strategy that clusters sub-queries by token-level similarity, forming valid optimization groups without additional rollouts. We further design a composite reward combining ranking quality signals with trajectory-level outcome feedback, providing the ranker with both immediate and long-term learning signals. Experiments on seven single-hop and multi-hop QA benchmarks demonstrate consistent improvements over strong baselines, with ablation studies validating each design choice. Our results show that joint training of the reasoning agent and retrieval system is both feasible and strongly performant, pointing to a key ingredient for future search agents.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Hansi Zeng",
+          "orgs": [
+            "Center for Intelligent Information Retrieval, University of Massachusetts Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Liam Collins",
+          "orgs": [
+            "Snap Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Bhuvesh Kumar",
+          "orgs": [
+            "Snap Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Neil Shah",
+          "orgs": [
+            "Snap Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hamed Zamani",
+          "orgs": [
+            "Center for Intelligent Information Retrieval, University of Massachusetts Amherst"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2604.17555",
+      "date": "2026-04-19T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/snap-research/CoSearch"
+    },
+    {
+      "arxiv_id": "2510.16724",
+      "score": 0.2,
+      "title": "A Comprehensive Survey on Reinforcement Learning-based Agentic Search: Foundations, Roles, Optimizations, Evaluations, and Applications",
+      "tldr": "[comprehensive survey] This survey establishes the first systematic framework for reinforcement learning (RL)-based agentic search, decomposing the field into three core dimensions: (1) functional roles of RL in guiding retrieval, reasoning, and decision-making; (2) optimization strategies including reward design, policy learning, and training methodologies; and (3) application scope across agent-level, step-level, and module-level interventions. It identifies a critical gap in prior work\u2014most surveys focus on non-RL agentic RAG or narrow RL applications in deep research\u2014while offering a unified taxonomy of how RL enables adaptive, self-improving search behavior through multi-step planning, feedback loops, and dynamic strategy refinement.",
+      "abstract": "The advent of large language models (LLMs) has transformed information access and reasoning through open-ended natural language interaction. However, LLMs remain limited by static knowledge, factual hallucinations, and the inability to retrieve real-time or domain-specific information. Retrieval-Augmented Generation (RAG) mitigates these issues by grounding model outputs in external evidence, but traditional RAG pipelines are often single turn and heuristic, lacking adaptive control over retrieval and reasoning. Recent advances in agentic search address these limitations by enabling LLMs to plan, retrieve, and reflect through multi-step interaction with search environments. Within this paradigm, reinforcement learning (RL) offers a powerful mechanism for adaptive and self-improving search behavior. This survey provides the first comprehensive overview of \\\\emph{RL-based agentic search}, organizing the emerging field along three complementary dimensions: (i) What RL is for (functional roles), (ii) How RL is used (optimization strategies), and (iii) Where RL is applied (scope of optimization). We summarize representative methods, evaluation protocols, and applications, and discuss open challenges and future directions toward building reliable and scalable RL driven agentic search systems. We hope this survey will inspire future research on the integration of RL and agentic search. Our repository is available at https://github.com/ventr1c/Awesome-RL-based-Agentic-Search-Papers.",
+      "authors": [
+        "Minhua Lin",
+        "Zongyu Wu",
+        "Zhichao Xu",
+        "Hui Liu",
+        "Xianfeng Tang",
+        "Qi He",
+        "Charu Aggarwal",
+        "Hui Liu",
+        "Xiang Zhang",
+        "Suhang Wang"
+      ],
+      "url": "https://arxiv.org/abs/2510.16724",
+      "date": "2025-10-19T00:00:00",
+      "citation_count": 16,
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/ventr1c/Awesome-RL-based-Agentic-Search-Papers"
+    },
+    {
+      "arxiv_id": "2603.01464",
+      "score": 0.2,
+      "title": "ProtRLSearch: A Multi-Round Multimodal Protein Search Agent with Large Language Models Trained via Reinforcement Learning",
+      "tldr": "[research paper] ProtRLSearch introduces a multi-round, multimodal protein search agent that jointly processes protein sequences and text during real-time search, using reinforcement learning with multi-dimensional rewards (keywords, search tools, answer quality, format) to guide search planning and reasoning. Unlike prior text-only or single-round agents, it incorporates sequence-aware constraints in search decisions, enabling more accurate sequence-constrained functional and phenotypic reasoning. Evaluated on ProtMCQs (3,000 multimodal MCQs across three difficulty levels), the agent improves accuracy from 35.7% to 86.9% (level 1) and 26.1% to 72.5% (level 3), demonstrating superior integration of sequence and retrieval information in protein-centric tasks.",
+      "abstract": "Protein analysis tasks arising in healthcare settings often require accurate reasoning under protein sequence constraints, involving tasks such as functional interpretation of disease-related variants, protein-level analysis for clinical research, and similar scenarios. To address such tasks, search agents are introduced to search protein-related information, providing support for disease-related variant analysis and protein function reasoning in protein-centric inference. However, such search agents are mostly limited to single-round, text-only modality search, which prevents the protein sequence modality from being incorporated as a multimodal input into the search decision-making process. Meanwhile, their reliance on reinforcement learning (RL) supervision that focuses solely on the final answer results in a lack of search process constraints, making deviations in keyword selection and reasoning directions difficult to identify and correct in a timely manner. To address these limitations, we propose ProtRLSearch, a multi-round protein search agent trained with multi-dimensional reward based RL, which jointly leverages protein sequence and text as multimodal inputs during real-time search to produce high quality reports. To evaluate the ability of models to integrate protein sequence information and text-based multimodal inputs in realistic protein query settings, we construct ProtMCQs, a benchmark of 3,000 multiple choice questions (MCQs) organized into three difficulty levels. The benchmark evaluates protein query tasks that range from sequence constrained reasoning about protein function and phenotype changes to comprehensive protein reasoning that integrates multi-dimensional sequence features with signal pathways and regulatory networks.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Congying Liu",
+          "orgs": [
+            "1"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Taihao Li",
+          "orgs": [
+            "2"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Ming Huang",
+          "orgs": [
+            "3"
+          ]
+        },
+        {
+          "misc": {
+            "email": "peipeiliu@yeah.net"
+          },
+          "name": "Peipei Liu",
+          "orgs": [
+            "1",
+            "4"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xingyuan Wei",
+          "orgs": [
+            "1",
+            "4"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yiqing Shen",
+          "orgs": [
+            "5"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yanxu Mao",
+          "orgs": [
+            "6"
+          ]
+        },
+        {
+          "misc": {
+            "email": "peipeiliu@yeah.net"
+          },
+          "name": "Tiehan Cui",
+          "orgs": [
+            "6"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2603.01464",
+      "date": "2026-03-02T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2503.19470",
+      "score": 0.19090909,
+      "title": "ReSearch: Learning to Reason with Search for LLMs via Reinforcement Learning",
+      "tldr": "[research paper] ReSearch introduces a reinforcement learning framework that trains large language models to perform multi-hop reasoning with external search operations without supervised data on reasoning steps. By treating search queries and results as integral components of the reasoning chain, the model learns to dynamically decide when and how to retrieve information through interaction with text-based thinking, using GRPO to optimize policy via reward signals derived from final answers. The framework demonstrates strong performance gains (8.9%\u201322.4%) across benchmarks and reveals emergent capabilities like reflection and self-correction during training, without relying on handcrafted heuristics or labeled reasoning paths.",
+      "abstract": "Large Language Models (LLMs) have shown remarkable capabilities in reasoning, exemplified by the success of OpenAI-o1 and DeepSeek-R1. However, integrating reasoning with external search processes remains challenging, especially for complex multi-hop questions requiring multiple retrieval steps. We propose ReSearch, a novel framework that trains LLMs to Reason with Search via reinforcement learning without using any supervised data on reasoning steps. Our approach treats search operations as integral components of the reasoning chain, where when and how to perform searches is guided by text-based thinking, and search results subsequently influence further reasoning. We train ReSearch on Qwen2.5-7B(-Instruct) and Qwen2.5-32B(-Instruct) models and conduct extensive experiments. Despite being trained on only one dataset, our models demonstrate strong generalizability across various benchmarks. Analysis reveals that ReSearch naturally elicits advanced reasoning capabilities such as reflection and self-correction during the reinforcement learning process.",
+      "authors": [
+        {
+          "misc": {
+            "url": "https://github.com/Agent-RL/ReSearch",
+            "email": "chenmingyang@baichuan-inc.com"
+          },
+          "name": "Mingyang Chen",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Linzhuang Sun",
+          "orgs": [
+            "University of Chinese Academy of Sciences"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Tianpeng Li",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Haoze Sun",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yijie Zhou",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Chenzheng Zhu",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Haofen Wang",
+          "orgs": [
+            "Tongji University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jeff Z. Pan",
+          "orgs": [
+            "The University of Edinburgh"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Wen Zhang",
+          "orgs": [
+            "Zhejiang University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Huajun Chen",
+          "orgs": [
+            "Zhejiang University"
+          ]
+        },
+        {
+          "misc": {
+            "url": "https://github.com/Agent-RL/ReSearch",
+            "email": "yangfan@baichuan-inc.com"
+          },
+          "name": "Fan Yang",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zenan Zhou",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Weipeng Chen",
+          "orgs": [
+            "Baichuan Inc."
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2503.19470",
+      "date": "2025-03-25T00:00:00",
+      "citation_count": 75,
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/Agent-RL/ReSearch"
+    },
+    {
+      "arxiv_id": "2505.20046",
+      "score": 0.17777778,
+      "title": "REARANK: Reasoning Re-ranking Agent via Reinforcement Learning",
+      "tldr": "[research paper] Rearank introduces a listwise reranking agent that uses reinforcement learning to explicitly reason before ranking passages, enabling interpretable, efficient, and high-performance reranking. By formulating reranking as an RL problem with order-based rewards and a data augmentation pipeline from just 179 annotated queries, it achieves performance comparable to GPT-4 and surpasses it on reasoning-intensive benchmarks while maintaining low inference cost through a compact 7B model and simultaneous listwise ranking.",
+      "abstract": "We present REARANK, a large language model (LLM)-based listwise reasoning reranking agent. REARANK explicitly reasons before reranking, significantly improving both performance and interpretability. Leveraging reinforcement learning and data augmentation, REARANK achieves substantial improvements over baseline models across popular information retrieval benchmarks, notably requiring only 179 annotated samples. Built on top of Qwen2.5-7B, our REARANK-7B demonstrates performance comparable to GPT-4 on both in-domain and out-of-domain benchmarks and even surpasses GPT-4 on reasoning-intensive BRIGHT benchmarks. These results underscore the effectiveness of our approach and highlight how reinforcement learning can enhance LLM reasoning capabilities in reranking.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Le Zhang",
+          "orgs": [
+            "Mila - Quebec AI Institute",
+            "Universit\u00e9 de Montr\u00e9al"
+          ]
+        },
+        {
+          "misc": {
+            "email": "bo.wang@fudan.edu.cn"
+          },
+          "name": "Bo Wang",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xipeng Qiu",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Siva Reddy",
+          "orgs": [
+            "Mila - Quebec AI Institute",
+            "McGill University",
+            "Canada CIFAR AI Chair"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Aishwarya Agrawal",
+          "orgs": [
+            "Mila - Quebec AI Institute",
+            "Universit\u00e9 de Montr\u00e9al",
+            "Canada CIFAR AI Chair"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2505.20046",
+      "date": "2025-05-26T00:00:00",
+      "citation_count": 14,
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": "https://github.com/lezhang7/Rearank"
+    }
+  ]
+}

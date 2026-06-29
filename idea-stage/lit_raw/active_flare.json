@@ -1,0 +1,686 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "2305.06983",
+      "score": 1.0,
+      "title": "Active Retrieval Augmented Generation",
+      "tldr": "[research paper] FLARE introduces an active retrieval strategy for long-form generation that anticipates future content by generating a temporary next sentence, uses it to query external knowledge sources, and regenerates the sentence if low-confidence tokens are detected. This forward-looking mechanism enables dynamic, context-aware retrieval during generation, improving factual accuracy without requiring fixed retrieval intervals or task-specific decomposition, outperforming or matching baselines across four knowledge-intensive long-form tasks.",
+      "abstract": "Despite the remarkable ability of large language models (LMs) to comprehend and generate language, they have a tendency to hallucinate and create factually inaccurate output. Augmenting LMs by retrieving information from external knowledge resources is one promising solution. Most existing retrieval augmented LMs employ a retrieve-and-generate setup that only retrieves information once based on the input. This is limiting, however, in more general scenarios involving generation of long texts, where continually gathering information throughout generation is essential. In this work, we provide a generalized view of active retrieval augmented generation, methods that actively decide when and what to retrieve across the course of the generation. We propose Forward-Looking Active REtrieval augmented generation (FLARE), a generic method which iteratively uses a prediction of the upcoming sentence to anticipate future content, which is then utilized as a query to retrieve relevant documents to regenerate the sentence if it contains low-confidence tokens. We test FLARE along with baselines comprehensively over 4 long-form knowledge-intensive generation tasks/datasets. FLARE achieves superior or competitive performance on all tasks, demonstrating the effectiveness of our method. Code and datasets are available at https://github.com/jzbjyb/FLARE.",
+      "authors": [
+        {
+          "misc": {
+            "email": "zhengbaj@cs.cmu.edu"
+          },
+          "name": "Zhengbao Jiang",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "fangzhex@cs.cmu.edu"
+          },
+          "name": "Frank F. Xu",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "luyug@cs.cmu.edu"
+          },
+          "name": "Luyu Gao",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "zhiqings@cs.cmu.edu"
+          },
+          "name": "Zhiqing Sun",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qian Liu",
+          "orgs": [
+            "Sea AI Lab",
+            "FAIR, Meta"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jane Dwivedi-Yu",
+          "orgs": [
+            "FAIR, Meta"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yiming Yang",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jamie Callan",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "gneubig@cs.cmu.edu"
+          },
+          "name": "Graham Neubig",
+          "orgs": [
+            "Language Technologies Institute, Carnegie Mellon University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2305.06983",
+      "date": "2023-05-11T00:00:00",
+      "citation_count": 647,
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": "https://github.com/jzbjyb/FLARE"
+    },
+    {
+      "arxiv_id": "2406.12534",
+      "score": 0.4166667,
+      "title": "Unified Active Retrieval for Retrieval Augmented Generation",
+      "tldr": "[research paper] Unified Active Retrieval (UAR) introduces a multi-criteria, plug-and-play framework for active retrieval in Retrieval-Augmented Generation (RAG), addressing the limitations of single-criterion methods by integrating four orthogonal criteria\u2014intent-aware, knowledge-aware, time-sensitive-aware, and self-aware\u2014into lightweight binary classifiers trained on LLM hidden states. These classifiers operate without modifying the LLM, enabling efficient, real-time retrieval timing decisions with negligible inference overhead. UAR-Criteria further standardizes decision logic via a prioritized decision tree, unifying diverse instruction types into a unified, scalable retrieval policy that improves both retrieval accuracy and downstream task performance by avoiding unnecessary external knowledge access.",
+      "abstract": "In Retrieval-Augmented Generation (RAG), retrieval is not always helpful and applying it to every instruction is sub-optimal. Therefore, determining whether to retrieve is crucial for RAG, which is usually referred to as Active Retrieval. However, existing active retrieval methods face two challenges: 1. They usually rely on a single criterion, which struggles with handling various types of instructions. 2. They depend on specialized and highly differentiated procedures, and thus combining them makes the RAG system more complicated and leads to higher response latency. To address these challenges, we propose Unified Active Retrieval (UAR). UAR contains four orthogonal criteria and casts them into plug-and-play classification tasks, which achieves multifaceted retrieval timing judgements with negligible extra inference cost. We further introduce the Unified Active Retrieval Criteria (UAR-Criteria), designed to process diverse active retrieval scenarios through a standardized procedure. Experiments on four representative types of user instructions show that UAR significantly outperforms existing work on the retrieval timing judgement and the performance of downstream tasks, which shows the effectiveness of UAR and its helpfulness to downstream tasks.",
+      "authors": [
+        {
+          "misc": {
+            "email": "chengqy21@m.fudan.edu.cn"
+          },
+          "name": "Qinyuan Cheng",
+          "orgs": [
+            "Fudan University",
+            "Shanghai AI Laboratory"
+          ]
+        },
+        {
+          "misc": {
+            "email": "lixn20@fudan.edu.cn"
+          },
+          "name": "Xiaonan Li",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shimin Li",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qin Zhu",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhangyue Yin",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yunfan Shao",
+          "orgs": [
+            "Fudan University",
+            "Shanghai AI Laboratory"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Linyang Li",
+          "orgs": [
+            "Shanghai AI Laboratory"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Tianxiang Sun",
+          "orgs": [
+            "Fudan University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hang Yan",
+          "orgs": [
+            "Shanghai AI Laboratory"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xpqiu@fudan.edu.cn"
+          },
+          "name": "Xipeng Qiu",
+          "orgs": [
+            "Fudan University",
+            "Shanghai Collaborative Innovation Center of Intelligent Visual Computing"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2406.12534",
+      "date": "2024-06-18T00:00:00",
+      "citation_count": 10,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "venue_year": null,
+      "github_url": "https://github.com/xiami2019/UAR"
+    },
+    {
+      "arxiv_id": "2502.12145",
+      "score": 0.33333334,
+      "title": "Fast or Better? Balancing Accuracy and Cost in Retrieval-Augmented Generation with Flexible User Control",
+      "tldr": "[research paper] Flare-Aug introduces a user-controllable retrieval-augmented generation framework that dynamically balances accuracy and retrieval cost via two specialized classifiers\u2014one optimized for accuracy, one for efficiency\u2014combined through an interpretable parameter \u03b1. This enables fine-grained, real-time adjustment of the accuracy-cost trade-off without relying on internal LLM states or complex adaptive policies, addressing the lack of user-driven flexibility in existing adaptive RAG systems for diverse application needs.",
+      "abstract": "Retrieval-Augmented Generation (RAG) has emerged as a powerful approach to mitigate large language model (LLM) hallucinations by incorporating external knowledge retrieval. However, existing RAG frameworks often apply retrieval indiscriminately,leading to inefficiencies-over-retrieving when unnecessary or failing to retrieve iteratively when required for complex reasoning. Recent adaptive retrieval strategies, though adaptively navigates these retrieval strategies, predict only based on query complexity and lacks user-driven flexibility, making them infeasible for diverse user application needs. In this paper, we introduce a novel user-controllable RAG framework that enables dynamic adjustment of the accuracy-cost trade-off. Our approach leverages two classifiers: one trained to prioritize accuracy and another to prioritize retrieval efficiency. Via an interpretable control parameter $\\\\alpha$, users can seamlessly navigate between minimal-cost retrieval and high-accuracy retrieval based on their specific requirements. We empirically demonstrate that our approach effectively balances accuracy, retrieval cost, and user controllability, making it a practical and adaptable solution for real-world applications. Code is available at https://github.com/JinyanSu1/Flare-Aug.",
+      "authors": [
+        {
+          "misc": {
+            "email": "js3673@cornell.edu"
+          },
+          "name": "Jinyan Su",
+          "orgs": [
+            "Cornell University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jehealey@adobe.com"
+          },
+          "name": "Jennifer Healey",
+          "orgs": [
+            "Adobe Research"
+          ]
+        },
+        {
+          "misc": {
+            "email": "preslav.nakov@mbzuai.ac.ae"
+          },
+          "name": "Preslav Nakov",
+          "orgs": [
+            "Mohamed bin Zayed University of Artificial Intelligence"
+          ]
+        },
+        {
+          "misc": {
+            "email": "ctc9@cornell.edu"
+          },
+          "name": "Claire Cardie",
+          "orgs": [
+            "Cornell University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2502.12145",
+      "date": "2025-02-17T00:00:00",
+      "citation_count": 9,
+      "categories": [
+        "cs.IR",
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/JinyanSu1/Flare-Aug"
+    },
+    {
+      "arxiv_id": "2601.03908",
+      "score": 0.27040815,
+      "title": "Decide Then Retrieve: A Training-Free Framework with Uncertainty-Guided Triggering and Dual-Path Retrieval",
+      "tldr": "[research paper] Decide Then Retrieve (DTR) introduces a training-free, model-agnostic RAG framework that uses generation uncertainty to dynamically decide when to trigger retrieval, eliminating unnecessary calls for simple queries. It employs a dual-path retrieval mechanism that simultaneously retrieves from the original query and an LLM-generated pseudo-context, then adaptively selects relevant documents to improve performance on sparse and ambiguous inputs, consistently boosting EM and F1 across benchmarks while reducing retrieval noise.",
+      "abstract": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) by incorporating external knowledge, but existing approaches indiscriminately trigger retrieval and rely on single-path evidence construction, often introducing noise and limiting performance gains. In this work, we propose Decide Then Retrieve (DTR), a training-free framework that adaptively determines when retrieval is necessary and how external information should be selected. DTR leverages generation uncertainty to guide retrieval triggering and introduces a dual-path retrieval mechanism with adaptive information selection to better handle sparse and ambiguous queries. Extensive experiments across five open-domain QA benchmarks, multiple model scales, and different retrievers demonstrate that DTR consistently improves EM and F1 over standard RAG and strong retrieval-enhanced baselines, while reducing unnecessary retrievals. The code and data used in this paper are available at https://github.com/ChenWangHKU/DTR.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Wang Chen",
+          "orgs": [
+            "Baidu Inc",
+            "The University of Hong Kong"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Guanqiang Qi",
+          "orgs": [
+            "Baidu Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Weikang Li",
+          "orgs": [
+            "Peking University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "liyang164@baidu.com"
+          },
+          "name": "Yang Li",
+          "orgs": [
+            "Baidu Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Deguo Xia",
+          "orgs": [
+            "Baidu Inc"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jizhou Huang",
+          "orgs": [
+            "Baidu Inc"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2601.03908",
+      "date": "2026-01-07T00:00:00",
+      "citation_count": 2,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/ChenWangHKU/DTR"
+    },
+    {
+      "arxiv_id": "2604.11407",
+      "score": 0.25882354,
+      "title": "Retrieval as Generation: A Unified Framework with Self-Triggered Information Planning",
+      "tldr": "[research paper] GRIP introduces a token-level control mechanism within autoregressive decoding to unify retrieval and generation, enabling dynamic, self-triggered information planning. The model emits explicit control tokens ([RETRIEVE], [INTERMEDIARY], [ANSWER], [SOLVED]) to decide retrieval timing, query reformulation, and termination in a single decoding trajectory, learning context-sensitive retrieval behavior through structured supervision of answerability types. Experiments show superior performance over RAG baselines and competitiveness with GPT-4o, with improved adaptability, retrieval depth, and stopping reliability in multi-hop QA tasks.",
+      "abstract": "We revisit retrieval-augmented generation (RAG) by embedding retrieval control directly into generation. Instead of treating retrieval as an external intervention, we express retrieval decisions within token-level decoding, enabling end-to-end coordination without additional controllers or classifiers. Under the paradigm of Retrieval as Generation, we propose \\textbf{GRIP} (\\textbf{G}eneration-guided \\textbf{R}etrieval with \\textbf{I}nformation \\textbf{P}lanning), a unified framework in which the model regulates retrieval behavior through control-token emission. Central to GRIP is \\textit{Self-Triggered Information Planning}, which allows the model to decide when to retrieve, how to reformulate queries, and when to terminate, all within a single autoregressive trajectory. This design tightly couples retrieval and reasoning and supports dynamic multi-step inference with on-the-fly evidence integration. To supervise these behaviors, we construct a structured training set covering answerable, partially answerable, and multi-hop queries, each aligned with specific token patterns. Experiments on five QA benchmarks show that GRIP surpasses strong RAG baselines and is competitive with GPT-4o while using substantially fewer parameters.",
+      "authors": [
+        {
+          "misc": {
+            "email": "deepblue.lb@gmail.com"
+          },
+          "name": "Bo Li",
+          "orgs": [
+            "National Engineering Research Center for Software Engineering, Peking University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wye@pku.edu.cn"
+          },
+          "name": "Mingda Wang",
+          "orgs": [
+            "School of Health Sciences and Biomedical Engineering, Hebei University of Technology"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Gexiang Fang",
+          "orgs": [
+            "National Engineering Research Center for Software Engineering, Peking University"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shikun Zhang",
+          "orgs": [
+            "National Engineering Research Center for Software Engineering, Peking University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "wye@pku.edu.cn"
+          },
+          "name": "Wei Ye",
+          "orgs": [
+            "National Engineering Research Center for Software Engineering, Peking University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2604.11407",
+      "date": "2026-04-13T00:00:00",
+      "citation_count": 5,
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "venue": null,
+      "venue_year": null,
+      "github_url": "https://github.com/WisdomShell/GRIP"
+    },
+    {
+      "arxiv_id": "2410.23902",
+      "score": 0.25,
+      "title": "Responsible Retrieval Augmented Generation for Climate Decision Making from Documents",
+      "tldr": "[research paper] The paper introduces a domain-specific evaluation framework for Retrieval-Augmented Generation (RAG) systems in climate law and policy, addressing hallucination, transparency, and user trust. It proposes a responsible AI pipeline with integrated retrieval, generation, and real-time evaluation components, enabling users to verify outputs by linking generated answers to source documents. The work includes a human-annotated dataset, automated evaluation tools, and a user-centric UX that supports validation and accountability, highlighting critical technical and ethical considerations for deploying generative AI in high-stakes, data-scarce domains.",
+      "abstract": "Climate decision making is constrained by the complexity and inaccessibility of key information within lengthy, technical, and multi-lingual documents. Generative AI technologies offer a promising route for improving the accessibility of information contained within these documents, but suffer from limitations. These include (1) a tendency to hallucinate or mis-represent information, (2) difficulty in steering or guaranteeing properties of generated output, and (3) reduced performance in specific technical domains. To address these challenges, we introduce a novel evaluation framework with domain-specific dimensions tailored for climate-related documents. We then apply this framework to evaluate Retrieval-Augmented Generation (RAG) approaches and assess retrieval- and generation-quality within a prototype tool that answers questions about individual climate law and policy documents. In addition, we publish a human-annotated dataset and scalable automated evaluation tools, with the aim of facilitating broader adoption and robust assessment of these systems in the climate domain. Our findings highlight the key components of responsible deployment of RAG to enhance decision-making, while also providing insights into user experience (UX) considerations for safely deploying such systems to build trust with users in high-risk domains.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Matyas Juhasz",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Kalyan Dutia",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Henry Franks",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Conor Delahunty",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Patrick Fawbert Mills",
+          "orgs": []
+        },
+        {
+          "misc": {
+            "email": "pimdsci@climatepolicyradar.org"
+          },
+          "name": "Harrison Pim",
+          "orgs": [
+            "climatepolicyradar.org"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2410.23902",
+      "date": "2024-10-31T00:00:00",
+      "citation_count": 9,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2412.02830",
+      "score": 0.2,
+      "title": "RARE: Retrieval-Augmented Reasoning Enhancement for Large Language Models",
+      "tldr": "[research paper] RARE introduces two novel retrieval-augmented actions within Monte Carlo Tree Search: (A6) generates search queries from the initial question and retrieves supporting documents to enrich early reasoning, and (A7) retrieves contextual information for generated sub-questions to refine intermediate steps. A Retrieval-Augmented Factuality Scorer (RAFS) evaluates reasoning paths for factual accuracy, replacing traditional discriminators. Experiments on medical and commonsense QA tasks show that RARE enables open-source LLMs like LLaMA 3.1 to match or exceed the performance of closed-source models such as GPT-4o by enhancing factual integrity and logical coherence through real-time, context-aware knowledge retrieval during multi-step reasoning.",
+      "abstract": "This work introduces RARE (Retrieval-Augmented Reasoning Enhancement), a versatile extension to the mutual reasoning framework (rStar), aimed at enhancing reasoning accuracy and factual integrity across large language models (LLMs) for complex, knowledge-intensive tasks such as commonsense and medical reasoning. RARE incorporates two innovative actions within the Monte Carlo Tree Search (MCTS) framework: A6, which generates search queries based on the initial problem statement, performs information retrieval using those queries, and augments reasoning with the retrieved data to formulate the final answer; and A7, which leverages information retrieval specifically for generated sub-questions and re-answers these sub-questions with the relevant contextual information. Additionally, a Retrieval-Augmented Factuality Scorer is proposed to replace the original discriminator, prioritizing reasoning paths that meet high standards of factuality. Experimental results with LLaMA 3.1 show that RARE enables open-source LLMs to achieve competitive performance with top open-source models like GPT-4 and GPT-4o. This research establishes RARE as a scalable solution for improving LLMs in domains where logical coherence and factual integrity are critical.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Hieu Tran",
+          "orgs": [
+            "University of Massachusetts, Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zonghai Yao",
+          "orgs": [
+            "University of Massachusetts, Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhichao Yang",
+          "orgs": [
+            "University of Massachusetts, Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Junda Wang",
+          "orgs": [
+            "University of Massachusetts, Amherst"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yifan Zhang",
+          "orgs": [
+            "University of Massachusetts, Lowell"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Shuo Han",
+          "orgs": [
+            "University of Massachusetts, Lowell"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Feiyun Ouyang",
+          "orgs": [
+            "University of Massachusetts, Lowell"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Hong Yu",
+          "orgs": [
+            "University of Massachusetts, Amherst",
+            "University of Massachusetts, Lowell"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2412.02830",
+      "date": "2024-12-03T00:00:00",
+      "citation_count": 27,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "venue_year": null,
+      "github_url": "https://github.com/fatebreaker/RARE"
+    },
+    {
+      "arxiv_id": "1808.04776",
+      "score": 0.16666667,
+      "title": "Retrieve and Refine: Improved Sequence Generation Models For Dialogue",
+      "tldr": "[research paper] The paper proposes a 'Retrieve and Refine' framework that combines retrieval-based response selection with sequence generation, where a retrieval model (Key-Value Memory Network) selects a candidate response from a corpus, which is then appended as context to a Seq2Seq generator (LSTM with attention) for refinement. The model improves over both pure retrieval and generation models in human evaluations on the ConvAI2 dataset, with variants enhancing performance via input truncation (RetNRef+) and copy error mitigation (RetNRef++) to prevent superficial copying of retrieval outputs. Results show superior engagement and contextual relevance, though perplexity is misleading due to the validity of diverse responses.",
+      "abstract": "Sequence generation models for dialogue are known to have several problems: they tend to produce short, generic sentences that are uninformative and unengaging. Retrieval models on the other hand can surface interesting responses, but are restricted to the given retrieval set leading to erroneous replies that cannot be tuned to the specific context. In this work we develop a model that combines the two approaches to avoid both their deficiencies: first retrieve a response and then refine it -- the final sequence generator treating the retrieval as additional context. We show on the recent CONVAI2 challenge task our approach produces responses superior to both standard retrieval and generation models in human evaluations.",
+      "authors": [
+        {
+          "misc": {
+            "email": "jase@fb.com"
+          },
+          "name": "Jason Weston",
+          "orgs": [
+            "Facebook AI Research"
+          ]
+        },
+        {
+          "misc": {
+            "email": "edinan@fb.com"
+          },
+          "name": "Emily Dinan",
+          "orgs": [
+            "Facebook AI Research"
+          ]
+        },
+        {
+          "misc": {
+            "email": "ahm@fb.com"
+          },
+          "name": "Alexander H. Miller",
+          "orgs": [
+            "Facebook AI Research"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1808.04776",
+      "date": "2018-08-14T00:00:00",
+      "citation_count": 208,
+      "categories": [
+        "cs.CL"
+      ],
+      "venue": "SCAI@EMNLP",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2101.01857",
+      "score": 0.16666667,
+      "title": "Reinforcement Learning with Latent Flow",
+      "tldr": "[research paper] Flare introduces a structured late fusion architecture for pixel-based reinforcement learning that explicitly encodes temporal dynamics via latent vector differences, bypassing computationally expensive optical flow. It achieves state-of-the-art performance on DeepMind control benchmarks with superior sample efficiency\u2014outperforming prior model-free methods by 1.9\u00d7 and 1.5\u00d7 on 500k and 1M steps\u2014while also outperforming Rainbow DQN on 5 of 8 Atari games at 100M steps, demonstrating that temporal inductive bias in latent space enables effective policy learning without explicit velocity signals.",
+      "abstract": "Temporal information is essential to learning effective policies with Reinforcement Learning (RL). However, current state-of-the-art RL algorithms either assume that such information is given as part of the state space or, when learning from pixels, use the simple heuristic of frame-stacking to implicitly capture temporal information present in the image observations. This heuristic is in contrast to the current paradigm in video classification architectures, which utilize explicit encodings of temporal information through methods such as optical flow and two-stream architectures to achieve state-of-the-art performance. Inspired by leading video classification architectures, we introduce the Flow of Latents for Reinforcement Learning (Flare), a network architecture for RL that explicitly encodes temporal information through latent vector differences. We show that Flare (i) recovers optimal performance in state-based RL without explicit access to the state velocity, solely with positional state information, (ii) achieves state-of-the-art performance on pixel-based challenging continuous control tasks within the DeepMind control benchmark suite, namely quadruped walk, hopper hop, finger turn hard, pendulum swing, and walker run, and is the most sample efficient model-free pixel-based RL algorithm, outperforming the prior model-free state-of-the-art by 1.9X and 1.5X on the 500k and 1M step benchmarks, respectively, and (iv), when augmented over rainbow DQN, outperforms this state-of-the-art level baseline on 5 of 8 challenging Atari games at 100M time step benchmark.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Wenling Shang",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Xiaofei Wang",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Aravind Srinivas",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Aravind Rajeswaran",
+          "orgs": [
+            "University of Washington"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yang Gao",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Pieter Abbeel",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Michael Laskin",
+          "orgs": [
+            "University of California Berkeley"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2101.01857",
+      "date": "2021-01-06T00:00:00",
+      "citation_count": 28,
+      "categories": [
+        "cs.LG"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "venue_year": null,
+      "github_url": "https://github.com/WendyShang/flare"
+    },
+    {
+      "arxiv_id": "2508.12594",
+      "score": 0.14285715,
+      "title": "FLARE: Fast Low-rank Attention Routing Engine",
+      "tldr": "[research paper] FLARE introduces a linear-complexity self-attention mechanism for large unstructured meshes by routing attention through fixed-length latent sequences, where each attention head learns independent low-rank projections via distinct latent token slices. This enables rank-constrained attention with $\\mathcal{O}(NM)$ complexity, validated through spectral analysis showing low-rank subspaces and head-wise diversity in eigen spectra, resulting in superior accuracy and scalability over state-of-the-art PDE surrogate models without requiring distributed training or memory offloading.",
+      "abstract": "The quadratic complexity of self-attention limits its applicability and scalability on large unstructured meshes. We introduce Fast Low-rank Attention Routing Engine (FLARE), a linear complexity self-attention mechanism that routes attention through fixed-length latent sequences. Each attention head performs global communication among $N$ tokens by projecting the input sequence onto a fixed length latent sequence of $M \\\\ll N$ tokens using learnable query tokens. By routing attention through a bottleneck sequence, FLARE learns a low-rank form of attention that can be applied at $O(NM)$ cost. FLARE not only scales to unprecedented problem sizes, but also delivers superior accuracy compared to state-of-the-art neural PDE surrogates across diverse benchmarks. We also release a new additive manufacturing dataset to spur further research. Our code is available at https://github.com/vpuri3/FLARE.py.",
+      "authors": [
+        {
+          "misc": {
+            "email": "vedantpu@andrew.cmu.edu"
+          },
+          "name": "Vedant Puri",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        },
+        {
+          "misc": {
+            "email": "aajoglek@andrew.cmu.edu"
+          },
+          "name": "Aditya Joglekar",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        },
+        {
+          "misc": {
+            "email": "kferguso@andrew.cmu.edu"
+          },
+          "name": "Kevin Ferguson",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        },
+        {
+          "misc": {
+            "email": "yuhsuan2@andrew.cmu.edu"
+          },
+          "name": "Yu-hsuan Chen",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jessicaz@andrew.cmu.edu"
+          },
+          "name": "Yongjie Jessica Zhang",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        },
+        {
+          "misc": {
+            "email": "lkara@andrew.cmu.edu"
+          },
+          "name": "Levent Burak Kara",
+          "orgs": [
+            "Mechanical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2508.12594",
+      "date": "2025-08-18T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/vpuri3/FLARE.py"
+    }
+  ]
+}

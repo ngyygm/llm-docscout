@@ -1,0 +1,24 @@
+# DocScout environment config (Stage-2 pilot). Mirrors the action/budget knobs.
+env:
+  max_steps: 8            # hard step cap (cf. CodeScout max_turns)
+  max_read_tokens: 2000   # read-budget cap (tokens of doc content into context)
+  search_k: 5             # top-k snippets per search
+  snippet_token_cost: true   # snippets count toward read budget (cheap by design)
+
+data:
+  source: synth           # synth | grounded (MuSiQue/HotpotQA/DocScope — see DATA_DESIGN.md)
+  n_docs: 8
+  sections_per_doc: 8
+  n_instances_train: 5000
+  n_instances_dev: 1000
+  multi_hop_frac: 0.2
+  seed: 0
+
+rollout:
+  recent_reads_kept: 2    # three-tier memory: how many committed reads to keep in prompt
+
+model:
+  # Qwen3-1.7B / 2.5B (≤2.5B, per user constraint; cf. CodeScout-1.7B)
+  base: Qwen/Qwen3-1.7B
+  temperature: 0.7
+  max_tokens: 256

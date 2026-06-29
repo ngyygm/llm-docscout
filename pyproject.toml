@@ -1,0 +1,20 @@
+[project]
+name = "llm-docscout"
+version = "0.1.0"
+description = "DocScout — RL-trained NL-document search agent with read-budget reward (NL analogue of CodeScout)."
+requires-python = ">=3.10"
+dependencies = [
+  # core env/reward/rollout have NO hard deps (self-contained BM25, CPU-runnable).
+]
+
+[project.optional-dependencies]
+serve = ["openai>=1.0"]            # OpenAIClient for vLLM-served rollouts
+train = ["torch", "transformers", "accelerate", "vllm"]  # GRPO training (GPU)
+tests = ["pytest"]
+
+[tool.setuptools]
+packages = ["docscout", "docscout.data", "docscout.env", "docscout.reward", "docscout.agent"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"

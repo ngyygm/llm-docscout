@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+
+# Environment
+.venv/
+env/
+
+# Model checkpoints (too large for git)
+ckpts/
+
+# Experiment outputs (reproducible)
+results/
+logs/*.log
+
+# Data - keep references, not generated files
+data/synth/*.json
+!data/synth/.gitkeep
+
+# Literature PDFs (re-downloadable)
+related-papers/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code internal
+.claude/scheduled_tasks.json

@@ -1,0 +1,479 @@
+{
+  "status": "success",
+  "backend": "qdrant",
+  "total_count": 10,
+  "result": [
+    {
+      "arxiv_id": "1908.06132",
+      "score": 0.5,
+      "title": "Learning Representations and Agents for Information Retrieval",
+      "tldr": "[PhD dissertation] The dissertation proposes two agent-based approaches for information retrieval: (1) a goal-driven web navigation agent (NeuAgent) that traverses Wikipedia to answer questions by leveraging document links and structure, and (2) a reinforcement learning-based query reformulation agent that dynamically rewrites questions to improve search relevance. It also introduces two novel components to enhance search engines: a pretrained unsupervised re-ranker that improves document ranking and a document expansion method that augments documents with predicted questions they might answer, jointly doubling retrieval effectiveness on benchmark datasets. These methods treat search engines as interactive systems where agents learn to exploit retrieval infrastructure rather than storing all knowledge in a monolithic model.",
+      "abstract": "A goal shared by artificial intelligence and information retrieval is to create an oracle, that is, a machine that can answer our questions, no matter how difficult they are. A more limited, but still instrumental, version of this oracle is a question-answering system, in which an open-ended question is given to the machine, and an answer is produced based on the knowledge it has access to. Such systems already exist and are increasingly capable of answering complicated questions. This progress can be partially attributed to the recent success of machine learning and to the efficient methods for storing and retrieving information, most notably through web search engines. One can imagine that this general-purpose question-answering system can be built as a billion-parameters neural network trained end-to-end with a large number of pairs of questions and answers. We argue, however, that although this approach has been very successful for tasks such as machine translation, storing the world's knowledge as parameters of a learning machine can be very hard. A more efficient way is to train an artificial agent on how to use an external retrieval system to collect relevant information. This agent can leverage the effort that has been put into designing and running efficient storage and retrieval systems by learning how to best utilize them to accomplish a task. ...",
+      "authors": [
+        {
+          "misc": {
+            "url": "https://www.cs.nyu.edu/~rfn216/",
+            "email": "rfn216@nyu.edu"
+          },
+          "name": "Rodrigo Frassetto Nogueira",
+          "orgs": [
+            "New York University Tandon School of Engineering",
+            "Courant Institute",
+            "Center for Data Science",
+            "NYU Machine Learning for Language (ML\u00b2) Lab",
+            "Universidade Estadual de Campinas (UNICAMP)",
+            "Siemens",
+            "Microsoft Research",
+            "Google Research"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1908.06132",
+      "date": "2019-08-16T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1805.07008",
+      "score": 0.5,
+      "title": "Hierarchical Reinforcement Learning with Deep Nested Agents",
+      "tldr": "[research paper] The paper proposes a Deep Nested Agent framework, a hierarchical reinforcement learning variant that enhances performance in non-Markovian environments by propagating high-level agent information (e.g., policy, task objectives) directly into the state representation of a low-level nested agent. This enables better long-term planning and faster convergence in complex, open-world scenarios like Minecraft, where early actions have delayed effects. Experiments on three non-Markovian tasks in Minecraft show superior performance and efficiency compared to both non-hierarchical single-agent DQN and standard hierarchical RL methods, demonstrating the value of state-informed nested agents in dynamic, long-horizon decision-making.",
+      "abstract": "Deep hierarchical reinforcement learning has gained a lot of attention in recent years due to its ability to produce state-of-the-art results in challenging environments where non-hierarchical frameworks fail to learn useful policies. However, as problem domains become more complex, deep hierarchical reinforcement learning can become inefficient, leading to longer convergence times and poor performance. We introduce the Deep Nested Agent framework, which is a variant of deep hierarchical reinforcement learning where information from the main agent is propagated to the low level $nested$ agent by incorporating this information into the nested agent's state. We demonstrate the effectiveness and performance of the Deep Nested Agent framework by applying it to three scenarios in Minecraft with comparisons to a deep non-hierarchical single agent framework, as well as, a deep hierarchical framework.",
+      "authors": [
+        {
+          "misc": {
+            "email": "mwb@iastate.edu"
+          },
+          "name": "Marc W. Brittain",
+          "orgs": [
+            "Department of Aerospace Engineering",
+            "Iowa State University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "pwei@iastate.edu"
+          },
+          "name": "Peng Wei",
+          "orgs": [
+            "Department of Aerospace Engineering",
+            "Iowa State University"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1805.07008",
+      "date": "2018-05-18T00:00:00",
+      "citation_count": 1,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2108.13268",
+      "score": 0.35897437,
+      "title": "Sensor-Based Navigation Using Hierarchical Reinforcement Learning",
+      "tldr": "[research paper] A hierarchical deep reinforcement learning agent learns lidar-based navigation in continuous action space without any global or goal information, using intrinsic motivation to self-generate waypoints. The agent pre-processes raw lidar data via an autoencoder to create a compact state representation and employs a multi-layer hierarchical structure where a high-level policy generates internal goals and a low-level controller executes continuous actions, enabling robust navigation in sparse-reward, unknown environments with improved success rate and path efficiency over flat architectures.",
+      "abstract": "Robotic systems are nowadays capable of solving complex navigation tasks. However, their capabilities are limited to the knowledge of the designer and consequently lack generalizability to initially unconsidered situations. This makes deep reinforcement learning (DRL) especially interesting, as these algorithms promise a self-learning system only relying on feedback from the environment. In this paper, we consider the problem of lidar-based robot navigation in continuous action space using DRL without providing any goal-oriented or global information. By relying solely on local sensor data to solve navigation tasks, we design an agent that assigns its own waypoints based on intrinsic motivation. Our agent is able to learn goal-directed navigation behavior even when facing only sparse feedback, i.e., delayed rewards when reaching the target. To address this challenge and the complexity of the continuous action space, we deploy a hierarchical agent structure in which the exploration is distributed across multiple layers. Within the hierarchical structure, our agent self-assigns internal goals and learns to extract reasonable waypoints to reach the desired target position only based on local sensor data. In our experiments, we demonstrate the navigation capabilities of our agent in two environments and show that the hierarchical structure seriously improves the performance in terms of success rate and success weighted by path length in comparison to a flat structure. Furthermore, we provide a real-robot experiment to illustrate that the trained agent can be easily transferred to a real-world scenario.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Christopher Gebauer",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Nils Dengler",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Maren Bennewitz",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2108.13268",
+      "date": "2021-08-30T00:00:00",
+      "citation_count": 6,
+      "categories": [
+        "cs.RO"
+      ],
+      "venue": "Annual Meeting of the IEEE Industry Applications Society",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1611.03718",
+      "score": 0.33333334,
+      "title": "Hierarchical Object Detection with Deep Reinforcement Learning",
+      "tldr": "[research paper] A hierarchical object detection framework uses deep reinforcement learning to guide a top-down search through image regions, selecting among five predefined candidates (quadrants + center). The agent iteratively zooms into regions with higher salience, reducing the number of proposals compared to traditional methods. Experiments show that overlapping region proposals improve detection performance, while region-specific feature extraction (Image-Zooms) outperforms shared feature maps (Pool45-Crops) due to higher spatial resolution and richer local information, despite increased computation\u2014making it viable due to the agent\u2019s minimal region visits.",
+      "abstract": "We present a method for performing hierarchical object detection in images guided by a deep reinforcement learning agent. The key idea is to focus on those parts of the image that contain richer information and zoom on them. We train an intelligent agent that, given an image window, is capable of deciding where to focus the attention among five different predefined region candidates (smaller windows). This procedure is iterated providing a hierarchical image analysis.We compare two different candidate proposal strategies to guide the object search: with and without overlap. Moreover, our work compares two different strategies to extract features from a convolutional neural network for each region proposal: a first one that computes new feature maps for each region proposal, and a second one that computes the feature maps for the whole image to later generate crops for each region proposal. Experiments indicate better results for the overlapping candidate proposal strategy and a loss of performance for the cropped image features due to the loss of spatial resolution. We argue that, while this loss seems unavoidable when working with large amounts of object candidates, the much more reduced amount of region proposals generated by our reinforcement learning agent allows considering to extract features for each location without sharing convolutional computation among regions.",
+      "authors": [
+        {
+          "misc": {
+            "email": "miriam.bellver@bsc.es"
+          },
+          "name": "Miriam Bellver Bueno",
+          "orgs": [
+            "Barcelona Supercomputing Center (BSC)"
+          ]
+        },
+        {
+          "misc": {
+            "email": "xavier.giro@upc.edu"
+          },
+          "name": "Xavier Gir\u00f3-i-Nieto",
+          "orgs": [
+            "Image Processing Group",
+            "Universitat Politecnica de Catalunya (UPC)"
+          ]
+        },
+        {
+          "misc": {
+            "email": "ferran.marques@upc.edu"
+          },
+          "name": "Ferran Marques",
+          "orgs": [
+            "Image Processing Group",
+            "Universitat Politecnica de Catalunya (UPC)"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jordi.torres@bsc.es"
+          },
+          "name": "Jordi Torres",
+          "orgs": [
+            "Barcelona Supercomputing Center (BSC)",
+            "Universitat Politecnica de Catalunya"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1611.03718",
+      "date": "2016-11-11T00:00:00",
+      "citation_count": 110,
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "venue": "Neural Information Processing Systems",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2508.08088",
+      "score": 0.25,
+      "title": "HierSearch: A Hierarchical Enterprise Deep Search Framework Integrating Local and Web Searches",
+      "tldr": "[research paper] HierSearch introduces a hierarchical agentic framework for multi-source deep search, where local and Web search agents operate at the low level to retrieve evidence from domain-specific corpora, and a planner agent at the high level coordinates retrieval, integrates evidence, and generates answers. Hierarchical reinforcement learning (HRL) enables efficient training by decoupling domain-specific tool mastery from cross-source planning, while a reasoning-aware knowledge refiner filters hallucinations and irrelevant evidence to prevent error propagation. The framework outperforms flat RL and multi-source baselines across general, financial, and medical benchmarks by leveraging structured agent collaboration and selective knowledge filtering.",
+      "abstract": "Recently, large reasoning models have demonstrated strong mathematical and coding abilities, and deep search leverages their reasoning capabilities in challenging information retrieval tasks. Existing deep search works are generally limited to a single knowledge source, either local or the Web. However, enterprises often require private deep search systems that can leverage search tools over both local and the Web corpus. Simply training an agent equipped with multiple search tools using flat reinforcement learning (RL) is a straightforward idea, but it has problems such as low training data efficiency and poor mastery of complex tools. To address the above issue, we propose a hierarchical agentic deep search framework, HierSearch, trained with hierarchical RL. At the low level, a local deep search agent and a Web deep search agent are trained to retrieve evidence from their corresponding domains. At the high level, a planner agent coordinates low-level agents and provides the final answer. Moreover, to prevent direct answer copying and error propagation, we design a knowledge refiner that filters out hallucinations and irrelevant evidence returned by low-level agents. Experiments show that HierSearch achieves better performance compared to flat RL, and outperforms various deep search and multi-source retrieval-augmented generation baselines in six benchmarks across general, finance, and medical domains.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Jiejun Tan",
+          "orgs": [
+            "1",
+            "Baichuan"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Zhicheng Dou",
+          "orgs": [
+            "1"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Yan Yu",
+          "orgs": [
+            "2"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jiehan Cheng",
+          "orgs": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Qiang Ju",
+          "orgs": [
+            "2"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Jian Xie",
+          "orgs": [
+            "2"
+          ]
+        },
+        {
+          "misc": {
+            "corresponding_author": true
+          },
+          "name": "Ji-Rong Wen",
+          "orgs": [
+            "1"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2508.08088",
+      "date": "2025-08-11T00:00:00",
+      "citation_count": 5,
+      "categories": [
+        "cs.IR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": "https://github.com/plageon/HierSearch"
+    },
+    {
+      "arxiv_id": "1911.10164",
+      "score": 0.25,
+      "title": "Efficient Exploration through Intrinsic Motivation Learning for Unsupervised Subgoal Discovery in Model-Free Hierarchical Reinforcement Learning",
+      "tldr": "[research paper] The paper presents a model-free hierarchical reinforcement learning framework where intrinsic motivation learning drives efficient exploration by enabling unsupervised subgoal discovery through anomaly detection on a limited memory of agent trajectories. It demonstrates that intrinsic motivation not only improves exploration coverage in sparse-reward environments but also facilitates automatic subgoal identification via clustering and outlier detection, without requiring environment models or prior knowledge of subgoals. The method unifies internal representation learning, subgoal discovery, and skill acquisition within a single framework, achieving success on complex tasks like Montezuma\u2019s Revenge and the rooms environment.",
+      "abstract": "Efficient exploration for automatic subgoal discovery is a challenging problem in Hierarchical Reinforcement Learning (HRL). In this paper, we show that intrinsic motivation learning increases the efficiency of exploration, leading to successful subgoal discovery. We introduce a model-free subgoal discovery method based on unsupervised learning over a limited memory of agent's experiences during intrinsic motivation. Additionally, we offer a unified approach to learning representations in model-free HRL.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Jacob Rafati",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "David C. Noelle",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/1911.10164",
+      "date": "2019-11-18T00:00:00",
+      "citation_count": 3,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "stat.ML"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "1809.10658",
+      "score": 0.24761905,
+      "title": "Learning to Coordinate Multiple Reinforcement Learning Agents for Diverse Query Reformulation",
+      "tldr": "[research paper] A hierarchical reinforcement learning framework divides query reformulation into multiple specialized sub-agents trained on disjoint data partitions, each generating diverse reformulations. A meta-aggregator learns to combine these outputs via weighted voting, enabling parallel training with minimal communication overhead\u2014only rewards and reformulated queries are exchanged. The method achieves superior generalization and diversity over ensemble baselines, with empirical evidence showing that random data partitioning outperforms semantically similar partitioning, contradicting intuitive expectations about specialization.",
+      "abstract": "We propose a method to efficiently learn diverse strategies in reinforcement learning for query reformulation in the tasks of document retrieval and question answering. In the proposed framework an agent consists of multiple specialized sub-agents and a meta-agent that learns to aggregate the answers from sub-agents to produce a final answer. Sub-agents are trained on disjoint partitions of the training data, while the meta-agent is trained on the full training set. Our method makes learning faster, because it is highly parallelizable, and has better generalization performance than strong baselines, such as an ensemble of agents trained on the full data. We show that the improved performance is due to the increased diversity of reformulation strategies.",
+      "authors": [
+        {
+          "misc": {
+            "email": "rodrigonogueira@nyu.edu"
+          },
+          "name": "Rodrigo Nogueira",
+          "orgs": [
+            "New York University"
+          ]
+        },
+        {
+          "misc": {
+            "email": "jbulian@google.com"
+          },
+          "name": "Jannis Bulian",
+          "orgs": [
+            "Google AI Language"
+          ]
+        },
+        {
+          "misc": {
+            "email": "massi@google.com"
+          },
+          "name": "Massimiliano Ciaramita",
+          "orgs": [
+            "Google AI Language"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/1809.10658",
+      "date": "2018-09-27T00:00:00",
+      "citation_count": 11,
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2107.03685",
+      "score": 0.20952383,
+      "title": "Towards Autonomous Pipeline Inspection with Hierarchical Reinforcement Learning",
+      "tldr": "[research paper] The paper proposes a hierarchical reinforcement learning (HRL) framework to enable autonomous navigation of multi-actuated snake-like pipe inspection robots (e.g., PIRATE) in complex pipeline topologies. By combining expert-defined policy hierarchies with auxiliary reward functions, the approach decomposes high-level navigation tasks into manageable sub-tasks (e.g., path planning, joint control, clamping), enabling robust, generalizable policies that outperform human-expert control in real-world pipe navigation scenarios. The hierarchical structure is shown to be essential for handling the high-dimensional action space and long-horizon dynamics inherent in in-pipe robotics, with experimental results demonstrating superior adaptability and performance in navigating sharp turns, T-junctions, and vertical sections.",
+      "abstract": "Inspection and maintenance are two crucial aspects of industrial pipeline plants. While robotics has made tremendous progress in the mechanic design of in-pipe inspection robots, the autonomous control of such robots is still a big open challenge due to the high number of actuators and the complex manoeuvres required. To address this problem, we investigate the usage of Deep Reinforcement Learning for achieving autonomous navigation of in-pipe robots in pipeline networks with complex topologies. Moreover, we introduce a hierarchical policy decomposition based on Hierarchical Reinforcement Learning to learn robust high-level navigation skills. We show that the hierarchical structure introduced in the policy is fundamental for solving the navigation task through pipes and necessary for achieving navigation performances superior to human-level control.",
+      "authors": [
+        {
+          "misc": {
+            "email": "n.botteghi@utwente.nl"
+          },
+          "name": "Nicol\u00f2 Botteghi",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Luuk Grefte",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Mannes Poel",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Beril Sirmacek",
+          "orgs": [
+            "Department of Computer Science, J\u00f6nk\u00f6ping University, J\u00f6nk\u00f6ping, Sweden"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Christoph Brune",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "Edwin Dertien",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        },
+        {
+          "misc": {},
+          "name": "",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Stefano Stramigioli",
+          "orgs": [
+            "Faculty of Electrical Engineering, Mathematics and Computer Science, University of Twente, Enschede, The Netherlands"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2107.03685",
+      "date": "2021-07-08T00:00:00",
+      "citation_count": 7,
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "venue": "International Conference on Robot Intelligence Technology and Applications",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2501.06554",
+      "score": 0.2,
+      "title": "Hierarchical Reinforcement Learning for Optimal Agent Grouping in Cooperative Systems",
+      "tldr": "[research paper] This paper proposes a hierarchical reinforcement learning framework with permutation-invariant neural networks to solve scalable agent grouping in cooperative multi-agent systems. It redefines the critic Q-function to embed pairing structure directly, decomposing joint Q-values into pair-wise components to avoid exponential option space explosion, while using shared-parameter policy networks to ensure parameter efficiency and permutation invariance under large-scale team formations. The method achieves scalable, dynamic grouping without exhaustive enumeration by leveraging structural simplifications in matching problems and avoids the curse of dimensionality in action space through architectural design.",
+      "abstract": "This paper presents a hierarchical reinforcement learning (RL) approach to address the agent grouping or pairing problem in cooperative multi-agent systems. The goal is to simultaneously learn the optimal grouping and agent policy. By employing a hierarchical RL framework, we distinguish between high-level decisions of grouping and low-level agents' actions. Our approach utilizes the CTDE (Centralized Training with Decentralized Execution) paradigm, ensuring efficient learning and scalable execution. We incorporate permutation-invariant neural networks to handle the homogeneity and cooperation among agents, enabling effective coordination. The option-critic algorithm is adapted to manage the hierarchical decision-making process, allowing for dynamic and optimal policy adjustments.",
+      "authors": [
+        {
+          "misc": {
+            "email": "l.hu11@lse.ac.uk"
+          },
+          "name": "Liyuan Hu",
+          "orgs": [
+            "Department of Statistics, London School of Economics"
+          ]
+        }
+      ],
+      "url": "https://arxiv.org/abs/2501.06554",
+      "date": "2025-01-11T00:00:00",
+      "citation_count": 0,
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    },
+    {
+      "arxiv_id": "2506.14045",
+      "score": 0.16666667,
+      "title": "Discovering Temporal Structure: An Overview of Hierarchical Reinforcement Learning",
+      "tldr": "This survey systematically analyzes hierarchical reinforcement learning (HRL) through the lens of fundamental RL challenges\u2014exploration, credit assignment, transfer, and interpretability\u2014identifying how autonomous temporal structure discovery enables scalable decision-making in complex environments. It categorizes methods by knowledge source (online interaction, offline datasets, LLMs), highlighting trade-offs in modularity, composability, and generalization, while emphasizing domains like open-ended systems and continual learning where HRL excels due to its ability to decompose and reuse temporal abstractions.",
+      "abstract": "Developing agents capable of exploring, planning and learning in complex open-ended environments is a grand challenge in artificial intelligence (AI). Hierarchical reinforcement learning (HRL) offers a promising solution to this challenge by discovering and exploiting the temporal structure within a stream of experience. The strong appeal of the HRL framework has led to a rich and diverse body of literature attempting to discover a useful structure. However, it is still not clear how one might define what constitutes good structure in the first place, or the kind of problems in which identifying it may be helpful. This work aims to identify the benefits of HRL from the perspective of the fundamental challenges in decision-making, as well as highlight its impact on the performance trade-offs of AI agents. Through these benefits, we then cover the families of methods that discover temporal structure in HRL, ranging from learning directly from online experience to offline datasets, to leveraging large language models (LLMs). Finally, we highlight the challenges of temporal structure discovery and the domains that are particularly well-suited for such endeavours.",
+      "authors": [
+        {
+          "misc": {},
+          "name": "Martin Klissarov",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Akhil Bagaria",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Ziyan Luo",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "George Konidaris",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Doina Precup",
+          "orgs": []
+        },
+        {
+          "misc": {},
+          "name": "Marlos C. Machado",
+          "orgs": []
+        }
+      ],
+      "url": "https://arxiv.org/abs/2506.14045",
+      "date": "2025-06-16T00:00:00",
+      "citation_count": 15,
+      "categories": [
+        "cs.AI"
+      ],
+      "venue": "arXiv.org",
+      "venue_year": null,
+      "github_url": null
+    }
+  ]
+}
