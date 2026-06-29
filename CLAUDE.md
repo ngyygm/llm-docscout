@@ -1,4 +1,4 @@
-# CLAUDE.md — DocScout project guide
+# CLAUDE.md — llm-docscout (DocScout) project guide
 
 ## What this is
 DocScout: RL-trained NL-document search agent with a **read-budget reward** — the
